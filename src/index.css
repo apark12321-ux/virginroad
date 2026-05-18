@@ -1,0 +1,369 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Pretendard", serif;
+  --font-eyebrow: "Italiana", "Cormorant Garamond", serif;
+
+  --color-cream: #FAF7F2;
+  --color-cream-soft: #F4EFE7;
+  --color-cream-deep: #EDE5D6;
+  --color-wine: #7C2D3B;
+  --color-wine-deep: #5B1F2A;
+  --color-wine-soft: #A04555;
+  --color-rose-gold: #C9A961;
+  --color-rose-gold-soft: #D9BD7C;
+  --color-charcoal: #2A2520;
+  --color-charcoal-soft: #4A4238;
+  --color-charcoal-muted: #6B6258;
+  --color-stone: #B8AC9C;
+  --color-stone-light: #D9D0C0;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * 0.4);
+  --radius-md: calc(var(--radius) * 0.7);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.6);
+}
+
+:root {
+    --background: #FAF7F2;
+    --foreground: #2A2520;
+    --card: #FFFDF9;
+    --card-foreground: #2A2520;
+    --popover: #FFFDF9;
+    --popover-foreground: #2A2520;
+    --primary: #7C2D3B;
+    --primary-foreground: #FAF7F2;
+    --secondary: #F4EFE7;
+    --secondary-foreground: #2A2520;
+    --muted: #EDE5D6;
+    --muted-foreground: #6B6258;
+    --accent: #C9A961;
+    --accent-foreground: #2A2520;
+    --destructive: #B8324A;
+    --destructive-foreground: #FAF7F2;
+    --border: #E5DDD0;
+    --input: #E5DDD0;
+    --ring: #7C2D3B;
+    --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/40;
+  }
+  html {
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  body {
+    background-color: #FAF7F2;
+    color: #2A2520;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* 셀렉션 컬러 */
+  ::selection {
+    background-color: #7C2D3B;
+    color: #FAF7F2;
+  }
+
+  /* 한국어 가독성 */
+  :lang(ko), html, body {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Editorial Typography — 글 본문 스타일
+   ───────────────────────────────────────────── */
+.editorial .toc {
+  background-color: #F4EFE7;
+  border-top: 1px solid #C9A961;
+  border-bottom: 1px solid #C9A961;
+  padding: 2rem 2.5rem;
+  margin: 2.5rem 0 3.5rem;
+  position: relative;
+}
+
+.editorial .toc::before {
+  content: "INDEX";
+  position: absolute;
+  top: -0.65rem;
+  left: 2.5rem;
+  background-color: #FAF7F2;
+  padding: 0 0.75rem;
+  font-family: var(--font-eyebrow);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: #7C2D3B;
+}
+
+.editorial .toc p {
+  display: none;
+}
+
+.editorial .toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.editorial .toc li {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4A4238;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.editorial .toc li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 0.875rem;
+  height: 1px;
+  background-color: #C9A961;
+}
+
+.editorial .toc li a {
+  color: #4A4238;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.editorial .toc li a:hover {
+  color: #7C2D3B;
+}
+
+.editorial h2 {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: #2A2520;
+  margin: 4rem 0 1.75rem;
+}
+
+.editorial h3 {
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: #2A2520;
+  margin: 3rem 0 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #E5DDD0;
+}
+
+.editorial h3::before {
+  content: "§";
+  color: #C9A961;
+  font-style: italic;
+  font-weight: 500;
+  margin-right: 0.625rem;
+  font-size: 1.25rem;
+}
+
+.editorial h4 {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #2A2520;
+  margin: 2rem 0 0.875rem;
+  text-transform: uppercase;
+}
+
+.editorial p {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: #3D3630;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+.editorial p strong {
+  color: #7C2D3B;
+  font-weight: 600;
+}
+
+.editorial ul:not(.toc ul) {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.75rem 0;
+}
+
+.editorial ul:not(.toc ul) li {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #3D3630;
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 0.875rem;
+}
+
+.editorial ul:not(.toc ul) li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 1.25rem;
+  height: 1px;
+  background-color: #C9A961;
+}
+
+.editorial ul:not(.toc ul) li strong {
+  color: #7C2D3B;
+  font-weight: 600;
+}
+
+.editorial a {
+  color: #7C2D3B;
+  text-decoration: underline;
+  text-decoration-color: #C9A961;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: all 0.2s;
+}
+
+.editorial a:hover {
+  color: #5B1F2A;
+  text-decoration-color: #7C2D3B;
+}
+
+.editorial blockquote {
+  border-left: 2px solid #C9A961;
+  padding: 0.5rem 0 0.5rem 1.75rem;
+  margin: 2rem 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #4A4238;
+}
+
+/* 드롭캡 (첫 단락) */
+.editorial > p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.75rem;
+  font-weight: 600;
+  float: left;
+  line-height: 0.85;
+  padding: 0.4rem 0.625rem 0 0;
+  color: #7C2D3B;
+}
+
+/* 면책 문구 */
+.editorial p[class*="text-sm"] {
+  font-size: 0.875rem;
+  color: #6B6258;
+  font-style: italic;
+  border-top: 1px solid #E5DDD0;
+  padding-top: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.editorial p[class*="text-xs"] {
+  font-size: 0.8125rem;
+  color: #B8AC9C;
+  letter-spacing: 0.05em;
+}
+
+/* ─────────────────────────────────────────────
+   Ornamental dividers
+   ───────────────────────────────────────────── */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, transparent, #C9A961, transparent);
+}
+
+.ornament span {
+  color: #C9A961;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+/* Eyebrow label */
+.eyebrow {
+  font-family: var(--font-eyebrow);
+  font-size: 0.75rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #7C2D3B;
+  font-weight: 400;
+}
+
+/* Display title gradient */
+.display-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+/* Subtle paper texture overlay */
+.paper-texture {
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(201, 169, 97, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(124, 45, 59, 0.03) 0%, transparent 50%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D0C0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8AC9C;
+}

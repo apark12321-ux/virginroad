@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "Post": {
+      "title": "Post",
+      "description": "A blog post or guide entry.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "excerpt": { "type": "string" },
+        "content": { "type": "string" },
+        "category": { "type": "string", "enum": ["청약-분양", "전월세", "이사-인테리어", "대출-금융"] },
+        "author": { "type": "string" },
+        "date": { "type": "string" },
+        "image": { "type": "string" },
+        "readTime": { "type": "string" }
+      },
+      "required": ["title", "content", "category", "author", "date"]
+    }
+  },
+  "firestore": {
+    "posts": {
+      "schema": "Post",
+      "description": "Collection of blog posts."
+    }
+  }
+}
