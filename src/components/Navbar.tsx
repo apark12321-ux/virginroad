@@ -1,9 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Search, Menu, X } from "lucide-react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { motion, AnimatePresence } from "motion/react";
+import { Search, X } from "lucide-react";
 
 interface NavbarProps {
   onSearch: (query: string) => void;
@@ -14,11 +11,10 @@ interface NavbarProps {
 export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 8);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -29,166 +25,142 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
     setIsMobileMenuOpen(false);
   };
 
+  const navItems = [
+    { label: "신혼금융", page: "category-신혼금융" },
+    { label: "신혼가전", page: "category-신혼가전" },
+    { label: "결혼준비", page: "category-결혼준비" },
+  ];
+
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E5DDD0] py-2"
-          : "bg-transparent py-4"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div
-            className="flex items-center gap-3 cursor-pointer group"
-            onClick={goHome}
-            id="site-logo"
-          >
-            {/* Ornamental V monogram */}
-            <div className="relative">
-              <div className="w-11 h-11 border border-[#7C2D3B] flex items-center justify-center group-hover:bg-[#7C2D3B] transition-colors duration-300">
-                <span className="font-display font-medium text-xl text-[#7C2D3B] group-hover:text-[#FAF7F2] transition-colors duration-300 italic">
-                  V
-                </span>
-              </div>
-              <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#C9A961]" />
-            </div>
-
-            <div className="flex flex-col leading-none">
-              <span className="font-display text-xl sm:text-2xl font-medium text-[#2A2520] tracking-tight">
-                버진로드
-              </span>
-              <span className="font-eyebrow text-[10px] tracking-[0.4em] text-[#7C2D3B] uppercase mt-0.5">
-                Virgin · Road
-              </span>
-            </div>
-          </div>
-
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-200 ${
+          isScrolled ? "border-b border-[#DADADA]" : "border-b border-transparent"
+        }`}
+      >
+        <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo — single weight, all black */}
             <button
-              onClick={() => onNavigate("category-신혼금융")}
-              className="font-eyebrow text-xs tracking-[0.25em] uppercase text-[#4A4238] hover:text-[#7C2D3B] transition-colors relative group"
+              onClick={goHome}
+              className="flex items-center gap-2 text-[#111111] hover:opacity-70 transition-opacity"
+              id="site-logo"
+              aria-label="버진로드 홈"
             >
-              신혼금융
-              <span className="absolute -bottom-1 left-0 right-0 h-px bg-[#C9A961] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+              <span className="text-[19px] font-bold tracking-tight leading-none">버진로드</span>
             </button>
-            <button
-              onClick={() => onNavigate("category-신혼가전")}
-              className="font-eyebrow text-xs tracking-[0.25em] uppercase text-[#4A4238] hover:text-[#7C2D3B] transition-colors relative group"
-            >
-              신혼가전
-              <span className="absolute -bottom-1 left-0 right-0 h-px bg-[#C9A961] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-            </button>
-            <button
-              onClick={() => onNavigate("category-결혼준비")}
-              className="font-eyebrow text-xs tracking-[0.25em] uppercase text-[#4A4238] hover:text-[#7C2D3B] transition-colors relative group"
-            >
-              결혼준비
-              <span className="absolute -bottom-1 left-0 right-0 h-px bg-[#C9A961] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-            </button>
-          </div>
 
-          {/* Search + mobile button */}
-          <div className="flex items-center gap-2">
-            <div className="relative group hidden sm:block">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#B8AC9C] group-focus-within:text-[#7C2D3B]" />
-              <Input
-                className="pl-9 pr-9 bg-[#F4EFE7] border border-transparent focus-visible:border-[#7C2D3B] focus-visible:ring-0 w-40 md:w-56 rounded-none text-sm placeholder:text-[#B8AC9C] h-9"
-                placeholder="검색"
-                value={searchQuery}
-                onChange={(e) => onSearch(e.target.value)}
-              />
-              {searchQuery && (
+            {/* Desktop nav */}
+            <div className="hidden md:flex items-center gap-1">
+              {navItems.map((item) => (
                 <button
-                  type="button"
-                  onClick={() => onSearch("")}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1 hover:bg-[#EDE5D6] transition-colors"
-                  aria-label="검색어 지우기"
+                  key={item.page}
+                  onClick={() => onNavigate(item.page)}
+                  className="px-4 py-2 text-[14px] font-medium text-[#333333] hover:text-[#111111] hover:bg-[#F5F5F5] rounded-md transition-colors"
                 >
-                  <X className="w-3 h-3 text-[#6B6258]" />
+                  {item.label}
                 </button>
-              )}
+              ))}
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden hover:bg-[#F4EFE7] rounded-none"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X /> : <Menu />}
-            </Button>
+
+            {/* Right: search + mobile menu */}
+            <div className="flex items-center gap-1">
+              {/* Desktop search */}
+              <div className="hidden md:block relative">
+                {isSearchOpen ? (
+                  <div className="flex items-center bg-[#F5F5F5] rounded-md pl-3 pr-1 h-9 w-64">
+                    <Search className="w-4 h-4 text-[#888888] shrink-0" />
+                    <input
+                      type="text"
+                      autoFocus
+                      value={searchQuery}
+                      onChange={(e) => onSearch(e.target.value)}
+                      placeholder="검색어를 입력하세요"
+                      className="bg-transparent border-0 outline-none text-[14px] text-[#111111] placeholder:text-[#888888] flex-1 px-2"
+                    />
+                    <button
+                      onClick={() => {
+                        onSearch("");
+                        setIsSearchOpen(false);
+                      }}
+                      className="p-1.5 rounded text-[#888888] hover:text-[#111111] hover:bg-[#DADADA]/40 transition-colors"
+                      aria-label="검색 닫기"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => setIsSearchOpen(true)}
+                    className="p-2.5 rounded-md text-[#333333] hover:text-[#111111] hover:bg-[#F5F5F5] transition-colors"
+                    aria-label="검색"
+                  >
+                    <Search className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
+
+              {/* Mobile: search icon */}
+              <button
+                onClick={() => setIsMobileMenuOpen((v) => !v)}
+                className="md:hidden p-2.5 rounded-md text-[#333333] hover:bg-[#F5F5F5] transition-colors"
+                aria-label="메뉴"
+              >
+                {isMobileMenuOpen ? <X className="w-5 h-5" /> : (
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <line x1="4" y1="7" x2="20" y2="7" />
+                    <line x1="4" y1="12" x2="20" y2="12" />
+                    <line x1="4" y1="17" x2="20" y2="17" />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
+        {/* Mobile menu — full overlay below header */}
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-[#FAF7F2] border-t border-[#E5DDD0] absolute top-full left-0 right-0 shadow-sm"
-          >
-            <div className="px-6 py-8 flex flex-col gap-5">
-              <button
-                onClick={() => {
-                  onNavigate("category-신혼금융");
-                  setIsMobileMenuOpen(false);
-                }}
-                className="font-display text-2xl text-[#2A2520] text-left flex items-center gap-3"
-              >
-                <span className="font-eyebrow text-xs text-[#C9A961] tracking-[0.3em]">01</span>
-                신혼금융
-              </button>
-              <button
-                onClick={() => {
-                  onNavigate("category-신혼가전");
-                  setIsMobileMenuOpen(false);
-                }}
-                className="font-display text-2xl text-[#2A2520] text-left flex items-center gap-3"
-              >
-                <span className="font-eyebrow text-xs text-[#C9A961] tracking-[0.3em]">02</span>
-                신혼가전
-              </button>
-              <button
-                onClick={() => {
-                  onNavigate("category-결혼준비");
-                  setIsMobileMenuOpen(false);
-                }}
-                className="font-display text-2xl text-[#2A2520] text-left flex items-center gap-3"
-              >
-                <span className="font-eyebrow text-xs text-[#C9A961] tracking-[0.3em]">03</span>
-                결혼준비
-              </button>
-
-              <div className="pt-4 border-t border-[#E5DDD0]">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#B8AC9C]" />
-                  <Input
-                    className="pl-9 pr-9 bg-[#F4EFE7] border-none rounded-none"
-                    placeholder="검색어를 입력하세요"
-                    value={searchQuery}
-                    onChange={(e) => onSearch(e.target.value)}
-                  />
-                  {searchQuery && (
-                    <button
-                      type="button"
-                      onClick={() => onSearch("")}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 p-1 hover:bg-[#EDE5D6] transition-colors"
-                      aria-label="검색어 지우기"
-                    >
-                      <X className="w-3.5 h-3.5 text-[#6B6258]" />
-                    </button>
-                  )}
-                </div>
+          <div className="md:hidden border-t border-[#DADADA] bg-white">
+            <div className="px-5 py-4 space-y-1">
+              {/* Mobile search */}
+              <div className="flex items-center bg-[#F5F5F5] rounded-md pl-3 pr-1 h-11 mb-3">
+                <Search className="w-4 h-4 text-[#888888] shrink-0" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => onSearch(e.target.value)}
+                  placeholder="검색어를 입력하세요"
+                  className="bg-transparent border-0 outline-none text-[15px] text-[#111111] placeholder:text-[#888888] flex-1 px-2"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => onSearch("")}
+                    className="p-1.5 rounded text-[#888888] hover:text-[#111111]"
+                    aria-label="검색어 지우기"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
               </div>
+
+              {navItems.map((item) => (
+                <button
+                  key={item.page}
+                  onClick={() => {
+                    onNavigate(item.page);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="block w-full text-left px-3 py-3 text-[16px] font-medium text-[#111111] hover:bg-[#F5F5F5] rounded-md transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </nav>
+      </nav>
+      {/* Spacer */}
+      <div className="h-16" />
+    </>
   );
 }
