@@ -418,9 +418,9 @@ export default function App() {
                           {/* Large feature */}
                           <button
                             onClick={() => handleNavigate(`post-${finPosts[0].id}`)}
-                            className="group text-left lg:col-span-7"
+                            className="group text-left lg:col-span-6"
                           >
-                            <div className="aspect-[16/10] overflow-hidden bg-[#F5F5F5] rounded-lg mb-4">
+                            <div className="aspect-[4/3] overflow-hidden bg-[#F5F5F5] rounded-lg mb-4">
                               <img
                                 src={finPosts[0].image}
                                 alt={finPosts[0].title}
@@ -441,7 +441,7 @@ export default function App() {
                           </button>
 
                           {/* 5 compact list items */}
-                          <ul className="lg:col-span-5 divide-y divide-[#DADADA]">
+                          <ul className="lg:col-span-6 divide-y divide-[#DADADA]">
                             {finPosts.slice(1, 6).map((post, idx) => (
                               <li key={post.id}>
                                 <button
