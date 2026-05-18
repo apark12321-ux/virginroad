@@ -3,6 +3,24 @@ interface FooterProps {
   onNavigate: (page: string) => void;
 }
 
+function LogoIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="16" r="9" />
+      <circle cx="20" cy="16" r="9" />
+    </svg>
+  );
+}
+
 export function Footer({ onNavigate }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
@@ -14,11 +32,19 @@ export function Footer({ onNavigate }: FooterProps) {
           <div className="col-span-2 md:col-span-5">
             <button
               onClick={() => onNavigate("home")}
-              className="text-[18px] font-bold text-[#111111] hover:opacity-70 transition-opacity mb-3 inline-block"
+              className="flex items-center gap-2.5 text-[#111111] hover:opacity-70 transition-opacity mb-4"
             >
-              버진로드
+              <LogoIcon className="w-7 h-7 shrink-0" />
+              <div className="flex flex-col items-start leading-none">
+                <span className="text-[16px] font-bold tracking-[0.08em] uppercase">
+                  VIRGINROAD
+                </span>
+                <span className="text-[11px] font-medium text-[#888888] mt-1 tracking-wide">
+                  버진로드
+                </span>
+              </div>
             </button>
-            <p className="text-[13px] leading-[1.7] text-[#4A4A4A] max-w-md break-keep">
+            <p className="text-[13px] leading-[1.65] text-[#4A4A4A] max-w-md break-keep">
               결혼 준비부터 신혼 자산 형성까지, 두 사람의 새로운 출발에 필요한
               실용 정보를 정리해 드립니다.
             </p>
@@ -99,10 +125,10 @@ export function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
-        {/* Business info — required for AdSense */}
+        {/* Business info — AdSense requirement */}
         <div className="border-t border-[#DADADA] pt-8">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <p className="text-[12px] text-[#4A4A4A] leading-[1.7]">
                 <span className="font-semibold text-[#111111]">알고파트너스</span>
                 <span className="mx-2 text-[#DADADA]">·</span>대표 박예준
@@ -116,7 +142,7 @@ export function Footer({ onNavigate }: FooterProps) {
                 </a>
               </p>
               <p className="text-[11px] text-[#888888] pt-2">
-                © {currentYear} Virgin Road. All rights reserved.
+                © {currentYear} VirginRoad. All rights reserved.
               </p>
             </div>
             <div className="flex items-center gap-5">

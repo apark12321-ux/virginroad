@@ -65,12 +65,12 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.hf.go.kr" target="_blank" rel="noopener noreferrer">한국주택금융공사</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글은 정책·금융 일반 정보를 제공하며, 실제 신청·승인 결과는 개별 심사에 따라 달라질 수 있습니다. 중요 결정 전 해당 기관 공식 안내를 반드시 확인하시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-10</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-12</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
     date: "2026-03-15",
-    updated: "2026-05-10",
+    updated: "2026-05-12",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800",
     readTime: "6분",
     hashtags: ["디딤돌대출", "보금자리론", "신생아특례", "신혼부부", "주택구입자금", "정책대출", "내집마련", "주거안정"]
@@ -174,12 +174,12 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://nhuf.molit.go.kr" target="_blank" rel="noopener noreferrer">주택도시기금</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 금리·한도·자격 요건은 정책 개정 및 시장 상황에 따라 수시로 변경되므로, 신청 직전 공식 채널의 최신 정보를 확인해 주십시오.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-08</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-09</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-03-17",
-    updated: "2026-05-08",
+    date: "2026-03-18",
+    updated: "2026-05-09",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["버팀목", "전세자금대출", "신혼부부", "정책대출", "전세대출", "우대금리", "전세보증금", "주거안정"]
@@ -229,11 +229,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.nts.go.kr" target="_blank" rel="noopener noreferrer">국세청</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글에 인용된 수치는 발행일 기준이며, 이후 정책 변경에 따라 달라질 수 있습니다. 본문 하단 갱신 일자도 함께 확인해 주시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-18</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-20</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-03-18",
+    date: "2026-03-20",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["결혼자금증여", "증여세공제", "혼인공제", "1억5천만원", "증여세신고", "신혼부부", "절세", "결혼자금"]
@@ -279,12 +279,12 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.molit.go.kr" target="_blank" rel="noopener noreferrer">국토교통부</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 정보는 일반 안내용이며 투자 권유나 영업 활동이 아닙니다. 본인 상황에 맞는 의사결정은 전문가 상담 후 신중히 진행하시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-12</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-15</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-03-20",
-    updated: "2026-05-12",
+    date: "2026-03-23",
+    updated: "2026-05-15",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["신혼희망타운", "공공분양", "수익공유형", "신혼부부주택", "LH분양", "내집마련", "정책주택", "분양"]
@@ -334,11 +334,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.hometax.go.kr" target="_blank" rel="noopener noreferrer">홈택스</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글은 정보 제공 목적이며, 개별 부동산 거래나 대출 신청에 대한 자문이 아닙니다. 구체적인 계약 전 변호사·세무사·금융기관에 별도 확인을 권합니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-23</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-26</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-03-23",
+    date: "2026-03-26",
     image: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["연말정산", "맞벌이부부", "부양가족공제", "의료비공제", "신용카드공제", "절세", "환급", "세액공제"]
@@ -388,11 +388,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.khug.or.kr" target="_blank" rel="noopener noreferrer">주택도시보증공사</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 모든 수치와 조건은 본문 작성 시점의 공식 자료에 근거하나, 정책 개정 가능성을 고려해 신청 직전 1차 자료를 재확인하시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-24</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-30</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-03-24",
+    date: "2026-03-30",
     image: "https://images.unsplash.com/photo-1554224128-3c7f3edcc69f?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["전세보증보험", "HUG", "SGI서울보증", "전세사기예방", "보증금반환", "신혼부부", "전세계약", "보증료"]
@@ -442,12 +442,12 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer">금융감독원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글은 신혼부부 일반의 사례를 가정한 정보이며, 개별 가구의 자격 요건은 다를 수 있으므로 본인 상황에 맞춰 별도 점검이 필요합니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-05</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-10</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-03-26",
-    updated: "2026-05-05",
+    date: "2026-04-02",
+    updated: "2026-05-10",
     image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["통장쪼개기", "신혼부부재테크", "공동생활비", "비상금", "부부재무", "자산관리", "저축", "가계부"]
@@ -493,11 +493,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본문에 나오는 금리·한도·세율은 2026년 5월 기준이고, 정책 변경에 따라 달라질 수 있으니 신청 시점에 다시 확인해 주시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-27</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-06</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-03-27",
+    date: "2026-04-06",
     image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["청약통장", "주택청약종합저축", "부부합산청약", "중복청약", "청약저축", "신혼부부", "청약가점", "내집마련"]
@@ -547,11 +547,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.lh.or.kr" target="_blank" rel="noopener noreferrer">LH 한국토지주택공사</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글은 정책·금융 일반 정보를 제공하며, 실제 신청·승인 결과는 개별 심사에 따라 달라질 수 있습니다. 중요 결정 전 해당 기관 공식 안내를 반드시 확인하시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-30</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-09</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-03-30",
+    date: "2026-04-09",
     image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["매입임대주택", "LH임대", "SH임대", "신혼부부임대", "공공임대", "장기임대", "주거지원", "신혼부부"]
@@ -601,11 +601,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer">금융감독원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 콘텐츠는 일반적인 안내를 목적으로 작성되었으며, 특정 개인의 자산·세무 상담을 대체하지 않습니다. 실제 거래 시 세무사·금융기관과 별도 상담을 권합니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-31</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-13</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-03-31",
+    date: "2026-04-13",
     image: "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["보험리모델링", "변액보험", "종신보험", "정기보험", "실손보험", "보험료절감", "신혼부부", "보험점검"]
@@ -655,12 +655,12 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://kostat.go.kr" target="_blank" rel="noopener noreferrer">통계청</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 금리·한도·자격 요건은 정책 개정 및 시장 상황에 따라 수시로 변경되므로, 신청 직전 공식 채널의 최신 정보를 확인해 주십시오.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-09</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-14</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-04-02",
-    updated: "2026-05-09",
+    date: "2026-04-16",
+    updated: "2026-05-14",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["신혼자산관리", "종잣돈", "저축률", "신혼부부재테크", "5천만원", "자산형성", "재무계획", "신혼1년차"]
@@ -710,11 +710,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer">금융감독원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글에 인용된 수치는 발행일 기준이며, 이후 정책 변경에 따라 달라질 수 있습니다. 본문 하단 갱신 일자도 함께 확인해 주시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-06</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-21</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-04-06",
+    date: "2026-04-21",
     image: "https://images.unsplash.com/photo-1579621970590-9d624316904b?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["IRP", "연금저축", "세액공제", "노후준비", "부부재테크", "절세", "신혼부부", "장기투자"]
@@ -764,11 +764,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.nts.go.kr" target="_blank" rel="noopener noreferrer">국세청</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 정보는 일반 안내용이며 투자 권유나 영업 활동이 아닙니다. 본인 상황에 맞는 의사결정은 전문가 상담 후 신중히 진행하시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-07</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-27</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-04-07",
+    date: "2026-04-27",
     image: "https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["부부공동명의", "단독명의", "양도소득세", "주택구입", "절세", "부동산세금", "신혼부부", "등기"]
@@ -818,12 +818,12 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer">금융감독원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글은 정보 제공 목적이며, 개별 부동산 거래나 대출 신청에 대한 자문이 아닙니다. 구체적인 계약 전 변호사·세무사·금융기관에 별도 확인을 권합니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-11</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-16</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-04-09",
-    updated: "2026-05-11",
+    date: "2026-05-04",
+    updated: "2026-05-16",
     image: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["비상금", "파킹통장", "CMA", "6개월생활비", "신혼부부재테크", "유동자금", "자산관리", "이자수익"]
@@ -873,11 +873,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.molit.go.kr" target="_blank" rel="noopener noreferrer">국토교통부</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 모든 수치와 조건은 본문 작성 시점의 공식 자료에 근거하나, 정책 개정 가능성을 고려해 신청 직전 1차 자료를 재확인하시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-13</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-08</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-04-13",
+    date: "2026-05-08",
     image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["주거지원정책", "디딤돌대출", "버팀목대출", "신혼희망타운", "매입임대", "신생아특례", "정책총정리", "신혼부부"]
@@ -927,11 +927,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer">금융감독원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글은 신혼부부 일반의 사례를 가정한 정보이며, 개별 가구의 자격 요건은 다를 수 있으므로 본인 상황에 맞춰 별도 점검이 필요합니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-14</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-13</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-04-14",
+    date: "2026-05-13",
     image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["결혼비용", "신용대출", "마이너스통장", "보험약관대출", "결혼자금마련", "신혼부부대출", "결혼준비", "금리비교"]
@@ -981,11 +981,11 @@ export const MOCK_POSTS = [
       <p>두 사람의 자산 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널을 통해 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 버진로드 편집팀은 신혼부부의 재무 의사결정에 가장 정확한 정보를 전달하기 위해 정책 개정 사항을 지속적으로 반영하겠습니다.</p>
       <p>관련 공식 정보는 <a href="https://www.iros.go.kr" target="_blank" rel="noopener noreferrer">대법원 인터넷등기소</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본문에 나오는 금리·한도·세율은 2026년 5월 기준이고, 정책 변경에 따라 달라질 수 있으니 신청 시점에 다시 확인해 주시기 바랍니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-16</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-15</p>
     `,
     category: "신혼금융",
     author: "버진로드 편집팀",
-    date: "2026-04-16",
+    date: "2026-05-15",
     image: "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["공동명의", "부동산등기", "지분비율", "자금출처", "증여세신고", "취득세", "신혼부부", "주택매수"]
@@ -1035,12 +1035,12 @@ export const MOCK_POSTS = [
       <p>가전과 가구는 한 번 사면 5년에서 10년을 쓰는 물건이에요. 광고나 패키지 할인에 휘둘리지 마시고, 본인 생활 패턴을 기준으로 천천히 결정하시면 후회가 없어요. 버진로드는 신혼집을 꾸리는 모든 분께 도움이 되는 정보를 계속 채워나갈게요.</p>
       <p>관련 공식 정보는 <a href="https://www.kca.go.kr" target="_blank" rel="noopener noreferrer">한국소비자원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 가전·가구 가격과 사양은 모델 라인업과 프로모션에 따라 수시로 바뀌니, 구매 직전 공식몰 또는 매장에서 다시 확인해 주세요.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-07</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-11</p>
     `,
     category: "신혼가전",
     author: "버진로드 편집팀",
-    date: "2026-03-19",
-    updated: "2026-05-07",
+    date: "2026-03-17",
+    updated: "2026-05-11",
     image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["신혼가전", "삼성가전", "LG가전", "혼수가전", "졸업패키지", "TV", "냉장고", "세탁기"]
@@ -1090,11 +1090,11 @@ export const MOCK_POSTS = [
       <p>가전과 가구는 한 번 사면 5년에서 10년을 쓰는 물건이에요. 광고나 패키지 할인에 휘둘리지 마시고, 본인 생활 패턴을 기준으로 천천히 결정하시면 후회가 없어요. 버진로드는 신혼집을 꾸리는 모든 분께 도움이 되는 정보를 계속 채워나갈게요.</p>
       <p>관련 공식 정보는 <a href="https://www.kca.go.kr" target="_blank" rel="noopener noreferrer">한국소비자원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글은 제조사로부터 어떠한 대가도 받지 않은 일반 정보입니다. 실제 구매 결정은 본인의 사용 패턴과 예산을 기준으로 판단하시면 됩니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-25</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-24</p>
     `,
     category: "신혼가전",
     author: "버진로드 편집팀",
-    date: "2026-03-25",
+    date: "2026-03-24",
     image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["가전사이즈", "신혼집평수", "TV사이즈", "냉장고용량", "에어컨평형", "공간활용", "인테리어", "혼수가전"]
@@ -1144,11 +1144,11 @@ export const MOCK_POSTS = [
       <p>가전과 가구는 한 번 사면 5년에서 10년을 쓰는 물건이에요. 광고나 패키지 할인에 휘둘리지 마시고, 본인 생활 패턴을 기준으로 천천히 결정하시면 후회가 없어요. 버진로드는 신혼집을 꾸리는 모든 분께 도움이 되는 정보를 계속 채워나갈게요.</p>
       <p>관련 공식 정보는 <a href="https://www.energy.or.kr" target="_blank" rel="noopener noreferrer">한국에너지공단</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 모델별 사양과 할인율은 시점에 따라 달라집니다. 본문 갱신일을 확인하시고, 구매 전 최신 가격을 비교해 주세요.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-01</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-31</p>
     `,
     category: "신혼가전",
     author: "버진로드 편집팀",
-    date: "2026-04-01",
+    date: "2026-03-31",
     image: "https://images.unsplash.com/photo-1556909172-89c5a4a9e0c2?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["빌트인가전", "신혼인테리어", "식기세척기", "인덕션", "정수기", "주방가전", "교체비용", "장기거주"]
@@ -1202,7 +1202,7 @@ export const MOCK_POSTS = [
     `,
     category: "신혼가전",
     author: "버진로드 편집팀",
-    date: "2026-04-03",
+    date: "2026-04-07",
     updated: "2026-05-13",
     image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
@@ -1253,11 +1253,11 @@ export const MOCK_POSTS = [
       <p>가전과 가구는 한 번 사면 5년에서 10년을 쓰는 물건이에요. 광고나 패키지 할인에 휘둘리지 마시고, 본인 생활 패턴을 기준으로 천천히 결정하시면 후회가 없어요. 버진로드는 신혼집을 꾸리는 모든 분께 도움이 되는 정보를 계속 채워나갈게요.</p>
       <p>관련 공식 정보는 <a href="https://www.kca.go.kr" target="_blank" rel="noopener noreferrer">한국소비자원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 글 속 가격·할인 정보는 발행 시점 기준이고, 매장과 시즌에 따라 차이가 크게 날 수 있어요. 최신 정보는 공식 채널을 참고해 주세요.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-08</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-14</p>
     `,
     category: "신혼가전",
     author: "버진로드 편집팀",
-    date: "2026-04-08",
+    date: "2026-04-14",
     image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["매트리스", "시몬스", "템퍼", "이케아매트리스", "퀸사이즈", "킹사이즈", "신혼침대", "수면"]
@@ -1307,11 +1307,11 @@ export const MOCK_POSTS = [
       <p>가전과 가구는 한 번 사면 5년에서 10년을 쓰는 물건이에요. 광고나 패키지 할인에 휘둘리지 마시고, 본인 생활 패턴을 기준으로 천천히 결정하시면 후회가 없어요. 버진로드는 신혼집을 꾸리는 모든 분께 도움이 되는 정보를 계속 채워나갈게요.</p>
       <p>관련 공식 정보는 <a href="https://www.kca.go.kr" target="_blank" rel="noopener noreferrer">한국소비자원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 가전·가구 선택은 개인의 취향과 거주 환경에 크게 좌우됩니다. 본 글은 일반적인 비교 자료로만 활용해 주세요.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-10</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-23</p>
     `,
     category: "신혼가전",
     author: "버진로드 편집팀",
-    date: "2026-04-10",
+    date: "2026-04-23",
     image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["혼수구매타이밍", "신혼박람회", "가전할인", "시즌세일", "신모델", "혼수준비", "구매시기", "예산절감"]
@@ -1361,11 +1361,11 @@ export const MOCK_POSTS = [
       <p>가전과 가구는 한 번 사면 5년에서 10년을 쓰는 물건이에요. 광고나 패키지 할인에 휘둘리지 마시고, 본인 생활 패턴을 기준으로 천천히 결정하시면 후회가 없어요. 버진로드는 신혼집을 꾸리는 모든 분께 도움이 되는 정보를 계속 채워나갈게요.</p>
       <p>관련 공식 정보는 <a href="https://www.kca.go.kr" target="_blank" rel="noopener noreferrer">한국소비자원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 가전·가구 가격과 사양은 모델 라인업과 프로모션에 따라 수시로 바뀌니, 구매 직전 공식몰 또는 매장에서 다시 확인해 주세요.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-15</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-06</p>
     `,
     category: "신혼가전",
     author: "버진로드 편집팀",
-    date: "2026-04-15",
+    date: "2026-05-06",
     image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["신혼인테리어", "도배", "마루시공", "조명", "입주청소", "필름", "인테리어예산", "셀프인테리어"]
@@ -1415,11 +1415,11 @@ export const MOCK_POSTS = [
       <p>가전과 가구는 한 번 사면 5년에서 10년을 쓰는 물건이에요. 광고나 패키지 할인에 휘둘리지 마시고, 본인 생활 패턴을 기준으로 천천히 결정하시면 후회가 없어요. 버진로드는 신혼집을 꾸리는 모든 분께 도움이 되는 정보를 계속 채워나갈게요.</p>
       <p>관련 공식 정보는 <a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer">금융감독원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글은 제조사로부터 어떠한 대가도 받지 않은 일반 정보입니다. 실제 구매 결정은 본인의 사용 패턴과 예산을 기준으로 판단하시면 됩니다.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-20</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-14</p>
     `,
     category: "신혼가전",
     author: "버진로드 편집팀",
-    date: "2026-04-20",
+    date: "2026-05-14",
     image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["무이자할부", "카드청구할인", "가전구매", "할부수수료", "신용카드혜택", "혼수가전", "할인비교", "결제전략"]
@@ -1469,12 +1469,12 @@ export const MOCK_POSTS = [
       <p>결혼 준비는 정답이 없는 영역이거든요. 평균값에 너무 매이지 말고, 두 사람이 가장 중요하게 생각하는 것에 예산과 시간을 더 쓰시면 돼요. 버진로드는 결혼을 앞둔 분들이 합리적으로 결정할 수 있도록 솔직한 정보로 함께할게요.</p>
       <p>관련 공식 정보는 <a href="https://kostat.go.kr" target="_blank" rel="noopener noreferrer">통계청</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 내용은 결혼 준비 일반 정보를 제공하는 목적이고, 특정 업체나 서비스를 추천하지 않아요. 계약 전 약관과 환불 조건을 꼭 확인해 주세요.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-06</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-08</p>
     `,
     category: "결혼준비",
     author: "버진로드 편집팀",
-    date: "2026-03-21",
-    updated: "2026-05-06",
+    date: "2026-03-19",
+    updated: "2026-05-08",
     image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["스드메", "웨딩촬영", "웨딩드레스", "신부메이크업", "결혼견적", "추가비용", "결혼준비", "웨딩패키지"]
@@ -1524,11 +1524,11 @@ export const MOCK_POSTS = [
       <p>결혼 준비는 정답이 없는 영역이거든요. 평균값에 너무 매이지 말고, 두 사람이 가장 중요하게 생각하는 것에 예산과 시간을 더 쓰시면 돼요. 버진로드는 결혼을 앞둔 분들이 합리적으로 결정할 수 있도록 솔직한 정보로 함께할게요.</p>
       <p>관련 공식 정보는 <a href="https://kostat.go.kr" target="_blank" rel="noopener noreferrer">통계청</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 비용·일정은 개인차가 매우 큰 영역이라 평균값을 그대로 적용하기보다, 본인 예산과 일정에 맞춰 참고용으로 활용해 주세요.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-21</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-10</p>
     `,
     category: "결혼준비",
     author: "버진로드 편집팀",
-    date: "2026-04-21",
+    date: "2026-04-10",
     image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["웨딩홀", "호텔웨딩", "컨벤션웨딩", "하우스웨딩", "예식장", "식대", "하객수", "결혼식장"]
@@ -1582,11 +1582,11 @@ export const MOCK_POSTS = [
       <p>결혼 준비는 정답이 없는 영역이거든요. 평균값에 너무 매이지 말고, 두 사람이 가장 중요하게 생각하는 것에 예산과 시간을 더 쓰시면 돼요. 버진로드는 결혼을 앞둔 분들이 합리적으로 결정할 수 있도록 솔직한 정보로 함께할게요.</p>
       <p>관련 공식 정보는 <a href="https://kostat.go.kr" target="_blank" rel="noopener noreferrer">통계청</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글에 등장하는 비용 수치는 평균적인 시장 기준이고, 지역·시기·업체에 따라 차이가 크게 날 수 있어요. 실제 계약 전에는 여러 업체 견적을 비교해 보시는 게 좋아요.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-27</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-30</p>
     `,
     category: "결혼준비",
     author: "버진로드 편집팀",
-    date: "2026-04-27",
+    date: "2026-04-30",
     image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["결혼준비타임라인", "결혼체크리스트", "6개월준비", "상견례", "예식장계약", "청첩장", "신혼여행", "혼수"]
@@ -1636,11 +1636,11 @@ export const MOCK_POSTS = [
       <p>결혼 준비는 정답이 없는 영역이거든요. 평균값에 너무 매이지 말고, 두 사람이 가장 중요하게 생각하는 것에 예산과 시간을 더 쓰시면 돼요. 버진로드는 결혼을 앞둔 분들이 합리적으로 결정할 수 있도록 솔직한 정보로 함께할게요.</p>
       <p>관련 공식 정보는 <a href="https://www.kca.go.kr" target="_blank" rel="noopener noreferrer">한국소비자원</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 결혼 준비는 두 사람과 양가 가족의 합의가 가장 중요해요. 본 글은 일반적인 가이드이며, 본인 상황에 맞게 유연하게 조정해 주세요.</p>
-      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-04</p>
+      <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-17</p>
     `,
     category: "결혼준비",
     author: "버진로드 편집팀",
-    date: "2026-05-04",
+    date: "2026-05-17",
     image: "https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&q=80&w=800",
     readTime: "5분",
     hashtags: ["예단", "예물", "결혼협상", "양가설득", "결혼비용절감", "현명한결혼", "결혼문화", "신혼부부"]

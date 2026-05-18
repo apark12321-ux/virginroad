@@ -8,6 +8,25 @@ interface NavbarProps {
   searchQuery?: string;
 }
 
+// Logo: interlocking rings (wedding band motif)
+function LogoIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="16" r="9" />
+      <circle cx="20" cy="16" r="9" />
+    </svg>
+  );
+}
+
 export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,14 +59,22 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
       >
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
           <div className="flex items-center justify-between h-16">
-            {/* Logo — single weight, all black */}
+            {/* Logo: icon + English wordmark + Korean subline */}
             <button
               onClick={goHome}
-              className="flex items-center gap-2 text-[#111111] hover:opacity-70 transition-opacity"
+              className="flex items-center gap-2.5 text-[#111111] hover:opacity-70 transition-opacity"
               id="site-logo"
               aria-label="버진로드 홈"
             >
-              <span className="text-[19px] font-bold tracking-tight leading-none">버진로드</span>
+              <LogoIcon className="w-7 h-7 shrink-0" />
+              <div className="flex flex-col items-start leading-none">
+                <span className="text-[15px] font-bold tracking-[0.08em] uppercase">
+                  VIRGINROAD
+                </span>
+                <span className="text-[10px] font-medium text-[#888888] mt-1 tracking-wide">
+                  버진로드
+                </span>
+              </div>
             </button>
 
             {/* Desktop nav */}
@@ -100,7 +127,7 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
                 )}
               </div>
 
-              {/* Mobile: search icon */}
+              {/* Mobile: hamburger */}
               <button
                 onClick={() => setIsMobileMenuOpen((v) => !v)}
                 className="md:hidden p-2.5 rounded-md text-[#333333] hover:bg-[#F5F5F5] transition-colors"
@@ -118,11 +145,10 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
           </div>
         </div>
 
-        {/* Mobile menu — full overlay below header */}
+        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-[#DADADA] bg-white">
             <div className="px-5 py-4 space-y-1">
-              {/* Mobile search */}
               <div className="flex items-center bg-[#F5F5F5] rounded-md pl-3 pr-1 h-11 mb-3">
                 <Search className="w-4 h-4 text-[#888888] shrink-0" />
                 <input
@@ -159,7 +185,6 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
           </div>
         )}
       </nav>
-      {/* Spacer */}
       <div className="h-16" />
     </>
   );

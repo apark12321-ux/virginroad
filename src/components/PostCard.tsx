@@ -38,12 +38,12 @@ export function PostCard({ post, onClick }: PostCardProps) {
       </p>
 
       {/* Title */}
-      <h3 className="text-[16px] sm:text-[17px] font-bold leading-[1.45] text-[#111111] mb-2 break-keep line-clamp-3 group-hover:underline underline-offset-2 decoration-1">
+      <h3 className="text-[16px] sm:text-[17px] font-bold leading-[1.4] text-[#111111] mb-2 break-keep line-clamp-3 group-hover:underline underline-offset-2 decoration-1">
         {post.title}
       </h3>
 
       {/* Excerpt */}
-      <p className="text-[14px] leading-[1.55] text-[#4A4A4A] line-clamp-2 break-keep mb-3">
+      <p className="text-[14px] leading-[1.5] text-[#4A4A4A] line-clamp-2 break-keep mb-3">
         {post.excerpt}
       </p>
 

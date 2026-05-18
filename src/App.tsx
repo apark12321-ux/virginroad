@@ -354,10 +354,13 @@ export default function App() {
             >
               {/* HERO: tight, monochrome, content-first */}
               <div className="pt-10 lg:pt-16 pb-12 lg:pb-20 border-b border-[#DADADA]">
-                <h1 className="text-[32px] sm:text-[44px] lg:text-[56px] font-bold tracking-[-0.03em] leading-[1.15] text-[#111111] mb-6 break-keep max-w-4xl">
+                <p className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#888888] mb-5">
+                  Virgin Road · A new beginning
+                </p>
+                <h1 className="text-[32px] sm:text-[44px] lg:text-[56px] font-bold tracking-[-0.03em] leading-[1.1] text-[#111111] mb-5 break-keep max-w-4xl">
                   결혼과 신혼, 가장 정확한 정보로 시작하세요.
                 </h1>
-                <p className="text-[16px] sm:text-[17px] leading-[1.7] text-[#4A4A4A] max-w-2xl break-keep mb-8">
+                <p className="text-[16px] sm:text-[17px] leading-[1.6] text-[#4A4A4A] max-w-2xl break-keep mb-8">
                   디딤돌·보금자리·신생아특례 정책 대출부터 신혼가전 비교, 결혼 준비 6개월 타임라인까지.
                   평균값이 아니라 본인 가구에 맞는 답을 찾도록 돕습니다.
                 </p>
