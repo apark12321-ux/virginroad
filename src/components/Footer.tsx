@@ -137,19 +137,17 @@ export function Footer({ onNavigate }: FooterProps) {
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
             <div className="space-y-2">
               <p className="text-[13px] text-[#4A3F30] leading-[1.7]">
-                <span className="font-bold text-[#2C2419]">알고파트너스</span>
-                <span className="mx-2 text-[#C8BBA8]">·</span>대표 박예준
-                <span className="mx-2 text-[#C8BBA8]">·</span>사업자등록번호 450-07-03104
+                <span className="font-bold text-[#2C2419]">상상아트</span>
+                <span className="mx-2 text-[#C8BBA8]">·</span>사업자등록번호 272-14-01256
+                <span className="mx-2 text-[#C8BBA8]">·</span>통신판매업 신고번호 제2023-화성동탄-1098호
               </p>
               <p className="text-[13px] text-[#4A3F30] leading-[1.7]">
-                인천광역시 서구 청라커낼로 270
-                <span className="mx-2 text-[#C8BBA8]">·</span>
                 <a href="mailto:apark12321@gmail.com" className="hover:text-[#E8745F] transition-colors">
                   apark12321@gmail.com
                 </a>
               </p>
               <p className="text-[11px] text-[#968670] pt-2">
-                © {currentYear} VirginRoad · 알고파트너스. All rights reserved.
+                © {currentYear} VirginRoad · 상상아트. All rights reserved.
               </p>
             </div>
             <div className="flex items-center gap-5">
