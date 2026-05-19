@@ -347,221 +347,307 @@ export default function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="max-w-[1400px] mx-auto px-5 lg:px-10"
             >
-              {/* HERO — compact, info-dense */}
-              <div className="pt-8 lg:pt-12 pb-8 lg:pb-10 border-b border-[#DADADA]">
-                <p className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#888888] mb-3">
-                  Virgin Road · A new beginning
-                </p>
-                <h1 className="text-[28px] sm:text-[36px] lg:text-[44px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-3 break-keep max-w-3xl">
-                  결혼과 신혼, 가장 정확한 정보로 시작하세요.
-                </h1>
-                <p className="text-[14px] sm:text-[15px] leading-[1.6] text-[#4A4A4A] max-w-2xl break-keep mb-5">
-                  디딤돌·보금자리·신생아특례 대출부터 신혼가전 비교, 결혼 6개월 준비 타임라인까지 — 평균값 대신 본인 가구에 맞는 답을 찾도록 돕습니다.
-                </p>
-                {/* Quick chips for popular topics */}
-                <div className="flex flex-wrap gap-1.5">
-                  {[
-                    { label: "디딤돌대출", page: "category-신혼금융" },
-                    { label: "신혼특공", page: "category-신혼금융" },
-                    { label: "신생아특례", page: "category-신혼금융" },
-                    { label: "혼수가전 비교", page: "category-신혼가전" },
-                    { label: "스드메 견적", page: "category-결혼준비" },
-                    { label: "결혼 타임라인", page: "category-결혼준비" },
-                  ].map((chip) => (
-                    <button
-                      key={chip.label}
-                      onClick={() => handleNavigate(chip.page)}
-                      className="text-[12px] font-medium text-[#4A4A4A] bg-[#F5F5F5] hover:bg-[#DADADA] hover:text-[#111111] px-3 py-1.5 rounded-full transition-colors"
-                    >
-                      {chip.label}
-                    </button>
-                  ))}
+              {/* HERO — warm gradient background, dense info */}
+              <div className="gradient-warm relative overflow-hidden">
+                {/* Decorative circles */}
+                <div className="absolute top-10 right-10 w-64 h-64 bg-[#FFD2BD] rounded-full opacity-20 blur-3xl" />
+                <div className="absolute bottom-10 left-10 w-48 h-48 bg-[#FFE9D9] rounded-full opacity-30 blur-2xl" />
+
+                <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-10 lg:py-16 relative">
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    {/* Left: Hero text */}
+                    <div className="lg:col-span-7">
+                      <div className="inline-flex items-center gap-2 mb-4">
+                        <span className="badge-coral">결혼·신혼 가이드</span>
+                        <span className="text-[12px] font-medium text-[#968670]">
+                          · 35개 글 · 매일 업데이트
+                        </span>
+                      </div>
+                      <h1 className="text-[32px] sm:text-[42px] lg:text-[52px] font-bold tracking-[-0.03em] leading-[1.15] text-[#2C2419] mb-5 break-keep">
+                        결혼과 신혼,<br />
+                        <span className="text-[#E8745F]">가장 정확한 정보</span>로<br />
+                        시작하세요.
+                      </h1>
+                      <p className="text-[15px] sm:text-[16px] leading-[1.7] text-[#4A3F30] max-w-xl break-keep mb-6">
+                        디딤돌·보금자리·신생아특례 대출부터 신혼가전 비교, 결혼 준비 6개월 타임라인까지.
+                        평균값이 아닌 본인 가구에 맞는 답을 찾도록 돕습니다.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {[
+                          { label: "💰 디딤돌대출", page: "category-신혼금융" },
+                          { label: "🏠 신혼특공", page: "category-신혼금융" },
+                          { label: "👶 신생아특례", page: "category-신혼금융" },
+                          { label: "📱 혼수가전 비교", page: "category-신혼가전" },
+                          { label: "💍 스드메 견적", page: "category-결혼준비" },
+                          { label: "📅 결혼 타임라인", page: "category-결혼준비" },
+                        ].map((chip) => (
+                          <button
+                            key={chip.label}
+                            onClick={() => handleNavigate(chip.page)}
+                            className="text-[13px] font-semibold text-[#4A3F30] bg-white hover:bg-[#FFE9D9] hover:text-[#E8745F] border border-[#E8DDCB] hover:border-[#FFD2BD] px-3.5 py-2 rounded-full transition-all"
+                          >
+                            {chip.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Right: Stats card */}
+                    <div className="lg:col-span-5">
+                      <div className="bg-white/80 backdrop-blur-sm border border-[#E8DDCB] rounded-2xl p-6 lg:p-8 shadow-sm">
+                        <div className="flex items-center gap-2 mb-5">
+                          <div className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
+                          <span className="text-[11px] font-bold text-[#22C55E] tracking-wide uppercase">Live · 운영 중</span>
+                        </div>
+                        <h3 className="text-[18px] font-bold text-[#2C2419] mb-5">
+                          이번 주 버진로드 소식
+                        </h3>
+                        <div className="space-y-3.5">
+                          <div className="flex justify-between items-center pb-3 border-b border-[#F4EDE3]">
+                            <span className="text-[14px] text-[#4A3F30]">총 발행 글</span>
+                            <span className="text-[22px] font-bold text-[#E8745F]">{allPosts.length}개</span>
+                          </div>
+                          <div className="flex justify-between items-center pb-3 border-b border-[#F4EDE3]">
+                            <span className="text-[14px] text-[#4A3F30]">이번 주 신규</span>
+                            <span className="text-[18px] font-bold text-[#2C2419]">5개</span>
+                          </div>
+                          <div className="flex justify-between items-center pb-3 border-b border-[#F4EDE3]">
+                            <span className="text-[14px] text-[#4A3F30]">정부·공공 자료 인용</span>
+                            <span className="text-[18px] font-bold text-[#2C2419]">100%</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-[14px] text-[#4A3F30]">최신 정책 반영</span>
+                            <span className="text-[14px] font-bold text-[#2C2419]">2026.05.19</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* === CATEGORY SECTIONS — info-dense, 4~6 posts each === */}
-              {(() => {
-                // Helper to get N most recent posts in a category
-                const byCategory = (cat: string, n: number) =>
-                  allPosts.filter(p => p.category === cat).slice(0, n);
+              {/* === CATEGORY SECTIONS — info-dense === */}
+              <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
+                {(() => {
+                  const byCategory = (cat: string, n: number) =>
+                    allPosts.filter(p => p.category === cat).slice(0, n);
 
-                const finPosts = byCategory("신혼금융", 6);
-                const appPosts = byCategory("신혼가전", 4);
-                const wedPosts = byCategory("결혼준비", 4);
+                  const finPosts = byCategory("신혼금융", 6);
+                  const appPosts = byCategory("신혼가전", 4);
+                  const wedPosts = byCategory("결혼준비", 4);
 
-                return (
-                  <>
-                    {/* 신혼금융 — feature 1 + 5 list */}
-                    {finPosts.length >= 6 && (
-                      <section className="py-10 lg:py-14 border-b border-[#DADADA]">
-                        <div className="flex items-end justify-between mb-6">
-                          <div>
-                            <p className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#888888] mb-1.5">
-                              Category 01
-                            </p>
-                            <h2 className="text-[22px] sm:text-[26px] font-bold text-[#111111] tracking-[-0.02em]">
-                              신혼금융
-                            </h2>
-                          </div>
-                          <button
-                            onClick={() => handleNavigate("category-신혼금융")}
-                            className="text-[13px] font-semibold text-[#4A4A4A] hover:text-[#111111] inline-flex items-center gap-1"
-                          >
-                            전체 보기 ({allPosts.filter(p => p.category === "신혼금융").length})
-                            <ArrowRight className="w-3.5 h-3.5" />
-                          </button>
-                        </div>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-                          {/* Large feature */}
-                          <button
-                            onClick={() => handleNavigate(`post-${finPosts[0].id}`)}
-                            className="group text-left lg:col-span-6"
-                          >
-                            <div className="aspect-[4/3] overflow-hidden bg-[#F5F5F5] rounded-lg mb-4">
-                              <img
-                                src={finPosts[0].image}
-                                alt={finPosts[0].title}
-                                referrerPolicy="no-referrer"
-                                loading="lazy"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                              />
+                  return (
+                    <>
+                      {/* 신혼금융 — 1 large + 5 list */}
+                      {finPosts.length >= 6 && (
+                        <section className="py-12 lg:py-16">
+                          <div className="flex items-end justify-between mb-8">
+                            <div>
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-1 h-6 bg-[#E8745F] rounded-full" />
+                                <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#E8745F]">
+                                  Category 01
+                                </p>
+                              </div>
+                              <h2 className="text-[24px] sm:text-[30px] font-bold text-[#2C2419] tracking-[-0.025em]">
+                                💰 신혼금융
+                              </h2>
+                              <p className="text-[13px] text-[#6B5D4A] mt-1">
+                                대출·청약·세금·자산관리, 신혼부부의 첫 번째 결정
+                              </p>
                             </div>
-                            <p className="text-[12px] font-medium text-[#888888] mb-1.5">
-                              {finPosts[0].date.replace(/-/g, ". ")} · {calculateReadTime(finPosts[0].content)} 읽기
-                            </p>
-                            <h3 className="text-[18px] sm:text-[20px] font-bold leading-[1.35] text-[#111111] mb-2 break-keep group-hover:underline underline-offset-4 decoration-1">
-                              {finPosts[0].title}
-                            </h3>
-                            <p className="text-[14px] leading-[1.55] text-[#4A4A4A] line-clamp-2 break-keep">
-                              {finPosts[0].excerpt}
-                            </p>
-                          </button>
-
-                          {/* 5 compact list items */}
-                          <ul className="lg:col-span-6 divide-y divide-[#DADADA]">
-                            {finPosts.slice(1, 6).map((post, idx) => (
-                              <li key={post.id}>
-                                <button
-                                  onClick={() => handleNavigate(`post-${post.id}`)}
-                                  className="group flex items-start gap-3 w-full text-left py-3 first:pt-0 last:pb-0"
-                                >
-                                  <span className="text-[12px] font-bold text-[#888888] tabular-nums shrink-0 pt-0.5">
-                                    0{idx + 2}
-                                  </span>
-                                  <div className="min-w-0 flex-1">
-                                    <h4 className="text-[14px] font-semibold leading-[1.4] text-[#111111] break-keep line-clamp-2 group-hover:underline underline-offset-2 decoration-1">
-                                      {post.title}
-                                    </h4>
-                                    <p className="text-[11px] text-[#888888] mt-1">
-                                      {post.date.replace(/-/g, ". ")}
-                                    </p>
-                                  </div>
-                                </button>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </section>
-                    )}
-
-                    {/* 신혼가전 — 4 horizontal cards */}
-                    {appPosts.length >= 4 && (
-                      <section className="py-10 lg:py-14 border-b border-[#DADADA]">
-                        <div className="flex items-end justify-between mb-6">
-                          <div>
-                            <p className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#888888] mb-1.5">
-                              Category 02
-                            </p>
-                            <h2 className="text-[22px] sm:text-[26px] font-bold text-[#111111] tracking-[-0.02em]">
-                              신혼가전
-                            </h2>
-                          </div>
-                          <button
-                            onClick={() => handleNavigate("category-신혼가전")}
-                            className="text-[13px] font-semibold text-[#4A4A4A] hover:text-[#111111] inline-flex items-center gap-1"
-                          >
-                            전체 보기 ({allPosts.filter(p => p.category === "신혼가전").length})
-                            <ArrowRight className="w-3.5 h-3.5" />
-                          </button>
-                        </div>
-
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 lg:gap-x-5">
-                          {appPosts.map(post => (
-                            <PostCard
-                              key={post.id}
-                              post={post}
-                              onClick={(id) => handleNavigate(`post-${id}`)}
-                            />
-                          ))}
-                        </div>
-                      </section>
-                    )}
-
-                    {/* 결혼준비 — 4 horizontal cards (uses all 4 wed posts) */}
-                    {wedPosts.length >= 4 && (
-                      <section className="py-10 lg:py-14 border-b border-[#DADADA]">
-                        <div className="flex items-end justify-between mb-6">
-                          <div>
-                            <p className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#888888] mb-1.5">
-                              Category 03
-                            </p>
-                            <h2 className="text-[22px] sm:text-[26px] font-bold text-[#111111] tracking-[-0.02em]">
-                              결혼준비
-                            </h2>
-                          </div>
-                          <button
-                            onClick={() => handleNavigate("category-결혼준비")}
-                            className="text-[13px] font-semibold text-[#4A4A4A] hover:text-[#111111] inline-flex items-center gap-1"
-                          >
-                            전체 보기 ({allPosts.filter(p => p.category === "결혼준비").length})
-                            <ArrowRight className="w-3.5 h-3.5" />
-                          </button>
-                        </div>
-
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 lg:gap-x-5">
-                          {wedPosts.map(post => (
-                            <PostCard
-                              key={post.id}
-                              post={post}
-                              onClick={(id) => handleNavigate(`post-${id}`)}
-                            />
-                          ))}
-                        </div>
-                      </section>
-                    )}
-
-                    {/* All posts CTA strip */}
-                    <section className="py-12 lg:py-16 text-center bg-[#FAFAFA] rounded-xl my-10">
-                      <p className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#888888] mb-3">
-                        Browse All
-                      </p>
-                      <h2 className="text-[22px] sm:text-[28px] font-bold tracking-[-0.02em] text-[#111111] mb-3 break-keep">
-                        총 {allPosts.length}개의 글, 카테고리별로 살펴보세요.
-                      </h2>
-                      <p className="text-[14px] text-[#4A4A4A] mb-6 break-keep max-w-md mx-auto px-4">
-                        본인 가구 상황에 맞는 글을 카테고리별로 빠르게 찾아볼 수 있습니다.
-                      </p>
-                      <div className="flex flex-wrap justify-center gap-2 px-4">
-                        {CATEGORIES.map(cat => {
-                          const count = allPosts.filter(p => p.category === cat).length;
-                          return (
                             <button
-                              key={cat}
-                              onClick={() => handleNavigate(`category-${cat}`)}
-                              className="inline-flex items-center gap-1.5 px-4 h-10 bg-white border border-[#DADADA] hover:border-[#111111] text-[#111111] text-[13px] font-semibold rounded-md transition-colors"
+                              onClick={() => handleNavigate("category-신혼금융")}
+                              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#FFE9D9] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all"
                             >
-                              {cat} · {count}
+                              전체 {allPosts.filter(p => p.category === "신혼금융").length}개 보기
+                              <ArrowRight className="w-3.5 h-3.5" />
                             </button>
-                          );
-                        })}
-                      </div>
-                    </section>
-                  </>
-                );
-              })()}
+                          </div>
+
+                          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+                            {/* Large feature */}
+                            <button
+                              onClick={() => handleNavigate(`post-${finPosts[0].id}`)}
+                              className="group text-left lg:col-span-6 card-warm p-0 overflow-hidden flex flex-col"
+                            >
+                              <div className="aspect-[5/3] overflow-hidden bg-[#FFF6EE] relative">
+                                <img
+                                  src={finPosts[0].image}
+                                  alt={finPosts[0].title}
+                                  referrerPolicy="no-referrer"
+                                  loading="lazy"
+                                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute top-3 left-3">
+                                  <span className="badge-new">최신</span>
+                                </div>
+                              </div>
+                              <div className="p-5">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <span className="text-[11px] font-bold text-[#E8745F]">신혼금융</span>
+                                  <span className="w-1 h-1 bg-[#C8BBA8] rounded-full" />
+                                  <span className="text-[11px] text-[#968670]">
+                                    {finPosts[0].date.replace(/-/g, ". ")} · {calculateReadTime(finPosts[0].content)} 읽기
+                                  </span>
+                                </div>
+                                <h3 className="text-[19px] sm:text-[21px] font-bold leading-[1.35] text-[#2C2419] mb-2.5 break-keep group-hover:text-[#E8745F] transition-colors">
+                                  {finPosts[0].title}
+                                </h3>
+                                <p className="text-[14px] leading-[1.6] text-[#4A3F30] line-clamp-2 break-keep">
+                                  {finPosts[0].excerpt}
+                                </p>
+                              </div>
+                            </button>
+
+                            {/* 5 compact list items */}
+                            <div className="lg:col-span-6 card-warm p-2 lg:p-3">
+                              <ul className="divide-y divide-[#F4EDE3]">
+                                {finPosts.slice(1, 6).map((post, idx) => (
+                                  <li key={post.id}>
+                                    <button
+                                      onClick={() => handleNavigate(`post-${post.id}`)}
+                                      className="group flex items-start gap-3 w-full text-left p-3 hover:bg-[#FFF6EE] rounded-lg transition-colors"
+                                    >
+                                      <span className="flex items-center justify-center w-7 h-7 bg-[#FFE9D9] text-[#B0432F] text-[11px] font-bold rounded-full shrink-0 tabular-nums">
+                                        {idx + 2}
+                                      </span>
+                                      <div className="min-w-0 flex-1">
+                                        <h4 className="text-[14px] font-bold leading-[1.4] text-[#2C2419] break-keep line-clamp-2 group-hover:text-[#E8745F] transition-colors mb-1">
+                                          {post.title}
+                                        </h4>
+                                        <p className="text-[11px] text-[#968670] font-medium">
+                                          {post.date.replace(/-/g, ". ")} · {calculateReadTime(post.content)}
+                                        </p>
+                                      </div>
+                                    </button>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        </section>
+                      )}
+
+                      {/* 신혼가전 */}
+                      {appPosts.length >= 4 && (
+                        <section className="py-12 lg:py-16 border-t border-[#E8DDCB]">
+                          <div className="flex items-end justify-between mb-8">
+                            <div>
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-1 h-6 bg-[#E8745F] rounded-full" />
+                                <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#E8745F]">
+                                  Category 02
+                                </p>
+                              </div>
+                              <h2 className="text-[24px] sm:text-[30px] font-bold text-[#2C2419] tracking-[-0.025em]">
+                                🏠 신혼가전
+                              </h2>
+                              <p className="text-[13px] text-[#6B5D4A] mt-1">
+                                혼수가전 비교, 인테리어 예산, 실용 구매 가이드
+                              </p>
+                            </div>
+                            <button
+                              onClick={() => handleNavigate("category-신혼가전")}
+                              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#FFE9D9] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all"
+                            >
+                              전체 {allPosts.filter(p => p.category === "신혼가전").length}개 보기
+                              <ArrowRight className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+
+                          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+                            {appPosts.map(post => (
+                              <PostCard
+                                key={post.id}
+                                post={post}
+                                onClick={(id) => handleNavigate(`post-${id}`)}
+                              />
+                            ))}
+                          </div>
+                        </section>
+                      )}
+
+                      {/* 결혼준비 */}
+                      {wedPosts.length >= 4 && (
+                        <section className="py-12 lg:py-16 border-t border-[#E8DDCB]">
+                          <div className="flex items-end justify-between mb-8">
+                            <div>
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-1 h-6 bg-[#E8745F] rounded-full" />
+                                <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#E8745F]">
+                                  Category 03
+                                </p>
+                              </div>
+                              <h2 className="text-[24px] sm:text-[30px] font-bold text-[#2C2419] tracking-[-0.025em]">
+                                💍 결혼준비
+                              </h2>
+                              <p className="text-[13px] text-[#6B5D4A] mt-1">
+                                스드메·예식장·청첩장, 결혼 준비의 모든 것
+                              </p>
+                            </div>
+                            <button
+                              onClick={() => handleNavigate("category-결혼준비")}
+                              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#FFE9D9] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all"
+                            >
+                              전체 {allPosts.filter(p => p.category === "결혼준비").length}개 보기
+                              <ArrowRight className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+
+                          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+                            {wedPosts.map(post => (
+                              <PostCard
+                                key={post.id}
+                                post={post}
+                                onClick={(id) => handleNavigate(`post-${id}`)}
+                              />
+                            ))}
+                          </div>
+                        </section>
+                      )}
+
+                      {/* All posts CTA strip */}
+                      <section className="py-12 lg:py-16">
+                        <div className="gradient-coral rounded-3xl p-8 lg:p-14 text-center text-white relative overflow-hidden">
+                          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32" />
+                          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24" />
+                          <div className="relative">
+                            <p className="text-[11px] font-bold tracking-[0.25em] uppercase opacity-80 mb-3">
+                              Browse All
+                            </p>
+                            <h2 className="text-[26px] sm:text-[34px] font-bold tracking-[-0.025em] mb-4 break-keep">
+                              총 {allPosts.length}개의 글,<br />카테고리별로 빠르게 찾아보세요.
+                            </h2>
+                            <p className="text-[14px] sm:text-[15px] opacity-90 mb-7 break-keep max-w-lg mx-auto">
+                              본인 가구 상황에 맞는 글을 카테고리별로 찾아보실 수 있습니다.
+                              매주 새로운 글이 업데이트됩니다.
+                            </p>
+                            <div className="flex flex-wrap justify-center gap-2.5">
+                              {CATEGORIES.map(cat => {
+                                const count = allPosts.filter(p => p.category === cat).length;
+                                return (
+                                  <button
+                                    key={cat}
+                                    onClick={() => handleNavigate(`category-${cat}`)}
+                                    className="inline-flex items-center gap-2 px-5 h-11 bg-white text-[#E8745F] text-[14px] font-bold rounded-full hover:bg-[#FFF6EE] transition-colors shadow-sm"
+                                  >
+                                    {cat}
+                                    <span className="px-2 py-0.5 bg-[#FFE9D9] text-[#B0432F] text-[11px] rounded-full">
+                                      {count}
+                                    </span>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </>
+                  );
+                })()}
+              </div>
             </motion.section>
           )}
 
