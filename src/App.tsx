@@ -440,14 +440,14 @@ export default function App() {
                   const byCategory = (cat: string, n: number) =>
                     allPosts.filter(p => p.category === cat).slice(0, n);
 
-                  const finPosts = byCategory("신혼금융", 6);
+                  const finPosts = byCategory("신혼금융", 7);
                   const appPosts = byCategory("신혼가전", 4);
                   const wedPosts = byCategory("결혼준비", 4);
 
                   return (
                     <>
                       {/* 신혼금융 — 1 large + 5 list */}
-                      {finPosts.length >= 6 && (
+                      {finPosts.length >= 7 && (
                         <section className="py-12 lg:py-16">
                           <div className="flex items-end justify-between mb-8">
                             <div>
@@ -508,14 +508,14 @@ export default function App() {
                               </div>
                             </button>
 
-                            {/* 5 compact list items */}
-                            <div className="lg:col-span-6 card-warm p-2 lg:p-3">
-                              <ul className="divide-y divide-[#F4EDE3]">
-                                {finPosts.slice(1, 6).map((post, idx) => (
-                                  <li key={post.id}>
+                            {/* 6 compact list items — fills full card height */}
+                            <div className="lg:col-span-6 card-warm p-2 lg:p-3 flex flex-col">
+                              <ul className="flex flex-col justify-between h-full divide-y divide-[#F4EDE3]">
+                                {finPosts.slice(1, 7).map((post, idx) => (
+                                  <li key={post.id} className="flex-1 flex items-center">
                                     <button
                                       onClick={() => handleNavigate(`post-${post.id}`)}
-                                      className="group flex items-start gap-3 w-full text-left p-3 hover:bg-[#FFF6EE] rounded-lg transition-colors"
+                                      className="group flex items-center gap-3 w-full text-left p-3 hover:bg-[#FFF6EE] rounded-lg transition-colors"
                                     >
                                       <span className="flex items-center justify-center w-7 h-7 bg-[#FFE9D9] text-[#B0432F] text-[11px] font-bold rounded-full shrink-0 tabular-nums">
                                         {idx + 2}
