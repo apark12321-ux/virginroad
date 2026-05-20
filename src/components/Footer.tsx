@@ -50,10 +50,9 @@ export function Footer({ onNavigate }: FooterProps) {
               결혼 준비부터 신혼 자산 형성까지, 두 사람의 새로운 출발에 필요한
               실용 정보를 정성껏 정리해 드립니다. 평균값이 아닌 본인 가구에 맞는 답을 함께 찾아보세요.
             </p>
-            <div className="mt-5 flex items-center gap-2">
-              <span className="badge-coral">신뢰</span>
-              <span className="badge-coral">전문성</span>
-              <span className="badge-coral">최신 정책</span>
+            <div className="mt-5 flex flex-wrap items-center gap-2">
+              <span className="badge-coral">정부·공공기관 자료 기반</span>
+              <span className="badge-coral">정책 변경 신속 반영</span>
             </div>
           </div>
 

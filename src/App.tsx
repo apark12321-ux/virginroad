@@ -365,7 +365,7 @@ export default function App() {
                       <div className="inline-flex items-center gap-2 mb-4">
                         <span className="badge-coral">결혼·신혼 가이드</span>
                         <span className="text-[12px] font-medium text-[#968670]">
-                          · 35개 글 · 매일 업데이트
+                          · 정부·공공기관 자료 기반
                         </span>
                       </div>
                       <h1 className="text-[32px] sm:text-[42px] lg:text-[52px] font-bold tracking-[-0.03em] leading-[1.15] text-[#2C2419] mb-5 break-keep">
@@ -397,34 +397,39 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* Right: Stats card */}
+                    {/* Right: Trust card */}
                     <div className="lg:col-span-5">
                       <div className="bg-white/80 backdrop-blur-sm border border-[#E8DDCB] rounded-2xl p-6 lg:p-8 shadow-sm">
                         <div className="flex items-center gap-2 mb-5">
-                          <div className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
-                          <span className="text-[11px] font-bold text-[#22C55E] tracking-wide uppercase">Live · 운영 중</span>
+                          <div className="w-2 h-2 rounded-full bg-[#22C55E]" />
+                          <span className="text-[11px] font-bold text-[#22C55E] tracking-wide uppercase">버진로드의 약속</span>
                         </div>
                         <h3 className="text-[18px] font-bold text-[#2C2419] mb-5">
-                          이번 주 버진로드 소식
+                          믿고 볼 수 있는 정보를 위해
                         </h3>
-                        <div className="space-y-3.5">
-                          <div className="flex justify-between items-center pb-3 border-b border-[#F4EDE3]">
-                            <span className="text-[14px] text-[#4A3F30]">총 발행 글</span>
-                            <span className="text-[22px] font-bold text-[#E8745F]">{allPosts.length}개</span>
-                          </div>
-                          <div className="flex justify-between items-center pb-3 border-b border-[#F4EDE3]">
-                            <span className="text-[14px] text-[#4A3F30]">이번 주 신규</span>
-                            <span className="text-[18px] font-bold text-[#2C2419]">5개</span>
-                          </div>
-                          <div className="flex justify-between items-center pb-3 border-b border-[#F4EDE3]">
-                            <span className="text-[14px] text-[#4A3F30]">정부·공공 자료 인용</span>
-                            <span className="text-[18px] font-bold text-[#2C2419]">100%</span>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-[14px] text-[#4A3F30]">최신 정책 반영</span>
-                            <span className="text-[14px] font-bold text-[#2C2419]">2026.05.19</span>
-                          </div>
-                        </div>
+                        <ul className="space-y-4">
+                          <li className="flex gap-3">
+                            <span className="text-[#E8745F] text-[15px] font-bold shrink-0 mt-0.5">✓</span>
+                            <div>
+                              <p className="text-[14px] font-bold text-[#2C2419] leading-snug">정부·공공기관 자료에 근거</p>
+                              <p className="text-[12px] text-[#968670] mt-0.5 leading-snug break-keep">주택도시기금·국세청·복지로 등 공식 출처만 인용합니다.</p>
+                            </div>
+                          </li>
+                          <li className="flex gap-3">
+                            <span className="text-[#E8745F] text-[15px] font-bold shrink-0 mt-0.5">✓</span>
+                            <div>
+                              <p className="text-[14px] font-bold text-[#2C2419] leading-snug">정책 변경 시 신속 반영</p>
+                              <p className="text-[12px] text-[#968670] mt-0.5 leading-snug break-keep">금리·세제·지원금이 바뀌면 빠르게 업데이트합니다.</p>
+                            </div>
+                          </li>
+                          <li className="flex gap-3">
+                            <span className="text-[#E8745F] text-[15px] font-bold shrink-0 mt-0.5">✓</span>
+                            <div>
+                              <p className="text-[14px] font-bold text-[#2C2419] leading-snug">평균값이 아닌 본인 가구 기준</p>
+                              <p className="text-[12px] text-[#968670] mt-0.5 leading-snug break-keep">조건별로 달라지는 실제 선택지를 안내합니다.</p>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -625,11 +630,11 @@ export default function App() {
                               Browse All
                             </p>
                             <h2 className="text-[26px] sm:text-[34px] font-bold tracking-[-0.025em] mb-4 break-keep">
-                              총 {allPosts.length}개의 글,<br />카테고리별로 빠르게 찾아보세요.
+                              필요한 정보를<br />카테고리별로 빠르게 찾아보세요.
                             </h2>
                             <p className="text-[14px] sm:text-[15px] opacity-90 mb-7 break-keep max-w-lg mx-auto">
-                              본인 가구 상황에 맞는 글을 카테고리별로 찾아보실 수 있습니다.
-                              매주 새로운 글이 업데이트됩니다.
+                              신혼금융·신혼가전·결혼준비, 본인 가구 상황에 맞는 글을
+                              카테고리별로 정리해 두었습니다.
                             </p>
                             <div className="flex flex-wrap justify-center gap-2.5">
                               {CATEGORIES.map(cat => {
