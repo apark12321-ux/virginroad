@@ -3,6 +3,7 @@ import { useState, useMemo, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { PostCard } from "./components/PostCard";
+import { PolicyHub } from "./components/PolicyHub";
 import { MOCK_POSTS, CATEGORIES } from "./constants";
 import { Post } from "./types";
 import { Share2, Printer, ArrowRight } from "lucide-react";
@@ -276,6 +277,10 @@ export default function App() {
       title = `소개 | ${SITE_NAME}`;
       description = `${SITE_NAME}는 신혼부부의 새로운 출발을 돕는 실용 정보 미디어입니다.`;
       canonical = `${SITE_URL}/about`;
+    } else if (currentPage === "policy") {
+      title = `2026 신혼부부 정책·금리 정보 | ${SITE_NAME}`;
+      description = `2026년 신혼부부 대출 금리, 결혼세액공제, 신생아특례, 부모급여 등 핵심 정책을 정부 공식 자료 기준으로 정리했습니다. 정책 변경 시 신속 업데이트.`;
+      canonical = `${SITE_URL}/policy`;
     } else if (currentPage === "privacy") {
       title = `개인정보 처리방침 | ${SITE_NAME}`;
       description = `${SITE_NAME}의 개인정보 수집 및 이용에 관한 안내입니다.`;
@@ -425,6 +430,9 @@ export default function App() {
                   </div>
                 </div>
               </div>
+
+              {/* === POLICY HUB 요약 (정책·금리 대시보드) === */}
+              <PolicyHub compact={true} onNavigate={handleNavigate} />
 
               {/* === CATEGORY SECTIONS — info-dense === */}
               <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
@@ -648,6 +656,18 @@ export default function App() {
                 })()}
               </div>
             </motion.section>
+          )}
+
+          {/* POLICY HUB — 정책정보 전체 페이지 */}
+          {currentPage === "policy" && (
+            <motion.div
+              key="policy-page"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+            >
+              <PolicyHub compact={false} onNavigate={handleNavigate} />
+            </motion.div>
           )}
 
           {/* ABOUT */}

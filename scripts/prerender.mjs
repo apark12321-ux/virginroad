@@ -164,7 +164,7 @@ function buildPostBody(post) {
       </header>
       <main>${post.content}</main>
       <footer>
-        <p>© 알고파트너스 · 운영: ${SITE_NAME} 편집팀 · 문의: apark12321@gmail.com</p>
+        <p>© 상상아트 · 운영: ${SITE_NAME} 편집팀 · 문의: apark12321@gmail.com</p>
       </footer>
     </article>
   `;
@@ -240,11 +240,11 @@ function articleJsonLd(post) {
     author: { "@type": "Organization", name: post.author },
     publisher: {
       "@type": "Organization",
-      name: "알고파트너스",
+      name: "상상아트",
       alternateName: SITE_NAME,
       url: SITE_URL,
       logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.svg` },
-      taxID: "450-07-03104",
+      taxID: "272-14-01256",
       foundingDate: "2025-03-01",
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/post/${slug}` },
@@ -294,7 +294,17 @@ function main() {
       url: `${SITE_URL}/about`,
       body: buildStaticPageBody(
         `${SITE_NAME} 소개`,
-        `<p>${SITE_NAME}는 신혼금융, 신혼가전, 결혼준비 등 신혼부부 생활 전반의 정보를 다루는 미디어입니다. 운영: 알고파트너스 / 대표: 박예준 / 문의: apark12321@gmail.com</p>`
+        `<p>${SITE_NAME}는 신혼금융, 신혼가전, 결혼준비 등 신혼부부 생활 전반의 정보를 다루는 미디어입니다. 운영: 상상아트 / 사업자등록번호: 272-14-01256 / 통신판매업: 제2023-화성동탄-1098호 / 문의: apark12321@gmail.com</p>`
+      ),
+    },
+    {
+      path: "policy/index.html",
+      title: `2026 신혼부부 정책·금리 정보 | ${SITE_NAME}`,
+      desc: `2026년 신혼부부 대출 금리, 결혼세액공제, 신생아특례, 부모급여 등 핵심 정책을 정부 공식 자료 기준으로 정리했습니다.`,
+      url: `${SITE_URL}/policy`,
+      body: buildStaticPageBody(
+        `2026 신혼부부 정책·금리 정보`,
+        `<p>신혼부부가 꼭 알아야 할 대출 금리, 세금 혜택, 출산 지원금을 정부·공공기관 공식 자료 기준으로 정리했습니다. 신생아 특례 디딤돌대출(금리 1.8~4.5%, 우대 적용 시 최저 1.2%), 결혼세액공제 100만원(2026년 12월 31일 마감), 부모급여(만 0세 월 100만원), 부동산 전자계약 우대금리 0.1%p 등 핵심 정책을 포함합니다. 출처: 주택도시기금, 한국주택금융공사, 홈택스, 복지로.</p>`
       ),
     },
     {
@@ -304,7 +314,7 @@ function main() {
       url: `${SITE_URL}/privacy`,
       body: buildStaticPageBody(
         "개인정보 처리방침",
-        `<p>본 사이트는 이용자의 개인정보를 소중히 다룹니다. 개인정보 보호책임자: 박예준 (apark12321@gmail.com).</p>`
+        `<p>본 사이트는 이용자의 개인정보를 소중히 다룹니다. 개인정보 보호책임자: 상상아트 개인정보 보호 담당자 (apark12321@gmail.com).</p>`
       ),
     },
     {
@@ -314,7 +324,7 @@ function main() {
       url: `${SITE_URL}/terms`,
       body: buildStaticPageBody(
         "이용약관",
-        `<p>본 약관은 알고파트너스(대표 박예준)가 운영하는 ${SITE_NAME}(https://virginroad.kr)의 서비스 이용에 관한 사항을 규정합니다.</p>`
+        `<p>본 약관은 상상아트가 운영하는 ${SITE_NAME}(https://virginroad.kr)의 서비스 이용에 관한 사항을 규정합니다.</p>`
       ),
     },
     {

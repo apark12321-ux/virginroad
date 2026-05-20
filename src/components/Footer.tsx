@@ -87,6 +87,14 @@ export function Footer({ onNavigate }: FooterProps) {
                   결혼준비
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("policy")}
+                  className="text-[14px] font-medium text-[#2C2419] hover:text-[#E8745F] transition-colors"
+                >
+                  정책정보
+                </button>
+              </li>
             </ul>
           </div>
 
