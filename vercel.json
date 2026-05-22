@@ -6,10 +6,11 @@
     { "source": "/post/:slug", "destination": "/post/:slug/index.html" },
     { "source": "/category/:slug", "destination": "/category/:slug/index.html" },
     { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/policy", "destination": "/policy/index.html" },
     { "source": "/privacy", "destination": "/privacy/index.html" },
     { "source": "/terms", "destination": "/terms/index.html" },
     { "source": "/partnership", "destination": "/partnership/index.html" },
     { "source": "/announcement", "destination": "/announcement/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!.*\\.[a-zA-Z0-9]+$).*)", "destination": "/index.html" }
   ]
 }
