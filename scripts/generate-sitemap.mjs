@@ -36,7 +36,20 @@ function loadPosts() {
   const blockRe = /\{\s*id:\s*"([^"]+)"[\s\S]*?title:\s*"((?:[^"\\]|\\.)*)"[\s\S]*?date:\s*"([^"]+)"/g;
   let m;
   while ((m = blockRe.exec(src)) !== null) {
-    posts.push({ id: m[1], title: m[2].replace(/\\"/g, '"'), date: m[3] });
+    const id = m[1];
+    const title = m[2].replace(/\\"/g, '"');
+    const date = m[3];
+    // 같은 블록에서 excerpt, category 추가 추출 (있으면)
+    const block = src.slice(m.index, m.index + 2000);
+    const exMatch = block.match(/excerpt:\s*"((?:[^"\\]|\\.)*)"/);
+    const catMatch = block.match(/category:\s*"([^"]+)"/);
+    posts.push({
+      id,
+      title,
+      date,
+      excerpt: exMatch ? exMatch[1].replace(/\\"/g, '"') : "",
+      category: catMatch ? catMatch[1] : "",
+    });
   }
   return posts;
 }
@@ -121,6 +134,46 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: ${SITE_URL}/sitemap.xml
+Sitemap: ${SITE_URL}/rss.xml
+`;
+}
+
+function buildRss(posts) {
+  const SITE_NAME = "버진로드";
+  const SITE_DESC = "신혼부부를 위한 가장 정확한 가이드 — 신혼금융·신혼가전·결혼준비 정보";
+  const now = new Date().toUTCString();
+
+  // 최신순 정렬 후 최근 30개만 (RSS 표준 관행)
+  const sorted = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 30);
+
+  const items = sorted
+    .map((p) => {
+      const url = `${SITE_URL}/post/${slugify(p.title)}`;
+      const pubDate = new Date(p.date + "T09:00:00+09:00").toUTCString();
+      const desc = p.excerpt || p.title;
+      const cat = p.category ? `\n      <category>${xmlEscape(p.category)}</category>` : "";
+      return `    <item>
+      <title>${xmlEscape(p.title)}</title>
+      <link>${url}</link>
+      <guid isPermaLink="true">${url}</guid>
+      <description>${xmlEscape(desc)}</description>${cat}
+      <pubDate>${pubDate}</pubDate>
+    </item>`;
+    })
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${xmlEscape(SITE_NAME)}</title>
+    <link>${SITE_URL}/</link>
+    <description>${xmlEscape(SITE_DESC)}</description>
+    <language>ko-KR</language>
+    <lastBuildDate>${now}</lastBuildDate>
+    <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
+${items}
+  </channel>
+</rss>
 `;
 }
 
@@ -129,7 +182,8 @@ function main() {
   const posts = loadPosts();
   writeFileSync(resolve(DIST, "sitemap.xml"), buildSitemap(posts), "utf8");
   writeFileSync(resolve(DIST, "robots.txt"), buildRobots(), "utf8");
-  console.log(`[sitemap] generated for ${posts.length} posts → dist/sitemap.xml, dist/robots.txt`);
+  writeFileSync(resolve(DIST, "rss.xml"), buildRss(posts), "utf8");
+  console.log(`[sitemap] generated for ${posts.length} posts → dist/sitemap.xml, dist/robots.txt, dist/rss.xml`);
 }
 
 main();
