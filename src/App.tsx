@@ -491,6 +491,13 @@ export default function App() {
                                   referrerPolicy="no-referrer"
                                   loading="lazy"
                                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                  onError={(e) => {
+                                    const img = e.target as HTMLImageElement;
+                                    if (!img.dataset.fallback) {
+                                      img.dataset.fallback = "1";
+                                      img.src = "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=800";
+                                    }
+                                  }}
                                 />
                                 <div className="absolute top-3 left-3">
                                   <span className="badge-new">최신</span>

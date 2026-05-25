@@ -3146,7 +3146,7 @@ export const MOCK_POSTS = [
     category: "신혼금융",
     author: "버진로드 편집팀",
     date: "2026-05-24",
-    image: "https://images.unsplash.com/photo-1554224128-3c7f3edcc69f?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=800",
     readTime: "6분",
     hashtags: ["신혼부부특별공급", "청약개편", "소득기준완화", "부부중복청약", "출산가구특공", "생애최초", "민영주택", "내집마련"]
   },
