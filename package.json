@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "node scripts/validate-dates.mjs && vite build && node scripts/generate-sitemap.mjs && node scripts/generate-rss.mjs && node scripts/prerender.mjs",
     "preview": "vite preview",
+    "submit-index": "node scripts/submit-index.mjs",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
   },
