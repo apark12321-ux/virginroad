@@ -62,20 +62,20 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
               onClick={goHome}
               className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
               id="site-logo"
-              aria-label="버진로드 홈"
+              aria-label="라이프앤 홈"
             >
               <LogoIcon className="w-8 h-8 shrink-0" />
               <div className="flex flex-col items-start leading-none">
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-[17px] font-bold tracking-[-0.02em] text-[#2C2419]">
-                    버진로드
+                    라이프앤
                   </span>
                   <span className="text-[10px] font-medium text-[#E8745F] tracking-[0.1em] uppercase">
-                    VirginRoad
+                    Life&amp;
                   </span>
                 </div>
                 <span className="text-[10px] font-medium text-[#968670] mt-1">
-                  신혼부부를 위한 가장 정확한 가이드
+                  가정경제·생활정책 전문 미디어
                 </span>
               </div>
             </button>
