@@ -35,14 +35,14 @@ export function Footer({ onNavigate }: FooterProps) {
               <div className="flex flex-col items-start leading-none">
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-[18px] font-bold tracking-[-0.02em] text-[#2C2419]">
-                    버진로드
+                    홈코노미뉴스
                   </span>
                   <span className="text-[11px] font-medium text-[#E8745F] tracking-[0.1em] uppercase">
-                    VirginRoad
+                    Homeconomy News
                   </span>
                 </div>
                 <span className="text-[11px] font-medium text-[#968670] mt-1.5">
-                  신혼부부를 위한 가장 정확한 가이드
+                  가정경제·생활정책 전문 미디어
                 </span>
               </div>
             </button>
@@ -154,7 +154,7 @@ export function Footer({ onNavigate }: FooterProps) {
                 </a>
               </p>
               <p className="text-[11px] text-[#968670] pt-2">
-                © {currentYear} VirginRoad · 상상아트. All rights reserved.
+                © {currentYear} Homeconomy News · 상상아트. All rights reserved.
               </p>
             </div>
             <div className="flex items-center gap-5">

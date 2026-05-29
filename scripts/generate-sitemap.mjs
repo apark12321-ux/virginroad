@@ -105,7 +105,7 @@ function buildSitemap(posts) {
 }
 
 function buildRobots() {
-  return `# 버진로드 robots.txt
+  return `# 홈코노미뉴스 robots.txt
 # Site: ${SITE_URL}
 
 User-agent: *
@@ -139,7 +139,7 @@ Sitemap: ${SITE_URL}/rss.xml
 }
 
 function buildRss(posts) {
-  const SITE_NAME = "버진로드";
+  const SITE_NAME = "홈코노미뉴스";
   const SITE_DESC = "신혼부부를 위한 가장 정확한 가이드 — 신혼금융·신혼가전·결혼준비 정보";
   const now = new Date().toUTCString();
 

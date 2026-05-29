@@ -15,8 +15,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DIST = resolve(ROOT, "dist");
 const SITE_URL = "https://virginroad.kr";
-const SITE_NAME = "버진로드";
-const DEFAULT_TITLE = "버진로드 - 신혼부부 금융·정책 & 결혼 준비 가이드";
+const SITE_NAME = "홈코노미뉴스";
+const DEFAULT_TITLE = "홈코노미뉴스 - 가정경제·생활정책 전문 미디어";
 const DEFAULT_DESCRIPTION = "신혼부부 정책 대출, 청약 전략, 혼수 가전 비교, 결혼 준비 체크리스트까지. 인생의 새로운 출발을 위한 실용 정보를 정리해 드립니다.";
 const CATEGORIES = ["신혼금융", "신혼가전", "결혼준비"];
 
@@ -209,7 +209,7 @@ function buildHomeBody(posts) {
     .join("");
   return `
     <main>
-      <h1>버진로드</h1>
+      <h1>홈코노미뉴스</h1>
       <p>${DEFAULT_DESCRIPTION}</p>
       <h2>최근 게시물</h2>
       <ul>${list}</ul>

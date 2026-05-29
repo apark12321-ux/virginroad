@@ -16,9 +16,9 @@ import { calculateReadTime, slugify, stripHtml } from "./lib/utils";
 type Page = "home" | "about" | "privacy" | "partnership" | "announcement" | "terms" | `category-${string}` | `post-${string}`;
 
 const SITE_URL = "https://virginroad.kr";
-const SITE_NAME = "버진로드";
-const DEFAULT_TITLE = "버진로드 - 신혼부부 금융·정책 & 결혼 준비 가이드";
-const DEFAULT_DESCRIPTION = "신혼부부 정책 대출, 청약 전략, 혼수 가전 비교, 결혼 준비 체크리스트까지. 인생의 새로운 출발을 위한 실용 정보를 정리해 드립니다.";
+const SITE_NAME = "홈코노미뉴스";
+const DEFAULT_TITLE = "홈코노미뉴스 - 가정경제·생활정책 전문 미디어";
+const DEFAULT_DESCRIPTION = "신혼·출산·주거·세금 정책부터 가정 재무까지. 정부·공공기관 자료에 근거한 가정경제·생활정책 전문 매체입니다.";
 
 function pageFromUrl(): Page {
   if (typeof window === "undefined") return "home";
@@ -100,7 +100,7 @@ function setArticleJsonLd(post: Post | null) {
     "image": [post.image],
     "datePublished": post.date,
     "dateModified": post.updated || post.date,
-    "author": { "@type": "Person", "name": post.author || "버진로드 편집팀" },
+    "author": { "@type": "Person", "name": post.author || "홈코노미뉴스 편집부" },
     "publisher": {
       "@type": "Organization",
       "name": "상상아트",
@@ -363,7 +363,7 @@ export default function App() {
                     {/* Left: Hero text */}
                     <div className="lg:col-span-7">
                       <div className="inline-flex items-center gap-2 mb-4">
-                        <span className="badge-coral">결혼·신혼 가이드</span>
+                        <span className="badge-coral">가정경제·생활정책</span>
                         <span className="text-[12px] font-medium text-[#968670]">
                           · 정부·공공기관 자료 기반
                         </span>
@@ -402,7 +402,7 @@ export default function App() {
                       <div className="bg-white/80 backdrop-blur-sm border border-[#E8DDCB] rounded-2xl p-6 lg:p-8 shadow-sm">
                         <div className="flex items-center gap-2 mb-5">
                           <div className="w-2 h-2 rounded-full bg-[#22C55E]" />
-                          <span className="text-[11px] font-bold text-[#22C55E] tracking-wide uppercase">버진로드의 약속</span>
+                          <span className="text-[11px] font-bold text-[#22C55E] tracking-wide uppercase">홈코노미뉴스의 약속</span>
                         </div>
                         <h3 className="text-[18px] font-bold text-[#2C2419] mb-5">
                           믿고 볼 수 있는 정보를 위해
@@ -692,14 +692,14 @@ export default function App() {
               className="max-w-[720px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
-                버진로드 소개
+                홈코노미뉴스 소개
               </h1>
               <p className="text-[16px] leading-[1.8] text-[#4A4A4A] mb-10 break-keep">
-                버진로드는 결혼을 앞두거나 신혼 생활을 막 시작한 두 사람을 위한 실용 정보 미디어입니다. 평균값에 묻혀 사라지는 본인의 상황에 맞는 답을 찾도록 돕습니다.
+                홈코노미뉴스는 결혼을 앞두거나 신혼 생활을 막 시작한 두 사람을 위한 실용 정보 미디어입니다. 평균값에 묻혀 사라지는 본인의 상황에 맞는 답을 찾도록 돕습니다.
               </p>
 
               <h2>우리의 목표</h2>
-              <p>결혼은 두 사람의 새로운 출발이고, 그 출발에는 수많은 의사결정이 따라옵니다. 디딤돌대출과 보금자리론 중 어느 쪽이 유리한지, 신혼특공 자격이 되는지, 스드메 견적의 광고가와 실제 지출은 왜 다른지. 평균값을 나열하는 기사는 많지만, 본인 가구에 적용하는 방법까지 안내하는 곳은 드뭅니다. 버진로드는 그 격차를 메우고자 합니다.</p>
+              <p>결혼은 두 사람의 새로운 출발이고, 그 출발에는 수많은 의사결정이 따라옵니다. 디딤돌대출과 보금자리론 중 어느 쪽이 유리한지, 신혼특공 자격이 되는지, 스드메 견적의 광고가와 실제 지출은 왜 다른지. 평균값을 나열하는 기사는 많지만, 본인 가구에 적용하는 방법까지 안내하는 곳은 드뭅니다. 홈코노미뉴스는 그 격차를 메우고자 합니다.</p>
 
               <h2>주요 카테고리</h2>
               <ul>
@@ -720,7 +720,7 @@ export default function App() {
               <p>모든 게시물은 세 단계 검토를 거쳐 발행됩니다. 1차 자료 수집과 본문 구성, 수치와 법령 조문의 팩트 체크, 표현의 정확성과 면책 고지의 적절성 검토. 정책이 변경되면 본문을 수정하고 글 하단 갱신 일자를 갱신합니다. 부정확한 부분을 발견하시면 <a href="mailto:apark12321@gmail.com">apark12321@gmail.com</a>으로 알려 주시면 영업일 3일 이내 검토 후 반영합니다.</p>
 
               <h2>다루지 않는 영역</h2>
-              <p>버진로드는 신혼부부의 실용 정보에 집중합니다. 부동산 투자 종목 추천, 특정 단지의 향후 가격 예측, 개별 사례에 대한 법률·세무 자문, 금융 상품의 가입 권유는 다루지 않습니다. 중요한 결정 시에는 반드시 해당 분야 전문가와 공공기관 공식 자료를 함께 확인해 주시기 바랍니다.</p>
+              <p>홈코노미뉴스는 신혼부부의 실용 정보에 집중합니다. 부동산 투자 종목 추천, 특정 단지의 향후 가격 예측, 개별 사례에 대한 법률·세무 자문, 금융 상품의 가입 권유는 다루지 않습니다. 중요한 결정 시에는 반드시 해당 분야 전문가와 공공기관 공식 자료를 함께 확인해 주시기 바랍니다.</p>
 
               <h2>운영 정보</h2>
               <ul>
@@ -931,7 +931,7 @@ export default function App() {
                 이용약관
               </h1>
               <p className="text-[16px] leading-[1.8] text-[#4A4A4A] mb-10 break-keep">
-                본 약관은 버진로드(이하 "사이트")가 제공하는 콘텐츠 및 부가 서비스(이하 "서비스")의 이용과 관련하여 사이트와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
+                본 약관은 홈코노미뉴스(이하 "사이트")가 제공하는 콘텐츠 및 부가 서비스(이하 "서비스")의 이용과 관련하여 사이트와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
               </p>
 
               <h2>제1조 (목적)</h2>
@@ -939,7 +939,7 @@ export default function App() {
 
               <h2>제2조 (용어의 정의)</h2>
               <ul>
-                <li><strong>"사이트"</strong>란 상상아트가 운영하는 버진로드(https://virginroad.kr)를 의미합니다.</li>
+                <li><strong>"사이트"</strong>란 상상아트가 운영하는 홈코노미뉴스(https://virginroad.kr)를 의미합니다.</li>
                 <li><strong>"운영자"</strong>란 본 사이트를 운영하는 상상아트를 의미합니다.</li>
                 <li><strong>"이용자"</strong>란 사이트에 접속하여 서비스를 이용하는 모든 자를 말합니다.</li>
                 <li><strong>"콘텐츠"</strong>란 사이트가 게재하는 모든 텍스트, 이미지, 데이터, 영상 등을 의미합니다.</li>
@@ -997,7 +997,7 @@ export default function App() {
                 공지사항
               </h1>
               <p className="text-[16px] leading-[1.8] text-[#4A4A4A] mb-10 break-keep">
-                버진로드 운영에 관한 안내 사항을 공지합니다.
+                홈코노미뉴스 운영에 관한 안내 사항을 공지합니다.
               </p>
 
               <h2>2026년 5월 13일</h2>
@@ -1009,8 +1009,8 @@ export default function App() {
               <p>주택도시기금의 디딤돌·버팀목 대출 우대금리 조건 변경 사항과 신생아특례대출 자격 확대를 반영하여 관련 게시물을 모두 업데이트했습니다. 본문 하단의 갱신 일자를 확인해 주시기 바랍니다.</p>
 
               <h2>2026년 3월 15일</h2>
-              <h3>버진로드 정식 오픈</h3>
-              <p>신혼부부의 새로운 출발을 위한 실용 정보 미디어 '버진로드'(virginroad.kr)를 정식 오픈하였습니다. 신혼금융, 신혼가전, 결혼준비 3개 카테고리에 걸쳐 평균값이 아닌 본인 가구에 맞는 답을 찾을 수 있도록 콘텐츠를 차근차근 쌓아갈 계획입니다.</p>
+              <h3>홈코노미뉴스 정식 오픈</h3>
+              <p>가정경제·생활정책 전문 미디어 '홈코노미뉴스'(virginroad.kr)를 정식 오픈하였습니다. 신혼·출산·주거·세금 등 가정의 의사결정에 직접 영향을 주는 정부 정책과 가정 재무 이슈를 정부·공공기관 자료에 근거해 다룹니다. 평균값이 아닌 본인 가구 기준의 답을 찾을 수 있도록 콘텐츠를 차근차근 쌓아갈 계획입니다.</p>
 
               <hr />
               <h2>운영 안내</h2>
@@ -1031,7 +1031,7 @@ export default function App() {
                 제휴 및 비즈니스 문의
               </h1>
               <p className="text-[16px] leading-[1.8] text-[#4A4A4A] mb-10 break-keep">
-                버진로드는 신혼부부 대상의 양질의 정보 콘텐츠를 제공하는 미디어입니다. 독자 여러분과 업계 파트너 여러분의 다양한 제안을 환영합니다.
+                홈코노미뉴스는 신혼부부 대상의 양질의 정보 콘텐츠를 제공하는 미디어입니다. 독자 여러분과 업계 파트너 여러분의 다양한 제안을 환영합니다.
               </p>
 
               <h2>제휴 가능 영역</h2>
@@ -1043,7 +1043,7 @@ export default function App() {
               </ul>
 
               <h2>제휴 검토 기준</h2>
-              <p>버진로드는 독자에게 정확하고 유용한 정보를 제공한다는 원칙을 최우선으로 합니다. 따라서 다음 기준에 부합하는 제휴만 검토합니다.</p>
+              <p>홈코노미뉴스는 독자에게 정확하고 유용한 정보를 제공한다는 원칙을 최우선으로 합니다. 따라서 다음 기준에 부합하는 제휴만 검토합니다.</p>
               <ul>
                 <li>법령을 준수하는 적법한 서비스·상품일 것</li>
                 <li>독자의 권익을 침해하지 않을 것</li>
@@ -1245,7 +1245,7 @@ export default function App() {
                             "신혼가전": "삼성·LG 패키지 비교, 평수별 가전 사이즈, 빌트인 선택 기준 등 신혼집을 꾸리는 데 필요한 실용 가이드를 정리했습니다.",
                             "결혼준비": "스드메 견적의 진실, 웨딩홀 종류별 장단점, 6개월 타임라인 등 결혼을 앞둔 두 사람을 위한 현실적인 안내입니다.",
                           } as Record<string, string>)[categoryName] || "본 카테고리의 글을 모았습니다."
-                        : "버진로드의 모든 글을 한자리에서 확인하세요.");
+                        : "홈코노미뉴스의 모든 글을 한자리에서 확인하세요.");
 
                     return (
                       <div className="flex items-end justify-between gap-6 flex-wrap">

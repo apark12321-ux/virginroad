@@ -12,7 +12,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DIST = resolve(ROOT, "dist");
 const SITE_URL = "https://virginroad.kr";
-const SITE_NAME = "버진로드";
+const SITE_NAME = "홈코노미뉴스";
 const SITE_DESC = "신혼부부를 위한 가장 정확한 결혼·신혼 가이드";
 
 function slugify(title) {
