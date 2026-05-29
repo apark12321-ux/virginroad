@@ -47,8 +47,8 @@ export function Footer({ onNavigate }: FooterProps) {
               </div>
             </button>
             <p className="text-[13px] leading-[1.7] text-[#4A3F30] max-w-md break-keep">
-              결혼 준비부터 신혼 자산 형성까지, 두 사람의 새로운 출발에 필요한
-              실용 정보를 정성껏 정리해 드립니다. 평균값이 아닌 본인 가구에 맞는 답을 함께 찾아보세요.
+              신혼·출산·주거·세금 정책부터 가정 재무까지, 가정의 의사결정에 필요한 정보를
+              정부·공공기관 자료에 근거해 전합니다. 평균값이 아닌 본인 가구 기준의 답을 함께 찾습니다.
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-2">
               <span className="badge-coral">정부·공공기관 자료 기반</span>
