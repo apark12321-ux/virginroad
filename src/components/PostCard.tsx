@@ -42,7 +42,7 @@ export function PostCard({ post, onClick }: PostCardProps) {
         <div className="absolute top-3 left-3">
           <span
             style={{ backgroundColor: colors.bg, color: colors.text }}
-            className="inline-flex items-center text-[11px] font-bold px-2.5 py-1 rounded-full"
+            className="inline-flex items-center text-[12px] font-bold px-3 py-1 rounded-full tracking-tight"
           >
             {post.category}
           </span>
@@ -50,19 +50,19 @@ export function PostCard({ post, onClick }: PostCardProps) {
       </div>
 
       {/* Content */}
-      <div className="p-4 flex flex-col flex-1">
+      <div className="p-5 flex flex-col flex-1">
         {/* Title */}
-        <h3 className="text-[15px] sm:text-[16px] font-bold leading-[1.4] text-[#2C2419] mb-2 break-keep line-clamp-2 group-hover:text-[#E8745F] transition-colors">
+        <h3 className="text-[16px] sm:text-[17px] font-bold leading-[1.4] text-[#1F1A12] mb-2.5 break-keep line-clamp-2 group-hover:text-[#E8745F] transition-colors tracking-[-0.018em]">
           {post.title}
         </h3>
 
         {/* Excerpt */}
-        <p className="text-[13px] leading-[1.55] text-[#6B5D4A] line-clamp-2 break-keep mb-3 flex-1">
+        <p className="text-[14px] leading-[1.6] text-[#6B5D4A] line-clamp-2 break-keep mb-4 flex-1 tracking-[-0.012em]">
           {post.excerpt}
         </p>
 
         {/* Meta */}
-        <div className="flex items-center gap-2 text-[11px] text-[#968670] pt-3 border-t border-[#F4EDE3]">
+        <div className="flex items-center gap-2 text-[12px] text-[#968670] pt-3 border-t border-[#F4EDE3]">
           <span className="font-medium">{post.date.replace(/-/g, ". ")}</span>
           <span className="w-[3px] h-[3px] bg-[#C8BBA8] rounded-full" />
           <Clock className="w-3 h-3" />

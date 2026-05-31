@@ -11,6 +11,7 @@
     { "source": "/terms", "destination": "/terms/index.html" },
     { "source": "/partnership", "destination": "/partnership/index.html" },
     { "source": "/announcement", "destination": "/announcement/index.html" },
+    { "source": "/tools/didimdol", "destination": "/tools/didimdol/index.html" },
     { "source": "/((?!.*\\.[a-zA-Z0-9]+$).*)", "destination": "/index.html" }
   ]
 }

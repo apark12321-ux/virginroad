@@ -46,6 +46,7 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
     { label: "신혼가전", page: "category-신혼가전", icon: "🏠" },
     { label: "결혼준비", page: "category-결혼준비", icon: "💍" },
     { label: "정책정보", page: "policy", icon: "📊" },
+    { label: "금리 계산기", page: "tools-didimdol", icon: "🧮" },
   ];
 
   return (

@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { PostCard } from "./components/PostCard";
 import { PolicyHub } from "./components/PolicyHub";
+import { DidimdolCalculator } from "./components/DidimdolCalculator";
 import { MOCK_POSTS, CATEGORIES } from "./constants";
 import { Post } from "./types";
 import { Share2, Printer, ArrowRight } from "lucide-react";
@@ -13,7 +14,7 @@ import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { calculateReadTime, slugify, stripHtml } from "./lib/utils";
 
-type Page = "home" | "about" | "privacy" | "partnership" | "announcement" | "terms" | `category-${string}` | `post-${string}`;
+type Page = "home" | "about" | "privacy" | "partnership" | "announcement" | "terms" | "policy" | "tools-didimdol" | `category-${string}` | `post-${string}`;
 
 const SITE_URL = "https://virginroad.kr";
 const SITE_NAME = "홈코노미뉴스";
@@ -29,6 +30,8 @@ function pageFromUrl(): Page {
   if (path === "/partnership") return "partnership";
   if (path === "/announcement") return "announcement";
   if (path === "/terms") return "terms";
+  if (path === "/policy") return "policy";
+  if (path === "/tools/didimdol") return "tools-didimdol";
   const catMatch = path.match(/^\/category\/(.+)$/);
   if (catMatch) return `category-${decodeURIComponent(catMatch[1])}` as Page;
   const postMatch = path.match(/^\/post\/(.+)$/);
@@ -43,6 +46,8 @@ function urlFromPage(page: Page, posts: Post[]): string {
   if (page === "partnership") return "/partnership";
   if (page === "announcement") return "/announcement";
   if (page === "terms") return "/terms";
+  if (page === "policy") return "/policy";
+  if (page === "tools-didimdol") return "/tools/didimdol";
   if (page.startsWith("category-")) {
     return `/category/${encodeURIComponent(page.replace("category-", ""))}`;
   }
@@ -297,6 +302,10 @@ export default function App() {
       title = `이용약관 | ${SITE_NAME}`;
       description = `${SITE_NAME} 서비스 이용에 관한 약관입니다.`;
       canonical = `${SITE_URL}/terms`;
+    } else if (currentPage === "tools-didimdol") {
+      title = `디딤돌 우대금리 계산기 | ${SITE_NAME}`;
+      description = `한국주택금융공사 2026년 5월 1일 공시 기준으로 본인 가구의 디딤돌대출 우대금리와 월 상환액을 시뮬레이션해 드립니다. 자녀·청약통장·전자계약 우대를 단계별로 확인하세요.`;
+      canonical = `${SITE_URL}/tools/didimdol`;
     } else if (currentPage.startsWith("category-")) {
       const cat = currentPage.replace("category-", "");
       const catDescriptions: Record<string, string> = {
@@ -679,6 +688,18 @@ export default function App() {
               exit={{ opacity: 0 }}
             >
               <PolicyHub compact={false} onNavigate={handleNavigate} />
+            </motion.div>
+          )}
+
+          {/* DIDIMDOL CALCULATOR */}
+          {currentPage === "tools-didimdol" && (
+            <motion.div
+              key="tools-didimdol-page"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+            >
+              <DidimdolCalculator />
             </motion.div>
           )}
 
