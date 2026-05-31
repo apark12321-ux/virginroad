@@ -710,7 +710,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[720px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
                 홈코노미뉴스 소개
@@ -761,7 +761,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[720px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
                 개인정보 처리방침
@@ -946,7 +946,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[720px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
                 이용약관
@@ -1012,7 +1012,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[720px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
                 공지사항
@@ -1046,7 +1046,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[720px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
                 제휴 및 비즈니스 문의
