@@ -12,6 +12,7 @@
     { "source": "/partnership", "destination": "/partnership/index.html" },
     { "source": "/announcement", "destination": "/announcement/index.html" },
     { "source": "/tools/didimdol", "destination": "/tools/didimdol/index.html" },
+    { "source": "/tools/cheongyak", "destination": "/tools/cheongyak/index.html" },
     { "source": "/((?!.*\\.[a-zA-Z0-9]+$).*)", "destination": "/index.html" }
   ]
 }

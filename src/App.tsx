@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { PostCard } from "./components/PostCard";
 import { PolicyHub } from "./components/PolicyHub";
 import { DidimdolCalculator } from "./components/DidimdolCalculator";
+import { CheongyakCalculator } from "./components/CheongyakCalculator";
 import { MOCK_POSTS, CATEGORIES } from "./constants";
 import { Post } from "./types";
 import { Share2, Printer, ArrowRight } from "lucide-react";
@@ -14,7 +15,7 @@ import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { calculateReadTime, slugify, stripHtml } from "./lib/utils";
 
-type Page = "home" | "about" | "privacy" | "partnership" | "announcement" | "terms" | "policy" | "tools-didimdol" | `category-${string}` | `post-${string}`;
+type Page = "home" | "about" | "privacy" | "partnership" | "announcement" | "terms" | "policy" | "tools-didimdol" | "tools-cheongyak" | `category-${string}` | `post-${string}`;
 
 const SITE_URL = "https://virginroad.kr";
 const SITE_NAME = "홈코노미뉴스";
@@ -32,6 +33,7 @@ function pageFromUrl(): Page {
   if (path === "/terms") return "terms";
   if (path === "/policy") return "policy";
   if (path === "/tools/didimdol") return "tools-didimdol";
+  if (path === "/tools/cheongyak") return "tools-cheongyak";
   const catMatch = path.match(/^\/category\/(.+)$/);
   if (catMatch) return `category-${decodeURIComponent(catMatch[1])}` as Page;
   const postMatch = path.match(/^\/post\/(.+)$/);
@@ -48,6 +50,7 @@ function urlFromPage(page: Page, posts: Post[]): string {
   if (page === "terms") return "/terms";
   if (page === "policy") return "/policy";
   if (page === "tools-didimdol") return "/tools/didimdol";
+  if (page === "tools-cheongyak") return "/tools/cheongyak";
   if (page.startsWith("category-")) {
     return `/category/${encodeURIComponent(page.replace("category-", ""))}`;
   }
@@ -306,6 +309,10 @@ export default function App() {
       title = `디딤돌 우대금리 계산기 | ${SITE_NAME}`;
       description = `한국주택금융공사 2026년 5월 1일 공시 기준으로 본인 가구의 디딤돌대출 우대금리와 월 상환액을 시뮬레이션해 드립니다. 자녀·청약통장·전자계약 우대를 단계별로 확인하세요.`;
       canonical = `${SITE_URL}/tools/didimdol`;
+    } else if (currentPage === "tools-cheongyak") {
+      title = `신혼부부 특별공급 가점 계산기 | ${SITE_NAME}`;
+      description = `「주택공급에 관한 규칙」 별표1 기준으로 신혼부부 특별공급 가점과 일반 청약가점제 점수를 동시에 계산해 드립니다. 자녀·혼인 기간·청약통장·신생아 가산까지 단계별 확인.`;
+      canonical = `${SITE_URL}/tools/cheongyak`;
     } else if (currentPage.startsWith("category-")) {
       const cat = currentPage.replace("category-", "");
       const catDescriptions: Record<string, string> = {
@@ -700,6 +707,18 @@ export default function App() {
               exit={{ opacity: 0 }}
             >
               <DidimdolCalculator />
+            </motion.div>
+          )}
+
+          {/* CHEONGYAK CALCULATOR */}
+          {currentPage === "tools-cheongyak" && (
+            <motion.div
+              key="tools-cheongyak-page"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+            >
+              <CheongyakCalculator />
             </motion.div>
           )}
 
