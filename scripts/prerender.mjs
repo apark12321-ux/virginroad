@@ -146,7 +146,25 @@ function renderPage(template, meta, bodyContent, jsonLd) {
   return html;
 }
 
-function buildPostBody(post) {
+function buildPostBody(post, allPosts = []) {
+  const related = allPosts
+    .filter((p) => p.category === post.category && p.id !== post.id)
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 4);
+  const relatedHtml = related.length
+    ? `
+      <nav aria-label="관련 글" class="related">
+        <h2>${htmlEscape(post.category)} 카테고리의 다른 글</h2>
+        <ul>
+          ${related
+            .map(
+              (p) =>
+                `<li><a href="/post/${encodeURIComponent(slugify(p.title) || p.id)}">${htmlEscape(p.title)}</a></li>`
+            )
+            .join("")}
+        </ul>
+      </nav>`
+    : "";
   return `
     <article>
       <header>
@@ -157,14 +175,15 @@ function buildPostBody(post) {
         <p class="excerpt">${htmlEscape(post.excerpt)}</p>
         <p class="meta">
           <span>${htmlEscape(post.author)}</span> ·
-          <time datetime="${post.date}">${post.date}</time> ·
+          <time datetime="${post.date}T09:00:00+09:00">${post.date}</time> ·
           <span>${htmlEscape(post.category)}</span>
         </p>
         <img src="${htmlEscape(post.image)}" alt="${htmlEscape(post.title)}" />
       </header>
       <main>${post.content}</main>
+      ${relatedHtml}
       <footer>
-        <p>© 상상아트 · 운영: ${SITE_NAME} 편집팀 · 문의: apark12321@gmail.com</p>
+        <p>© 상상아트 · 운영: ${SITE_NAME} 편집부 · 문의: apark12321@gmail.com</p>
       </footer>
     </article>
   `;
@@ -429,7 +448,7 @@ function main() {
         ogType: "article",
         ogImage: post.image,
       },
-      buildPostBody(post),
+      buildPostBody(post, posts),
       articleJsonLd(post)
     );
     writeFile(join(DIST, path), html);
