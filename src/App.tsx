@@ -8,9 +8,10 @@ import { DidimdolCalculator } from "./components/DidimdolCalculator";
 import { CheongyakCalculator } from "./components/CheongyakCalculator";
 import { MOCK_POSTS, CATEGORIES } from "./constants";
 import { Post } from "./types";
-import { Share2, Printer, ArrowRight, TrendingUp, ArrowUpRight } from "lucide-react";
+import { Share2, Printer, ArrowRight, TrendingUp, ArrowUpRight, Eye } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { auth, db } from "./lib/firebase";
+import { recordView, fetchAllViews, formatViews } from "./lib/views";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { calculateReadTime, slugify, stripHtml } from "./lib/utils";
@@ -159,6 +160,7 @@ export default function App() {
   });
   const [realPosts, setRealPosts] = useState<Post[]>([]);
   const [, setUser] = useState<User | null>(null);
+  const [views, setViews] = useState<Record<string, number>>({});
 
   useEffect(() => {
     const onPopState = () => {
@@ -229,6 +231,11 @@ export default function App() {
     return combined.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }, [realPosts]);
 
+  // 전체 조회수 로드 (마운트 시 1회)
+  useEffect(() => {
+    fetchAllViews().then(setViews);
+  }, []);
+
   const filteredPosts = useMemo(() => {
     let posts = allPosts;
     if (currentPage === "home") {
@@ -265,6 +272,15 @@ export default function App() {
     if (window.location.pathname !== desired) {
       window.history.replaceState({}, "", desired);
     }
+  }, [currentPost]);
+
+  // 글 조회 시 조회수 기록 (세션당 1회) + 화면에 즉시 반영
+  useEffect(() => {
+    if (!currentPost) return;
+    const id = currentPost.id;
+    recordView(id).then(() => {
+      fetchAllViews().then(setViews);
+    });
   }, [currentPost]);
 
   useEffect(() => {
@@ -696,6 +712,7 @@ export default function App() {
                               <PostCard
                                 key={post.id}
                                 post={post}
+                                views={views[post.id]}
                                 onClick={(id) => handleNavigate(`post-${id}`)}
                               />
                             ))}
@@ -735,6 +752,7 @@ export default function App() {
                               <PostCard
                                 key={post.id}
                                 post={post}
+                                views={views[post.id]}
                                 onClick={(id) => handleNavigate(`post-${id}`)}
                               />
                             ))}
@@ -773,6 +791,7 @@ export default function App() {
                                 <PostCard
                                   key={post.id}
                                   post={post}
+                                  views={views[post.id]}
                                   onClick={(id) => handleNavigate(`post-${id}`)}
                                 />
                               ))}
@@ -1295,6 +1314,10 @@ export default function App() {
                   <span className="text-[#8A87A0]">{currentPost.date.replace(/-/g, ". ")}</span>
                   <span className="w-[2px] h-[2px] bg-[#D5D8E8] rounded-full" />
                   <span className="text-[#8A87A0]">{calculateReadTime(currentPost.content)} 읽기</span>
+                  <span className="w-[2px] h-[2px] bg-[#D5D8E8] rounded-full" />
+                  <span className="text-[#8A87A0] inline-flex items-center gap-1">
+                    <Eye className="w-3.5 h-3.5" /> {formatViews(views[currentPost.id] || 0)}
+                  </span>
                 </div>
                 <div className="flex gap-1">
                   <button
@@ -1388,6 +1411,7 @@ export default function App() {
                         <PostCard
                           key={p.id}
                           post={p}
+                          views={views[p.id]}
                           onClick={(id) => handleNavigate(`post-${id}`)}
                         />
                       ))}
@@ -1492,6 +1516,7 @@ export default function App() {
                       >
                         <PostCard
                           post={post}
+                          views={views[post.id]}
                           onClick={(id) => handleNavigate(`post-${id}`)}
                           index={idx}
                         />

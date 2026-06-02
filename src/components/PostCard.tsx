@@ -1,12 +1,14 @@
 
 import { Post } from "../types";
 import { calculateReadTime } from "../lib/utils";
-import { Clock } from "lucide-react";
+import { Clock, Eye } from "lucide-react";
+import { formatViews } from "../lib/views";
 
 interface PostCardProps {
   post: Post;
   onClick: (id: string) => void;
   index?: number;
+  views?: number;
 }
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
@@ -15,7 +17,7 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
   "결혼준비": { bg: "#FFD2BD", text: "#6B2418" },
 };
 
-export function PostCard({ post, onClick }: PostCardProps) {
+export function PostCard({ post, onClick, views }: PostCardProps) {
   const dynamicReadTime = calculateReadTime(post.content);
   const colors = CATEGORY_COLORS[post.category] || CATEGORY_COLORS["신혼금융"];
 
@@ -67,6 +69,13 @@ export function PostCard({ post, onClick }: PostCardProps) {
           <span className="w-[3px] h-[3px] bg-[#B5B3C8] rounded-full" />
           <Clock className="w-3 h-3" />
           <span>{dynamicReadTime}</span>
+          {typeof views === "number" && views > 0 && (
+            <>
+              <span className="w-[3px] h-[3px] bg-[#B5B3C8] rounded-full" />
+              <Eye className="w-3 h-3" />
+              <span>{formatViews(views)}</span>
+            </>
+          )}
         </div>
       </div>
     </article>

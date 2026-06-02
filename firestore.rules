@@ -14,5 +14,17 @@ service cloud.firestore {
       allow get, list: if true;
       allow create, update, delete: if false;
     }
+
+    // views 컬렉션: 조회수 집계용
+    // 누구나 읽기 가능. 쓰기는 'count 필드를 1씩 증가'시키는 경우만 허용.
+    // (임의 값 설정·삭제는 차단해 조회수 조작 방지)
+    match /views/{postId} {
+      allow get, list: if true;
+      allow create: if request.resource.data.count == 1
+                    && request.resource.data.keys().hasOnly(['count']);
+      allow update: if request.resource.data.count == resource.data.count + 1
+                    && request.resource.data.keys().hasOnly(['count']);
+      allow delete: if false;
+    }
   }
 }
