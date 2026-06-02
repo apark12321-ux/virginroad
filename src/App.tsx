@@ -407,13 +407,14 @@ export default function App() {
                         </span>
                       </div>
                       <h1 className="text-[32px] sm:text-[42px] lg:text-[52px] font-bold tracking-[-0.03em] leading-[1.15] text-white mb-5 break-keep">
-                        결혼과 신혼,<br />
-                        <span className="text-[#FFB4A2]">가장 정확한 정보</span>로<br />
-                        시작하세요.
+                        대출도 청약도,<br />
+                        <span className="text-[#FFB4A2]">우리 집은 어떻게 될까</span><br />
+                        고민될 때.
                       </h1>
                       <p className="text-[15px] sm:text-[16px] leading-[1.7] text-white/85 max-w-xl break-keep mb-6">
-                        디딤돌·보금자리·신생아특례 대출부터 출산·육아 정책, 결혼 준비 의사결정까지.
-                        평균값이 아닌 본인 가구 기준의 답을 정부·공공기관 자료에 근거해 안내합니다.
+                        디딤돌 금리부터 신혼특공 가점, 출산·육아 지원금까지.
+                        복잡한 정책을 우리 집 상황에 맞춰 알기 쉽게 풀어드려요.
+                        평균이 아니라, 바로 우리 가구 기준으로요.
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {[
@@ -438,33 +439,33 @@ export default function App() {
                     {/* Right: Trust card */}
                     <div className="lg:col-span-5">
                       <div className="bg-white/80 backdrop-blur-sm border border-[#E2E4F0] rounded-2xl p-6 lg:p-8 shadow-sm">
-                        <div className="flex items-center gap-2 mb-5">
+                        <div className="flex items-center gap-2 mb-4">
                           <div className="w-2 h-2 rounded-full bg-[#22C55E]" />
-                          <span className="text-[11px] font-bold text-[#22C55E] tracking-wide uppercase">홈코노미뉴스의 약속</span>
+                          <span className="text-[11px] font-bold text-[#22C55E] tracking-wide">홈코노미뉴스는 이렇게 일해요</span>
                         </div>
-                        <h3 className="text-[18px] font-bold text-[#1E1B2E] mb-5">
-                          믿고 볼 수 있는 정보를 위해
+                        <h3 className="text-[18px] font-bold text-[#1E1B2E] mb-5 break-keep">
+                          숫자 하나도 공식 자료에서
                         </h3>
                         <ul className="space-y-4">
                           <li className="flex gap-3">
                             <span className="text-[#E8745F] text-[15px] font-bold shrink-0 mt-0.5">✓</span>
                             <div>
-                              <p className="text-[14px] font-bold text-[#1E1B2E] leading-snug">정부·공공기관 자료에 근거</p>
-                              <p className="text-[12px] text-[#8A87A0] mt-0.5 leading-snug break-keep">주택도시기금·국세청·복지로 등 공식 출처만 인용합니다.</p>
+                              <p className="text-[14px] font-bold text-[#1E1B2E] leading-snug">공식 출처만 인용해요</p>
+                              <p className="text-[12px] text-[#8A87A0] mt-0.5 leading-snug break-keep">주택도시기금·국세청·복지로 같은 정부 자료에 근거합니다.</p>
                             </div>
                           </li>
                           <li className="flex gap-3">
                             <span className="text-[#E8745F] text-[15px] font-bold shrink-0 mt-0.5">✓</span>
                             <div>
-                              <p className="text-[14px] font-bold text-[#1E1B2E] leading-snug">정책 변경 시 신속 반영</p>
+                              <p className="text-[14px] font-bold text-[#1E1B2E] leading-snug">바뀌면 바로 고쳐요</p>
                               <p className="text-[12px] text-[#8A87A0] mt-0.5 leading-snug break-keep">금리·세제·지원금이 바뀌면 빠르게 업데이트합니다.</p>
                             </div>
                           </li>
                           <li className="flex gap-3">
                             <span className="text-[#E8745F] text-[15px] font-bold shrink-0 mt-0.5">✓</span>
                             <div>
-                              <p className="text-[14px] font-bold text-[#1E1B2E] leading-snug">평균값이 아닌 본인 가구 기준</p>
-                              <p className="text-[12px] text-[#8A87A0] mt-0.5 leading-snug break-keep">조건별로 달라지는 실제 선택지를 안내합니다.</p>
+                              <p className="text-[14px] font-bold text-[#1E1B2E] leading-snug">우리 집 기준으로 알려줘요</p>
+                              <p className="text-[12px] text-[#8A87A0] mt-0.5 leading-snug break-keep">평균이 아니라 조건별로 달라지는 실제 선택지를 짚어드려요.</p>
                             </div>
                           </li>
                         </ul>

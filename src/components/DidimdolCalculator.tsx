@@ -139,13 +139,13 @@ export function DidimdolCalculator() {
   }, [input]);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+    <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-8 sm:py-10">
       <header className="mb-8">
         <span className="badge-coral mb-3">실용 도구</span>
         <h1 className="text-[26px] sm:text-[32px] font-bold tracking-[-0.025em] text-[#151320] leading-[1.25] mt-3">
           디딤돌 우대금리 계산기
         </h1>
-        <p className="text-[15px] sm:text-[16px] text-[#5B5870] leading-[1.7] mt-3 break-keep">
+        <p className="text-[15px] sm:text-[16px] text-[#5B5870] leading-[1.7] mt-3 break-keep max-w-2xl">
           본인 가구 조건을 입력하시면 한국주택금융공사 2026년 5월 1일 공시 기준으로
           단계별 우대금리 적용 과정과 월 상환액을 시뮬레이션해 드립니다. 평균값이
           아닌 본인 가구 기준의 답을 확인하세요.

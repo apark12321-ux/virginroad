@@ -135,13 +135,13 @@ export function CheongyakCalculator() {
   }, [result.specialTotal]);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+    <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-8 sm:py-10">
       <header className="mb-8">
         <span className="badge-coral mb-3">실용 도구</span>
         <h1 className="text-[26px] sm:text-[32px] font-bold tracking-[-0.025em] text-[#151320] leading-[1.25] mt-3">
           신혼부부 특별공급 가점 계산기
         </h1>
-        <p className="text-[15px] sm:text-[16px] text-[#5B5870] leading-[1.7] mt-3 break-keep">
+        <p className="text-[15px] sm:text-[16px] text-[#5B5870] leading-[1.7] mt-3 break-keep max-w-2xl">
           본인 가구 조건을 입력하시면 신혼부부 특별공급(공공분양) 가점과 일반 청약가점제 점수를
           동시에 계산해 드립니다. 「주택공급에 관한 규칙」과 신혼특공 운영지침을 토대로 했으며,
           단지별·지역별 세부 가점은 청약홈 공고문을 함께 확인하세요.
