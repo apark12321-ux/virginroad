@@ -522,6 +522,38 @@ export default function App() {
                 </p>
               </div>
 
+              {/* === 카테고리 빠른 진입 그리드 === */}
+              <div className="max-w-[1400px] mx-auto px-5 lg:px-10 pt-10 lg:pt-14">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-1 h-5 bg-[#4F46E5] rounded-full" />
+                  <h2 className="text-[16px] font-bold text-[#1E1B2E]">카테고리</h2>
+                </div>
+                <div className="grid grid-cols-3 lg:grid-cols-6 gap-3">
+                  {[
+                    { icon: "💰", label: "신혼금융", page: "category-신혼금융", count: allPosts.filter(p => p.category === "신혼금융").length },
+                    { icon: "🏠", label: "신혼가전", page: "category-신혼가전", count: allPosts.filter(p => p.category === "신혼가전").length },
+                    { icon: "💍", label: "결혼준비", page: "category-결혼준비", count: allPosts.filter(p => p.category === "결혼준비").length },
+                    { icon: "📊", label: "정책정보", page: "policy", count: null },
+                    { icon: "🧮", label: "금리 계산기", page: "tools-didimdol", count: null },
+                    { icon: "🎯", label: "가점 계산기", page: "tools-cheongyak", count: null },
+                  ].map((c) => (
+                    <button
+                      key={c.label}
+                      onClick={() => handleNavigate(c.page)}
+                      className="group flex flex-col items-center justify-center gap-2 bg-white border border-[#E2E4F0] hover:border-[#C7C9F0] hover:bg-[#F5F6FD] rounded-xl py-5 px-2 transition-all"
+                    >
+                      <span className="text-[28px] group-hover:scale-110 transition-transform">{c.icon}</span>
+                      <span className="text-[13px] font-bold text-[#1E1B2E] group-hover:text-[#4F46E5] transition-colors text-center leading-tight break-keep">
+                        {c.label}
+                      </span>
+                      {c.count !== null && (
+                        <span className="text-[11px] text-[#8A87A0] font-medium">{c.count}개 글</span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               {/* === CATEGORY SECTIONS — info-dense === */}
               <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
                 {(() => {
@@ -1445,9 +1477,12 @@ export default function App() {
                   ))}
                 </div>
 
-                {/* Posts grid */}
+                {/* Main + Sidebar layout */}
+                <div className="grid lg:grid-cols-12 gap-8 lg:gap-10">
+                  {/* Main: posts grid */}
+                  <div className="lg:col-span-9">
                 {filteredPosts.length > 0 ? (
-                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-12 lg:gap-x-6 lg:gap-y-14">
+                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-12 lg:gap-x-6 lg:gap-y-14">
                     {filteredPosts.map((post, idx) => (
                       <motion.div
                         key={post.id}
@@ -1477,6 +1512,93 @@ export default function App() {
                     </button>
                   </div>
                 )}
+                  </div>
+
+                  {/* Sidebar */}
+                  <aside className="lg:col-span-3 space-y-6">
+                    {/* 인기 글 */}
+                    <div className="bg-white border border-[#E2E4F0] rounded-xl overflow-hidden">
+                      <div className="bg-[#3730A3] px-4 py-3">
+                        <h3 className="text-[14px] font-bold text-white flex items-center gap-1.5">
+                          <TrendingUp className="w-4 h-4" /> 인기 글
+                        </h3>
+                      </div>
+                      <ul className="divide-y divide-[#EDEEF7]">
+                        {["fin-39", "fin-38", "fin-41", "fin-43", "fin-44"]
+                          .map(id => allPosts.find(p => p.id === id))
+                          .filter((p): p is typeof allPosts[number] => Boolean(p))
+                          .slice(0, 5)
+                          .map((post, i) => (
+                            <li key={post.id}>
+                              <button
+                                onClick={() => handleNavigate(`post-${post.id}`)}
+                                className="group flex gap-2.5 w-full text-left p-3 hover:bg-[#F5F6FD] transition-colors"
+                              >
+                                <span className="flex items-center justify-center w-5 h-5 bg-[#EEF0FB] text-[#3730A3] text-[11px] font-bold rounded shrink-0 mt-0.5 tabular-nums">
+                                  {i + 1}
+                                </span>
+                                <span className="text-[13px] font-medium text-[#1E1B2E] leading-[1.45] break-keep line-clamp-2 group-hover:text-[#4F46E5] transition-colors">
+                                  {post.title}
+                                </span>
+                              </button>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+
+                    {/* 최신 글 */}
+                    <div className="bg-white border border-[#E2E4F0] rounded-xl overflow-hidden">
+                      <div className="bg-[#4F46E5] px-4 py-3">
+                        <h3 className="text-[14px] font-bold text-white">📰 최신 글</h3>
+                      </div>
+                      <ul className="divide-y divide-[#EDEEF7]">
+                        {[...allPosts]
+                          .sort((a, b) => b.date.localeCompare(a.date))
+                          .slice(0, 5)
+                          .map((post) => (
+                            <li key={post.id}>
+                              <button
+                                onClick={() => handleNavigate(`post-${post.id}`)}
+                                className="group flex flex-col gap-1 w-full text-left p-3 hover:bg-[#F5F6FD] transition-colors"
+                              >
+                                <span className="text-[13px] font-medium text-[#1E1B2E] leading-[1.45] break-keep line-clamp-2 group-hover:text-[#4F46E5] transition-colors">
+                                  {post.title}
+                                </span>
+                                <span className="text-[11px] text-[#8A87A0]">{post.date.replace(/-/g, ". ")}</span>
+                              </button>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+
+                    {/* 주제별 빠른 찾기 */}
+                    <div className="bg-white border border-[#E2E4F0] rounded-xl overflow-hidden">
+                      <div className="bg-[#312E81] px-4 py-3">
+                        <h3 className="text-[14px] font-bold text-white">🔎 주제별 찾기</h3>
+                      </div>
+                      <div className="p-3 grid grid-cols-2 gap-2">
+                        {[
+                          { label: "디딤돌", page: "tools-didimdol" },
+                          { label: "신혼특공", page: "tools-cheongyak" },
+                          { label: "신생아특례", page: "category-신혼금융" },
+                          { label: "부모급여", page: "category-신혼금융" },
+                          { label: "공공임대", page: "category-신혼금융" },
+                          { label: "혼수가전", page: "category-신혼가전" },
+                          { label: "스드메", page: "category-결혼준비" },
+                          { label: "정책정보", page: "policy" },
+                        ].map((t) => (
+                          <button
+                            key={t.label}
+                            onClick={() => handleNavigate(t.page)}
+                            className="text-[12.5px] font-medium text-[#3F3D56] bg-[#F5F6FD] hover:bg-[#EEF0FB] hover:text-[#4F46E5] border border-[#E2E4F0] rounded-lg py-2 transition-colors"
+                          >
+                            {t.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </aside>
+                </div>
               </motion.section>
             )
           )}

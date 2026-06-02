@@ -58,14 +58,14 @@ export function Footer({ onNavigate }: FooterProps) {
 
           {/* Categories */}
           <div className="col-span-1 md:col-span-3">
-            <h4 className="text-[11px] font-bold text-[#E8745F] mb-4 tracking-[0.1em] uppercase">
+            <h4 className="text-[11px] font-bold text-[#4F46E5] mb-4 tracking-[0.1em] uppercase">
               카테고리
             </h4>
             <ul className="space-y-3">
               <li>
                 <button
                   onClick={() => onNavigate("category-신혼금융")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
                 >
                   신혼금융
                 </button>
@@ -73,7 +73,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("category-신혼가전")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
                 >
                   신혼가전
                 </button>
@@ -81,7 +81,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("category-결혼준비")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
                 >
                   결혼준비
                 </button>
@@ -89,7 +89,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("policy")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
                 >
                   정책정보
                 </button>
@@ -99,14 +99,14 @@ export function Footer({ onNavigate }: FooterProps) {
 
           {/* Info */}
           <div className="col-span-1 md:col-span-4">
-            <h4 className="text-[11px] font-bold text-[#E8745F] mb-4 tracking-[0.1em] uppercase">
+            <h4 className="text-[11px] font-bold text-[#4F46E5] mb-4 tracking-[0.1em] uppercase">
               안내
             </h4>
             <ul className="space-y-3">
               <li>
                 <button
                   onClick={() => onNavigate("about")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
                 >
                   소개
                 </button>
@@ -114,7 +114,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("announcement")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
                 >
                   공지사항
                 </button>
@@ -122,7 +122,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("partnership")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
                 >
                   제휴 문의
                 </button>
@@ -130,7 +130,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   href="mailto:apark12321@gmail.com"
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
                 >
                   apark12321@gmail.com
                 </a>
@@ -149,7 +149,7 @@ export function Footer({ onNavigate }: FooterProps) {
                 <span className="mx-2 text-[#B5B3C8]">·</span>통신판매업 신고번호 제2023-화성동탄-1098호
               </p>
               <p className="text-[13px] text-[#3F3D56] leading-[1.7]">
-                <a href="mailto:apark12321@gmail.com" className="hover:text-[#E8745F] transition-colors">
+                <a href="mailto:apark12321@gmail.com" className="hover:text-[#4F46E5] transition-colors">
                   apark12321@gmail.com
                 </a>
               </p>
@@ -166,7 +166,7 @@ export function Footer({ onNavigate }: FooterProps) {
               </button>
               <button
                 onClick={() => onNavigate("terms")}
-                className="text-[12px] font-medium text-[#3F3D56] hover:text-[#E8745F] hover:underline underline-offset-2"
+                className="text-[12px] font-medium text-[#3F3D56] hover:text-[#4F46E5] hover:underline underline-offset-2"
               >
                 이용약관
               </button>
