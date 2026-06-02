@@ -356,7 +356,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#111111]">
+    <div className="min-h-screen bg-white text-[#1E1B2E]">
       <Navbar onSearch={setSearchQuery} onNavigate={handleNavigate} searchQuery={searchQuery} />
 
       <main>
@@ -371,25 +371,25 @@ export default function App() {
               {/* HERO — warm gradient background, dense info */}
               <div className="gradient-warm relative overflow-hidden">
                 {/* Decorative circles */}
-                <div className="absolute top-10 right-10 w-64 h-64 bg-[#FFD2BD] rounded-full opacity-20 blur-3xl" />
-                <div className="absolute bottom-10 left-10 w-48 h-48 bg-[#FFE9D9] rounded-full opacity-30 blur-2xl" />
+                <div className="absolute top-10 right-10 w-64 h-64 bg-[#4F46E5] rounded-full opacity-30 blur-3xl" />
+                <div className="absolute bottom-10 left-10 w-48 h-48 bg-[#6366F1] rounded-full opacity-20 blur-2xl" />
 
                 <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-10 lg:py-16 relative">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     {/* Left: Hero text */}
                     <div className="lg:col-span-7">
                       <div className="inline-flex items-center gap-2 mb-4">
-                        <span className="badge-coral">가정경제·생활정책</span>
-                        <span className="text-[12px] font-medium text-[#968670]">
+                        <span className="inline-flex items-center gap-1 bg-white/15 text-white text-[11px] font-bold px-2.5 py-1 rounded-full backdrop-blur-sm">가정경제·생활정책</span>
+                        <span className="text-[12px] font-medium text-white/70">
                           · 정부·공공기관 자료 기반
                         </span>
                       </div>
-                      <h1 className="text-[32px] sm:text-[42px] lg:text-[52px] font-bold tracking-[-0.03em] leading-[1.15] text-[#2C2419] mb-5 break-keep">
+                      <h1 className="text-[32px] sm:text-[42px] lg:text-[52px] font-bold tracking-[-0.03em] leading-[1.15] text-white mb-5 break-keep">
                         결혼과 신혼,<br />
-                        <span className="text-[#E8745F]">가장 정확한 정보</span>로<br />
+                        <span className="text-[#FFB4A2]">가장 정확한 정보</span>로<br />
                         시작하세요.
                       </h1>
-                      <p className="text-[15px] sm:text-[16px] leading-[1.7] text-[#4A3F30] max-w-xl break-keep mb-6">
+                      <p className="text-[15px] sm:text-[16px] leading-[1.7] text-white/85 max-w-xl break-keep mb-6">
                         디딤돌·보금자리·신생아특례 대출부터 출산·육아 정책, 결혼 준비 의사결정까지.
                         평균값이 아닌 본인 가구 기준의 답을 정부·공공기관 자료에 근거해 안내합니다.
                       </p>
@@ -405,7 +405,7 @@ export default function App() {
                           <button
                             key={chip.label}
                             onClick={() => handleNavigate(chip.page)}
-                            className="text-[13px] font-semibold text-[#4A3F30] bg-white hover:bg-[#FFE9D9] hover:text-[#E8745F] border border-[#E8DDCB] hover:border-[#FFD2BD] px-3.5 py-2 rounded-full transition-all"
+                            className="text-[13px] font-semibold text-white bg-white/12 hover:bg-white/22 border border-white/20 hover:border-white/40 px-3.5 py-2 rounded-full transition-all backdrop-blur-sm"
                           >
                             {chip.label}
                           </button>
@@ -415,34 +415,34 @@ export default function App() {
 
                     {/* Right: Trust card */}
                     <div className="lg:col-span-5">
-                      <div className="bg-white/80 backdrop-blur-sm border border-[#E8DDCB] rounded-2xl p-6 lg:p-8 shadow-sm">
+                      <div className="bg-white/80 backdrop-blur-sm border border-[#E2E4F0] rounded-2xl p-6 lg:p-8 shadow-sm">
                         <div className="flex items-center gap-2 mb-5">
                           <div className="w-2 h-2 rounded-full bg-[#22C55E]" />
                           <span className="text-[11px] font-bold text-[#22C55E] tracking-wide uppercase">홈코노미뉴스의 약속</span>
                         </div>
-                        <h3 className="text-[18px] font-bold text-[#2C2419] mb-5">
+                        <h3 className="text-[18px] font-bold text-[#1E1B2E] mb-5">
                           믿고 볼 수 있는 정보를 위해
                         </h3>
                         <ul className="space-y-4">
                           <li className="flex gap-3">
                             <span className="text-[#E8745F] text-[15px] font-bold shrink-0 mt-0.5">✓</span>
                             <div>
-                              <p className="text-[14px] font-bold text-[#2C2419] leading-snug">정부·공공기관 자료에 근거</p>
-                              <p className="text-[12px] text-[#968670] mt-0.5 leading-snug break-keep">주택도시기금·국세청·복지로 등 공식 출처만 인용합니다.</p>
+                              <p className="text-[14px] font-bold text-[#1E1B2E] leading-snug">정부·공공기관 자료에 근거</p>
+                              <p className="text-[12px] text-[#8A87A0] mt-0.5 leading-snug break-keep">주택도시기금·국세청·복지로 등 공식 출처만 인용합니다.</p>
                             </div>
                           </li>
                           <li className="flex gap-3">
                             <span className="text-[#E8745F] text-[15px] font-bold shrink-0 mt-0.5">✓</span>
                             <div>
-                              <p className="text-[14px] font-bold text-[#2C2419] leading-snug">정책 변경 시 신속 반영</p>
-                              <p className="text-[12px] text-[#968670] mt-0.5 leading-snug break-keep">금리·세제·지원금이 바뀌면 빠르게 업데이트합니다.</p>
+                              <p className="text-[14px] font-bold text-[#1E1B2E] leading-snug">정책 변경 시 신속 반영</p>
+                              <p className="text-[12px] text-[#8A87A0] mt-0.5 leading-snug break-keep">금리·세제·지원금이 바뀌면 빠르게 업데이트합니다.</p>
                             </div>
                           </li>
                           <li className="flex gap-3">
                             <span className="text-[#E8745F] text-[15px] font-bold shrink-0 mt-0.5">✓</span>
                             <div>
-                              <p className="text-[14px] font-bold text-[#2C2419] leading-snug">평균값이 아닌 본인 가구 기준</p>
-                              <p className="text-[12px] text-[#968670] mt-0.5 leading-snug break-keep">조건별로 달라지는 실제 선택지를 안내합니다.</p>
+                              <p className="text-[14px] font-bold text-[#1E1B2E] leading-snug">평균값이 아닌 본인 가구 기준</p>
+                              <p className="text-[12px] text-[#8A87A0] mt-0.5 leading-snug break-keep">조건별로 달라지는 실제 선택지를 안내합니다.</p>
                             </div>
                           </li>
                         </ul>
@@ -453,7 +453,7 @@ export default function App() {
               </div>
 
               {/* === 많이 찾는 주제 (빠른 진입 태그 바) === */}
-              <div className="border-y border-[#E8DDCB] bg-[#FFFBF7]">
+              <div className="border-y border-[#E2E4F0] bg-[#FAFBFF]">
                 <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-4">
                   <div className="flex items-center gap-3 flex-wrap">
                     <span className="inline-flex items-center gap-1.5 text-[12px] font-bold text-[#B0432F] shrink-0">
@@ -472,9 +472,9 @@ export default function App() {
                         <button
                           key={t.label}
                           onClick={() => handleNavigate(t.page)}
-                          className="inline-flex items-center gap-1 text-[12.5px] font-medium text-[#4A3F30] hover:text-[#E8745F] transition-colors"
+                          className="inline-flex items-center gap-1 text-[12.5px] font-medium text-[#3F3D56] hover:text-[#E8745F] transition-colors"
                         >
-                          <span className="text-[#C8BBA8] font-bold tabular-nums">{i + 1}</span>
+                          <span className="text-[#B5B3C8] font-bold tabular-nums">{i + 1}</span>
                           {t.label}
                         </button>
                       ))}
@@ -490,7 +490,7 @@ export default function App() {
               <div className="max-w-[1400px] mx-auto px-5 lg:px-10 pt-10 lg:pt-14">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-1 h-5 bg-[#E8745F] rounded-full" />
-                  <h2 className="text-[16px] font-bold text-[#2C2419]">정부·공공기관 공식 자료 바로가기</h2>
+                  <h2 className="text-[16px] font-bold text-[#1E1B2E]">정부·공공기관 공식 자료 바로가기</h2>
                 </div>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                   {[
@@ -504,20 +504,20 @@ export default function App() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center gap-3 bg-white border border-[#E8DDCB] hover:border-[#FFD2BD] hover:bg-[#FFF6EE] rounded-xl p-4 transition-all"
+                      className="group flex items-center gap-3 bg-white border border-[#E2E4F0] hover:border-[#FFD2BD] hover:bg-[#F5F6FD] rounded-xl p-4 transition-all"
                     >
                       <span className="text-[24px] shrink-0">{link.icon}</span>
                       <div className="min-w-0">
-                        <p className="text-[14px] font-bold text-[#2C2419] group-hover:text-[#E8745F] transition-colors flex items-center gap-1">
+                        <p className="text-[14px] font-bold text-[#1E1B2E] group-hover:text-[#E8745F] transition-colors flex items-center gap-1">
                           {link.title}
                           <ArrowUpRight className="w-3.5 h-3.5 opacity-50" />
                         </p>
-                        <p className="text-[12px] text-[#968670] leading-snug break-keep">{link.desc}</p>
+                        <p className="text-[12px] text-[#8A87A0] leading-snug break-keep">{link.desc}</p>
                       </div>
                     </a>
                   ))}
                 </div>
-                <p className="text-[11px] text-[#968670] mt-3">
+                <p className="text-[11px] text-[#8A87A0] mt-3">
                   외부 공식 사이트로 연결됩니다. 신청 자격·금액은 각 기관 안내를 기준으로 확인하세요.
                 </p>
               </div>
@@ -545,16 +545,16 @@ export default function App() {
                                   Category 01
                                 </p>
                               </div>
-                              <h2 className="text-[24px] sm:text-[30px] font-bold text-[#2C2419] tracking-[-0.025em]">
+                              <h2 className="text-[24px] sm:text-[30px] font-bold text-[#1E1B2E] tracking-[-0.025em]">
                                 💰 신혼금융
                               </h2>
-                              <p className="text-[13px] text-[#6B5D4A] mt-1">
+                              <p className="text-[13px] text-[#5B5870] mt-1">
                                 주거 대출·청약·세금·자산관리, 가정 재무의 핵심 결정
                               </p>
                             </div>
                             <button
                               onClick={() => handleNavigate("category-신혼금융")}
-                              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#FFE9D9] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all"
+                              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#EEF0FB] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all"
                             >
                               전체 {allPosts.filter(p => p.category === "신혼금융").length}개 보기
                               <ArrowRight className="w-3.5 h-3.5" />
@@ -567,7 +567,7 @@ export default function App() {
                               onClick={() => handleNavigate(`post-${finPosts[0].id}`)}
                               className="group text-left lg:col-span-6 card-warm p-0 overflow-hidden flex flex-col"
                             >
-                              <div className="aspect-[5/3] overflow-hidden bg-[#FFF6EE] relative">
+                              <div className="aspect-[5/3] overflow-hidden bg-[#F5F6FD] relative">
                                 <img
                                   src={finPosts[0].image}
                                   alt={finPosts[0].title}
@@ -589,15 +589,15 @@ export default function App() {
                               <div className="p-5">
                                 <div className="flex items-center gap-2 mb-2">
                                   <span className="text-[11px] font-bold text-[#E8745F]">신혼금융</span>
-                                  <span className="w-1 h-1 bg-[#C8BBA8] rounded-full" />
-                                  <span className="text-[11px] text-[#968670]">
+                                  <span className="w-1 h-1 bg-[#B5B3C8] rounded-full" />
+                                  <span className="text-[11px] text-[#8A87A0]">
                                     {finPosts[0].date.replace(/-/g, ". ")} · {calculateReadTime(finPosts[0].content)} 읽기
                                   </span>
                                 </div>
-                                <h3 className="text-[19px] sm:text-[21px] font-bold leading-[1.35] text-[#2C2419] mb-2.5 break-keep group-hover:text-[#E8745F] transition-colors">
+                                <h3 className="text-[19px] sm:text-[21px] font-bold leading-[1.35] text-[#1E1B2E] mb-2.5 break-keep group-hover:text-[#E8745F] transition-colors">
                                   {finPosts[0].title}
                                 </h3>
-                                <p className="text-[14px] leading-[1.6] text-[#4A3F30] line-clamp-2 break-keep">
+                                <p className="text-[14px] leading-[1.6] text-[#3F3D56] line-clamp-2 break-keep">
                                   {finPosts[0].excerpt}
                                 </p>
                               </div>
@@ -605,21 +605,21 @@ export default function App() {
 
                             {/* 6 compact list items — fills full card height */}
                             <div className="lg:col-span-6 card-warm p-2 lg:p-3 flex flex-col">
-                              <ul className="flex flex-col justify-between h-full divide-y divide-[#F4EDE3]">
+                              <ul className="flex flex-col justify-between h-full divide-y divide-[#EDEEF7]">
                                 {finPosts.slice(1, 7).map((post, idx) => (
                                   <li key={post.id} className="flex-1 flex items-center">
                                     <button
                                       onClick={() => handleNavigate(`post-${post.id}`)}
-                                      className="group flex items-center gap-3 w-full text-left p-3 hover:bg-[#FFF6EE] rounded-lg transition-colors"
+                                      className="group flex items-center gap-3 w-full text-left p-3 hover:bg-[#F5F6FD] rounded-lg transition-colors"
                                     >
-                                      <span className="flex items-center justify-center w-7 h-7 bg-[#FFE9D9] text-[#B0432F] text-[11px] font-bold rounded-full shrink-0 tabular-nums">
+                                      <span className="flex items-center justify-center w-7 h-7 bg-[#EEF0FB] text-[#B0432F] text-[11px] font-bold rounded-full shrink-0 tabular-nums">
                                         {idx + 2}
                                       </span>
                                       <div className="min-w-0 flex-1">
-                                        <h4 className="text-[14px] font-bold leading-[1.4] text-[#2C2419] break-keep line-clamp-2 group-hover:text-[#E8745F] transition-colors mb-1">
+                                        <h4 className="text-[14px] font-bold leading-[1.4] text-[#1E1B2E] break-keep line-clamp-2 group-hover:text-[#E8745F] transition-colors mb-1">
                                           {post.title}
                                         </h4>
-                                        <p className="text-[11px] text-[#968670] font-medium">
+                                        <p className="text-[11px] text-[#8A87A0] font-medium">
                                           {post.date.replace(/-/g, ". ")} · {calculateReadTime(post.content)}
                                         </p>
                                       </div>
@@ -634,7 +634,7 @@ export default function App() {
 
                       {/* 신혼가전 */}
                       {appPosts.length >= 4 && (
-                        <section className="py-12 lg:py-16 border-t border-[#E8DDCB]">
+                        <section className="py-12 lg:py-16 border-t border-[#E2E4F0]">
                           <div className="flex items-end justify-between mb-8">
                             <div>
                               <div className="flex items-center gap-2 mb-2">
@@ -643,16 +643,16 @@ export default function App() {
                                   Category 02
                                 </p>
                               </div>
-                              <h2 className="text-[24px] sm:text-[30px] font-bold text-[#2C2419] tracking-[-0.025em]">
+                              <h2 className="text-[24px] sm:text-[30px] font-bold text-[#1E1B2E] tracking-[-0.025em]">
                                 🏠 신혼가전
                               </h2>
-                              <p className="text-[13px] text-[#6B5D4A] mt-1">
+                              <p className="text-[13px] text-[#5B5870] mt-1">
                                 혼수가전 비교, 인테리어 예산, 실용 구매 가이드
                               </p>
                             </div>
                             <button
                               onClick={() => handleNavigate("category-신혼가전")}
-                              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#FFE9D9] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all"
+                              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#EEF0FB] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all"
                             >
                               전체 {allPosts.filter(p => p.category === "신혼가전").length}개 보기
                               <ArrowRight className="w-3.5 h-3.5" />
@@ -673,7 +673,7 @@ export default function App() {
 
                       {/* 결혼준비 */}
                       {wedPosts.length >= 4 && (
-                        <section className="py-12 lg:py-16 border-t border-[#E8DDCB]">
+                        <section className="py-12 lg:py-16 border-t border-[#E2E4F0]">
                           <div className="flex items-end justify-between mb-8">
                             <div>
                               <div className="flex items-center gap-2 mb-2">
@@ -682,16 +682,16 @@ export default function App() {
                                   Category 03
                                 </p>
                               </div>
-                              <h2 className="text-[24px] sm:text-[30px] font-bold text-[#2C2419] tracking-[-0.025em]">
+                              <h2 className="text-[24px] sm:text-[30px] font-bold text-[#1E1B2E] tracking-[-0.025em]">
                                 💍 결혼준비
                               </h2>
-                              <p className="text-[13px] text-[#6B5D4A] mt-1">
+                              <p className="text-[13px] text-[#5B5870] mt-1">
                                 스드메·예식장·청첩장, 결혼 준비 의사결정
                               </p>
                             </div>
                             <button
                               onClick={() => handleNavigate("category-결혼준비")}
-                              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#FFE9D9] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all"
+                              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#EEF0FB] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all"
                             >
                               전체 {allPosts.filter(p => p.category === "결혼준비").length}개 보기
                               <ArrowRight className="w-3.5 h-3.5" />
@@ -719,7 +719,7 @@ export default function App() {
                           .filter((p): p is typeof allPosts[number] => Boolean(p));
                         if (featured.length < 3) return null;
                         return (
-                          <section className="py-12 lg:py-16 border-t border-[#E8DDCB]">
+                          <section className="py-12 lg:py-16 border-t border-[#E2E4F0]">
                             <div className="flex items-end justify-between mb-8">
                               <div>
                                 <div className="flex items-center gap-2 mb-2">
@@ -728,10 +728,10 @@ export default function App() {
                                     Editor's Pick
                                   </p>
                                 </div>
-                                <h2 className="text-[24px] sm:text-[30px] font-bold text-[#2C2419] tracking-[-0.025em]">
+                                <h2 className="text-[24px] sm:text-[30px] font-bold text-[#1E1B2E] tracking-[-0.025em]">
                                   ⭐ 주목할 글
                                 </h2>
-                                <p className="text-[13px] text-[#6B5D4A] mt-1">
+                                <p className="text-[13px] text-[#5B5870] mt-1">
                                   계산기로 직접 확인할 수 있는 글, 실제 사례 기반 심층 분석
                                 </p>
                               </div>
@@ -772,10 +772,10 @@ export default function App() {
                                   <button
                                     key={cat}
                                     onClick={() => handleNavigate(`category-${cat}`)}
-                                    className="inline-flex items-center gap-2 px-5 h-11 bg-white text-[#E8745F] text-[14px] font-bold rounded-full hover:bg-[#FFF6EE] transition-colors shadow-sm"
+                                    className="inline-flex items-center gap-2 px-5 h-11 bg-white text-[#E8745F] text-[14px] font-bold rounded-full hover:bg-[#F5F6FD] transition-colors shadow-sm"
                                   >
                                     {cat}
-                                    <span className="px-2 py-0.5 bg-[#FFE9D9] text-[#B0432F] text-[11px] rounded-full">
+                                    <span className="px-2 py-0.5 bg-[#EEF0FB] text-[#B0432F] text-[11px] rounded-full">
                                       {count}
                                     </span>
                                   </button>
@@ -837,10 +837,10 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
-              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
+              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 홈코노미뉴스 소개
               </h1>
-              <p className="text-[16px] leading-[1.8] text-[#4A4A4A] mb-10 break-keep">
+              <p className="text-[16px] leading-[1.8] text-[#3F3D56] mb-10 break-keep">
                 홈코노미뉴스는 신혼·출산·주거·세금 등 가정의 의사결정에 직접 영향을 주는 정부 정책과 가정 재무 이슈를 다루는 가정경제·생활정책 전문 미디어입니다. 평균값에 묻혀 사라지는 본인 가구의 답을 정부·공공기관 자료에 근거해 안내합니다.
               </p>
 
@@ -888,15 +888,15 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
-              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
+              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 개인정보 처리방침
               </h1>
-              <p className="text-[16px] leading-[1.8] text-[#4A4A4A] mb-10 break-keep">
+              <p className="text-[16px] leading-[1.8] text-[#3F3D56] mb-10 break-keep">
                 상상아트(이하 '회사')는 「개인정보 보호법」 등 관련 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보 처리에 관한 절차 및 기준을 안내합니다.
               </p>
 
-              <p className="text-sm text-[#888888]">본 개인정보처리방침은 다음과 같은 내용을 담고 있습니다.</p>
-              <ol className="text-sm text-[#888888]">
+              <p className="text-sm text-[#8A87A0]">본 개인정보처리방침은 다음과 같은 내용을 담고 있습니다.</p>
+              <ol className="text-sm text-[#8A87A0]">
                 <li>개인정보의 처리 목적</li>
                 <li>처리하는 개인정보의 항목 및 수집 방법</li>
                 <li>개인정보의 처리 및 보유 기간</li>
@@ -1073,10 +1073,10 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
-              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
+              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 이용약관
               </h1>
-              <p className="text-[16px] leading-[1.8] text-[#4A4A4A] mb-10 break-keep">
+              <p className="text-[16px] leading-[1.8] text-[#3F3D56] mb-10 break-keep">
                 본 약관은 홈코노미뉴스(이하 "사이트")가 제공하는 콘텐츠 및 부가 서비스(이하 "서비스")의 이용과 관련하여 사이트와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
               </p>
 
@@ -1139,10 +1139,10 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
-              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
+              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 공지사항
               </h1>
-              <p className="text-[16px] leading-[1.8] text-[#4A4A4A] mb-10 break-keep">
+              <p className="text-[16px] leading-[1.8] text-[#3F3D56] mb-10 break-keep">
                 홈코노미뉴스 운영에 관한 안내 사항을 공지합니다.
               </p>
 
@@ -1160,7 +1160,7 @@ export default function App() {
 
               <hr />
               <h2>운영 안내</h2>
-              <p>본 공지사항은 사이트 운영 정책, 콘텐츠 정책, 법령 준수와 관련된 주요 변경 사항을 안내합니다. 중요 사항이 발생할 때마다 본 페이지를 통해 우선 안내드리며, 개인정보 처리에 관한 변경은 별도로 <button onClick={() => handleNavigate("privacy")} className="text-[#111111] underline underline-offset-2">개인정보처리방침</button>을 통해 고지합니다.</p>
+              <p>본 공지사항은 사이트 운영 정책, 콘텐츠 정책, 법령 준수와 관련된 주요 변경 사항을 안내합니다. 중요 사항이 발생할 때마다 본 페이지를 통해 우선 안내드리며, 개인정보 처리에 관한 변경은 별도로 <button onClick={() => handleNavigate("privacy")} className="text-[#1E1B2E] underline underline-offset-2">개인정보처리방침</button>을 통해 고지합니다.</p>
               <p>사이트 운영 관련 의견이나 제보는 언제든 <a href="mailto:apark12321@gmail.com">apark12321@gmail.com</a>으로 보내주세요.</p>
             </motion.div>
           )}
@@ -1173,10 +1173,10 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
-              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#111111] mb-6 break-keep">
+              <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 제휴 및 비즈니스 문의
               </h1>
-              <p className="text-[16px] leading-[1.8] text-[#4A4A4A] mb-10 break-keep">
+              <p className="text-[16px] leading-[1.8] text-[#3F3D56] mb-10 break-keep">
                 홈코노미뉴스는 신혼·출산·주거·세금 등 가정경제·생활정책 정보를 다루는 전문 미디어입니다. 독자 여러분과 업계 파트너 여러분의 다양한 제안을 환영합니다.
               </p>
 
@@ -1226,14 +1226,14 @@ export default function App() {
               className="max-w-[720px] mx-auto px-5 lg:px-6 py-10 lg:py-16"
             >
               {/* Breadcrumb */}
-              <nav aria-label="breadcrumb" className="mb-6 text-[12px] text-[#888888]">
+              <nav aria-label="breadcrumb" className="mb-6 text-[12px] text-[#8A87A0]">
                 <ol className="flex flex-wrap items-center gap-1.5">
                   <li>
-                    <button onClick={() => handleNavigate("home")} className="hover:text-[#111111] transition-colors">홈</button>
+                    <button onClick={() => handleNavigate("home")} className="hover:text-[#1E1B2E] transition-colors">홈</button>
                   </li>
                   <li aria-hidden="true">/</li>
                   <li>
-                    <button onClick={() => handleNavigate(`category-${currentPost.category}`)} className="hover:text-[#111111] transition-colors">
+                    <button onClick={() => handleNavigate(`category-${currentPost.category}`)} className="hover:text-[#1E1B2E] transition-colors">
                       {currentPost.category}
                     </button>
                   </li>
@@ -1241,32 +1241,32 @@ export default function App() {
               </nav>
 
               {/* Category */}
-              <p className="text-[13px] font-semibold text-[#111111] mb-4">
+              <p className="text-[13px] font-semibold text-[#1E1B2E] mb-4">
                 {currentPost.category}
               </p>
 
               {/* Title */}
-              <h1 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold leading-[1.2] tracking-[-0.025em] text-[#111111] mb-5 break-keep">
+              <h1 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold leading-[1.2] tracking-[-0.025em] text-[#1E1B2E] mb-5 break-keep">
                 {currentPost.title}
               </h1>
 
               {/* Excerpt */}
-              <p className="text-[17px] leading-[1.7] text-[#4A4A4A] mb-8 break-keep">
+              <p className="text-[17px] leading-[1.7] text-[#3F3D56] mb-8 break-keep">
                 {currentPost.excerpt}
               </p>
 
               {/* Meta + actions */}
-              <div className="flex items-center justify-between py-5 border-y border-[#DADADA] mb-10">
+              <div className="flex items-center justify-between py-5 border-y border-[#D5D8E8] mb-10">
                 <div className="flex items-center gap-3 text-[13px]">
-                  <span className="font-semibold text-[#111111]">{currentPost.author}</span>
-                  <span className="w-[2px] h-[2px] bg-[#DADADA] rounded-full" />
-                  <span className="text-[#888888]">{currentPost.date.replace(/-/g, ". ")}</span>
-                  <span className="w-[2px] h-[2px] bg-[#DADADA] rounded-full" />
-                  <span className="text-[#888888]">{calculateReadTime(currentPost.content)} 읽기</span>
+                  <span className="font-semibold text-[#1E1B2E]">{currentPost.author}</span>
+                  <span className="w-[2px] h-[2px] bg-[#D5D8E8] rounded-full" />
+                  <span className="text-[#8A87A0]">{currentPost.date.replace(/-/g, ". ")}</span>
+                  <span className="w-[2px] h-[2px] bg-[#D5D8E8] rounded-full" />
+                  <span className="text-[#8A87A0]">{calculateReadTime(currentPost.content)} 읽기</span>
                 </div>
                 <div className="flex gap-1">
                   <button
-                    className="w-9 h-9 rounded-md text-[#4A4A4A] hover:text-[#111111] hover:bg-[#F5F5F5] flex items-center justify-center transition-colors"
+                    className="w-9 h-9 rounded-md text-[#3F3D56] hover:text-[#1E1B2E] hover:bg-[#F1F3F9] flex items-center justify-center transition-colors"
                     title="공유"
                     aria-label="이 글 공유하기"
                     onClick={async () => {
@@ -1294,7 +1294,7 @@ export default function App() {
                     <Share2 className="w-4 h-4" />
                   </button>
                   <button
-                    className="w-9 h-9 rounded-md text-[#4A4A4A] hover:text-[#111111] hover:bg-[#F5F5F5] flex items-center justify-center transition-colors hidden sm:flex"
+                    className="w-9 h-9 rounded-md text-[#3F3D56] hover:text-[#1E1B2E] hover:bg-[#F1F3F9] flex items-center justify-center transition-colors hidden sm:flex"
                     title="인쇄"
                     aria-label="이 글 인쇄하기"
                     onClick={() => window.print()}
@@ -1305,7 +1305,7 @@ export default function App() {
               </div>
 
               {/* Hero image */}
-              <div className="aspect-[16/10] overflow-hidden mb-10 bg-[#F5F5F5] rounded-lg">
+              <div className="aspect-[16/10] overflow-hidden mb-10 bg-[#F1F3F9] rounded-lg">
                 <img
                   src={currentPost.image}
                   alt={currentPost.title}
@@ -1325,12 +1325,12 @@ export default function App() {
 
               {/* Hashtags */}
               {currentPost.hashtags && currentPost.hashtags.length > 0 && (
-                <div className="mt-12 pt-8 border-t border-[#DADADA]">
+                <div className="mt-12 pt-8 border-t border-[#D5D8E8]">
                   <div className="flex flex-wrap gap-2">
                     {currentPost.hashtags.map(tag => (
                       <span
                         key={tag}
-                        className="text-[12px] text-[#4A4A4A] bg-[#F5F5F5] px-3 py-1.5 rounded-full"
+                        className="text-[12px] text-[#3F3D56] bg-[#F1F3F9] px-3 py-1.5 rounded-full"
                       >
                         #{tag}
                       </span>
@@ -1347,8 +1347,8 @@ export default function App() {
                   .slice(0, 3);
                 if (related.length === 0) return null;
                 return (
-                  <aside className="mt-16 pt-10 border-t border-[#DADADA]" aria-label="관련 글">
-                    <h2 className="text-[18px] sm:text-[20px] font-bold text-[#111111] mb-6 tracking-tight">
+                  <aside className="mt-16 pt-10 border-t border-[#D5D8E8]" aria-label="관련 글">
+                    <h2 className="text-[18px] sm:text-[20px] font-bold text-[#1E1B2E] mb-6 tracking-tight">
                       {currentPost.category} 카테고리의 다른 글
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1396,10 +1396,10 @@ export default function App() {
                     return (
                       <div className="flex items-end justify-between gap-6 flex-wrap">
                         <div className="max-w-2xl">
-                          <h2 className="text-[26px] sm:text-[32px] lg:text-[40px] font-bold text-[#111111] tracking-[-0.025em] break-keep leading-[1.2] mb-3">
+                          <h2 className="text-[26px] sm:text-[32px] lg:text-[40px] font-bold text-[#1E1B2E] tracking-[-0.025em] break-keep leading-[1.2] mb-3">
                             {title}
                           </h2>
-                          <p className="text-[14px] sm:text-[15px] text-[#4A4A4A] leading-[1.7] break-keep max-w-xl">
+                          <p className="text-[14px] sm:text-[15px] text-[#3F3D56] leading-[1.7] break-keep max-w-xl">
                             {desc}
                           </p>
                         </div>
@@ -1407,7 +1407,7 @@ export default function App() {
                           <button
                             type="button"
                             onClick={() => { setSearchQuery(""); handleNavigate("home"); }}
-                            className="text-[13px] font-semibold text-[#4A4A4A] hover:text-[#111111] inline-flex items-center gap-1"
+                            className="text-[13px] font-semibold text-[#3F3D56] hover:text-[#1E1B2E] inline-flex items-center gap-1"
                             aria-label="검색 닫기"
                           >
                             <ArrowRight className="w-3.5 h-3.5 rotate-180" /> 검색 닫기
@@ -1419,12 +1419,12 @@ export default function App() {
                 </div>
 
                 {/* Category tabs — pill style */}
-                <div className="flex gap-1.5 overflow-x-auto pb-4 mb-8 hide-scrollbar border-b border-[#DADADA]">
+                <div className="flex gap-1.5 overflow-x-auto pb-4 mb-8 hide-scrollbar border-b border-[#D5D8E8]">
                   <button
                     className={`whitespace-nowrap px-4 h-9 rounded-full text-[13px] font-semibold transition-colors ${
                       currentPage === "home" && !searchQuery
-                        ? "bg-[#111111] text-white"
-                        : "bg-white text-[#4A4A4A] hover:bg-[#F5F5F5] border border-[#DADADA]"
+                        ? "bg-[#1E1B2E] text-white"
+                        : "bg-white text-[#3F3D56] hover:bg-[#F1F3F9] border border-[#D5D8E8]"
                     }`}
                     onClick={() => handleNavigate("home")}
                   >
@@ -1435,8 +1435,8 @@ export default function App() {
                       key={cat}
                       className={`whitespace-nowrap px-4 h-9 rounded-full text-[13px] font-semibold transition-colors ${
                         currentPage === `category-${cat}`
-                          ? "bg-[#111111] text-white"
-                          : "bg-white text-[#4A4A4A] hover:bg-[#F5F5F5] border border-[#DADADA]"
+                          ? "bg-[#1E1B2E] text-white"
+                          : "bg-white text-[#3F3D56] hover:bg-[#F1F3F9] border border-[#D5D8E8]"
                       }`}
                       onClick={() => handleNavigate(`category-${cat}`)}
                     >
@@ -1464,13 +1464,13 @@ export default function App() {
                     ))}
                   </div>
                 ) : (
-                  <div className="py-20 text-center bg-[#FAFAFA] rounded-xl">
-                    <p className="text-[16px] font-semibold text-[#111111] mb-2">
+                  <div className="py-20 text-center bg-[#F8F9FD] rounded-xl">
+                    <p className="text-[16px] font-semibold text-[#1E1B2E] mb-2">
                       검색 결과가 없습니다
                     </p>
-                    <p className="text-[14px] text-[#888888] mb-6">다른 검색어로 다시 시도해 보세요.</p>
+                    <p className="text-[14px] text-[#8A87A0] mb-6">다른 검색어로 다시 시도해 보세요.</p>
                     <button
-                      className="text-[13px] font-semibold text-[#111111] underline underline-offset-4"
+                      className="text-[13px] font-semibold text-[#1E1B2E] underline underline-offset-4"
                       onClick={() => { setSearchQuery(""); handleNavigate("home"); }}
                     >
                       모든 글 보기

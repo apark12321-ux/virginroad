@@ -129,7 +129,7 @@ export function CheongyakCalculator() {
     const s = result.specialTotal;
     if (s >= 18) return { label: "매우 높음", color: "#15803D", bg: "#DCFCE7" };
     if (s >= 14) return { label: "높음", color: "#1F7A3D", bg: "#D6F4E1" };
-    if (s >= 10) return { label: "중간", color: "#B0432F", bg: "#FFE9D9" };
+    if (s >= 10) return { label: "중간", color: "#B0432F", bg: "#EEF0FB" };
     if (s >= 6) return { label: "낮음", color: "#A04D14", bg: "#FFE0CC" };
     return { label: "매우 낮음", color: "#7A2A1A", bg: "#FFD6CC" };
   }, [result.specialTotal]);
@@ -138,10 +138,10 @@ export function CheongyakCalculator() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
       <header className="mb-8">
         <span className="badge-coral mb-3">실용 도구</span>
-        <h1 className="text-[26px] sm:text-[32px] font-bold tracking-[-0.025em] text-[#1F1A12] leading-[1.25] mt-3">
+        <h1 className="text-[26px] sm:text-[32px] font-bold tracking-[-0.025em] text-[#151320] leading-[1.25] mt-3">
           신혼부부 특별공급 가점 계산기
         </h1>
-        <p className="text-[15px] sm:text-[16px] text-[#6B5D4A] leading-[1.7] mt-3 break-keep">
+        <p className="text-[15px] sm:text-[16px] text-[#5B5870] leading-[1.7] mt-3 break-keep">
           본인 가구 조건을 입력하시면 신혼부부 특별공급(공공분양) 가점과 일반 청약가점제 점수를
           동시에 계산해 드립니다. 「주택공급에 관한 규칙」과 신혼특공 운영지침을 토대로 했으며,
           단지별·지역별 세부 가점은 청약홈 공고문을 함께 확인하세요.
@@ -150,12 +150,12 @@ export function CheongyakCalculator() {
 
       <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
         {/* 입력 */}
-        <section className="bg-white border border-[#E8DDCB] rounded-[14px] p-5 sm:p-6">
-          <h2 className="text-[18px] font-bold text-[#1F1A12] mb-5">조건 입력</h2>
+        <section className="bg-white border border-[#E2E4F0] rounded-[14px] p-5 sm:p-6">
+          <h2 className="text-[18px] font-bold text-[#151320] mb-5">조건 입력</h2>
 
           <div className="space-y-5">
             <div>
-              <label className="block text-[13px] font-bold text-[#4A3F30] mb-2">
+              <label className="block text-[13px] font-bold text-[#3F3D56] mb-2">
                 미성년 자녀 수
               </label>
               <div className="grid grid-cols-4 gap-2">
@@ -167,7 +167,7 @@ export function CheongyakCalculator() {
                     className={`py-2 text-[13px] font-medium rounded-[8px] border transition-colors ${
                       input.children === c
                         ? "bg-[#E8745F] border-[#E8745F] text-white"
-                        : "bg-white border-[#E8DDCB] text-[#4A3F30] hover:border-[#FFD2BD]"
+                        : "bg-white border-[#E2E4F0] text-[#3F3D56] hover:border-[#FFD2BD]"
                     }`}
                   >
                     {c === 3 ? "3명+" : `${c}명`}
@@ -177,7 +177,7 @@ export function CheongyakCalculator() {
             </div>
 
             <div>
-              <label className="block text-[13px] font-bold text-[#4A3F30] mb-2">
+              <label className="block text-[13px] font-bold text-[#3F3D56] mb-2">
                 혼인 기간: <span className="text-[#E8745F]">{input.marriageYears}년</span>
               </label>
               <input
@@ -189,14 +189,14 @@ export function CheongyakCalculator() {
                 onChange={(e) => setInput({ ...input, marriageYears: Number(e.target.value) })}
                 className="w-full accent-[#E8745F]"
               />
-              <div className="flex justify-between text-[11px] text-[#968670] mt-1">
+              <div className="flex justify-between text-[11px] text-[#8A87A0] mt-1">
                 <span>혼인 직후</span>
                 <span>7년 초과 (가점 0)</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-[13px] font-bold text-[#4A3F30] mb-2">
+              <label className="block text-[13px] font-bold text-[#3F3D56] mb-2">
                 본인 청약통장 납입 회차: <span className="text-[#E8745F]">{input.jeongyakMonths}회</span>
               </label>
               <input
@@ -208,16 +208,16 @@ export function CheongyakCalculator() {
                 onChange={(e) => setInput({ ...input, jeongyakMonths: Number(e.target.value) })}
                 className="w-full accent-[#E8745F]"
               />
-              <div className="flex justify-between text-[11px] text-[#968670] mt-1">
+              <div className="flex justify-between text-[11px] text-[#8A87A0] mt-1">
                 <span>미가입</span>
                 <span>24회+ (3점)</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-[13px] font-bold text-[#4A3F30] mb-2">
+              <label className="block text-[13px] font-bold text-[#3F3D56] mb-2">
                 배우자 청약통장 납입 회차: <span className="text-[#E8745F]">{input.spouseJeongyakMonths}회</span>
-                <span className="block text-[11px] text-[#968670] font-normal mt-0.5">2024년 개정: 배우자 점수의 50% 합산 (최대 3점)</span>
+                <span className="block text-[11px] text-[#8A87A0] font-normal mt-0.5">2024년 개정: 배우자 점수의 50% 합산 (최대 3점)</span>
               </label>
               <input
                 type="range"
@@ -231,7 +231,7 @@ export function CheongyakCalculator() {
             </div>
 
             <div>
-              <label className="block text-[13px] font-bold text-[#4A3F30] mb-2">
+              <label className="block text-[13px] font-bold text-[#3F3D56] mb-2">
                 무주택 기간: <span className="text-[#E8745F]">{input.noHouseYears}년</span>
               </label>
               <input
@@ -243,14 +243,14 @@ export function CheongyakCalculator() {
                 onChange={(e) => setInput({ ...input, noHouseYears: Number(e.target.value) })}
                 className="w-full accent-[#E8745F]"
               />
-              <div className="flex justify-between text-[11px] text-[#968670] mt-1">
+              <div className="flex justify-between text-[11px] text-[#8A87A0] mt-1">
                 <span>유주택</span>
                 <span>15년+ (일반가점 32점)</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-[13px] font-bold text-[#4A3F30] mb-2">
+              <label className="block text-[13px] font-bold text-[#3F3D56] mb-2">
                 해당 지역 연속 거주: <span className="text-[#E8745F]">{input.regionYears}년</span>
               </label>
               <input
@@ -265,7 +265,7 @@ export function CheongyakCalculator() {
             </div>
 
             <div>
-              <label className="block text-[13px] font-bold text-[#4A3F30] mb-2">
+              <label className="block text-[13px] font-bold text-[#3F3D56] mb-2">
                 부양가족 (본인 제외, 일반가점용): <span className="text-[#E8745F]">{input.payingFamily}명</span>
               </label>
               <input
@@ -286,9 +286,9 @@ export function CheongyakCalculator() {
                 onChange={(e) => setInput({ ...input, hasNewborn: e.target.checked })}
                 className="mt-1 w-4 h-4 accent-[#E8745F]"
               />
-              <span className="text-[13.5px] text-[#2C2419] leading-[1.5]">
+              <span className="text-[13.5px] text-[#1E1B2E] leading-[1.5]">
                 <strong className="font-bold">신생아 가구</strong> (만 2세 이하 자녀)
-                <span className="block text-[12px] text-[#968670] mt-0.5">2024년 신설된 신생아 우선공급 가산점 (+3점)</span>
+                <span className="block text-[12px] text-[#8A87A0] mt-0.5">2024년 신설된 신생아 우선공급 가산점 (+3점)</span>
               </span>
             </label>
 
@@ -299,9 +299,9 @@ export function CheongyakCalculator() {
                 onChange={(e) => setInput({ ...input, isMultiChild: e.target.checked })}
                 className="mt-1 w-4 h-4 accent-[#E8745F]"
               />
-              <span className="text-[13.5px] text-[#2C2419] leading-[1.5]">
+              <span className="text-[13.5px] text-[#1E1B2E] leading-[1.5]">
                 <strong className="font-bold">다자녀 가구</strong> (3명 이상)
-                <span className="block text-[12px] text-[#968670] mt-0.5">자녀 3명 이상 시 별도 가산 (+2점)</span>
+                <span className="block text-[12px] text-[#8A87A0] mt-0.5">자녀 3명 이상 시 별도 가산 (+2점)</span>
               </span>
             </label>
           </div>
@@ -341,8 +341,8 @@ export function CheongyakCalculator() {
             </div>
           </div>
 
-          <div className="bg-white border border-[#E8DDCB] rounded-[14px] p-5 sm:p-6">
-            <h3 className="text-[15px] font-bold text-[#1F1A12] mb-4">신혼특공 항목별 가점</h3>
+          <div className="bg-white border border-[#E2E4F0] rounded-[14px] p-5 sm:p-6">
+            <h3 className="text-[15px] font-bold text-[#151320] mb-4">신혼특공 항목별 가점</h3>
             <div className="space-y-2 text-[13.5px]">
               <ScoreRow label="자녀 수" value={result.cp} max={3} />
               <ScoreRow label="혼인 기간 (짧을수록 유리)" value={result.mp} max={3} />
@@ -367,8 +367,8 @@ export function CheongyakCalculator() {
               {result.multiChildBonus > 0 && (
                 <ScoreRow label="다자녀 가구 가산" value={result.multiChildBonus} max={2} />
               )}
-              <div className="flex justify-between pt-2.5 mt-1 border-t border-[#FFE9D9]">
-                <span className="font-bold text-[#1F1A12]">합계</span>
+              <div className="flex justify-between pt-2.5 mt-1 border-t border-[#EEF0FB]">
+                <span className="font-bold text-[#151320]">합계</span>
                 <span className="font-bold text-[#E8745F] text-[16px]">
                   {result.specialTotal}점
                 </span>
@@ -376,20 +376,20 @@ export function CheongyakCalculator() {
             </div>
           </div>
 
-          <div className="bg-white border border-[#E8DDCB] rounded-[14px] p-5 sm:p-6">
-            <h3 className="text-[15px] font-bold text-[#1F1A12] mb-1">참고: 일반 청약가점제</h3>
-            <p className="text-[12px] text-[#968670] mb-4 leading-[1.5]">
+          <div className="bg-white border border-[#E2E4F0] rounded-[14px] p-5 sm:p-6">
+            <h3 className="text-[15px] font-bold text-[#151320] mb-1">참고: 일반 청약가점제</h3>
+            <p className="text-[12px] text-[#8A87A0] mb-4 leading-[1.5]">
               신혼특공이 안 될 때 일반 청약(추첨제 외) 도전 시의 예상 점수
             </p>
             <div className="space-y-2 text-[13.5px]">
               <ScoreRow label="무주택 기간" value={result.gNoHouse} max={32} faint />
               <ScoreRow label="부양가족" value={result.gFamily} max={35} faint />
               <ScoreRow label="청약통장 가입 기간" value={result.gJeongyak} max={17} faint />
-              <div className="flex justify-between pt-2.5 mt-1 border-t border-[#F4EDE3]">
-                <span className="font-bold text-[#4A3F30]">합계 (84점 만점)</span>
-                <span className="font-bold text-[#4A3F30] text-[16px]">{result.generalTotal}점</span>
+              <div className="flex justify-between pt-2.5 mt-1 border-t border-[#EDEEF7]">
+                <span className="font-bold text-[#3F3D56]">합계 (84점 만점)</span>
+                <span className="font-bold text-[#3F3D56] text-[16px]">{result.generalTotal}점</span>
               </div>
-              <p className="text-[12px] text-[#968670] pt-2 leading-[1.55]">
+              <p className="text-[12px] text-[#8A87A0] pt-2 leading-[1.55]">
                 인기 단지 일반 청약 당첨 커트라인은 보통 60점 이상입니다. 신혼특공 가점이 낮다면
                 일반 청약 추첨제 물량을 노리는 전략도 함께 검토하세요.
               </p>
@@ -399,32 +399,32 @@ export function CheongyakCalculator() {
       </div>
 
       {/* 면책 및 출처 */}
-      <section className="mt-10 bg-[#FAF7F2] border border-[#E8DDCB] rounded-[12px] p-5 sm:p-6">
-        <h3 className="text-[13px] font-bold text-[#1F1A12] mb-3 uppercase tracking-[0.08em]">
+      <section className="mt-10 bg-[#F5F6FD] border border-[#E2E4F0] rounded-[12px] p-5 sm:p-6">
+        <h3 className="text-[13px] font-bold text-[#151320] mb-3 uppercase tracking-[0.08em]">
           이 계산기에 대해
         </h3>
-        <div className="space-y-2.5 text-[13px] text-[#6B5D4A] leading-[1.7]">
+        <div className="space-y-2.5 text-[13px] text-[#5B5870] leading-[1.7]">
           <p>
-            본 계산기는 <strong className="text-[#4A3F30]">「주택공급에 관한 규칙」 별표1 가점 산정 기준</strong>과
+            본 계산기는 <strong className="text-[#3F3D56]">「주택공급에 관한 규칙」 별표1 가점 산정 기준</strong>과
             신혼부부 특별공급 운영지침의 표준 가점 체계를 토대로 작성됐습니다. 2024년 개정으로 도입된
             배우자 청약통장 50% 합산, 신생아 가구 가산점도 반영됐습니다.
           </p>
           <p>
-            <strong className="text-[#4A3F30]">계산기 한계:</strong> 실제 단지별 가점표는 공공·민영
+            <strong className="text-[#3F3D56]">계산기 한계:</strong> 실제 단지별 가점표는 공공·민영
             여부, 공급 지역, 모집공고 시점에 따라 세부 기준이 다릅니다. 특히 동점자 처리 우선순위
             (자녀 수 &gt; 무주택 기간 &gt; 청약통장 순), 임신·태아 인정 여부, 부모님 60세 이상 동거
             가구의 무주택 인정 등은 공고문 우선이며 본 계산기에는 반영되지 않습니다. 신청 직전 청약홈
             공식 가점 계산기와 단지 공고문을 반드시 함께 확인하세요.
           </p>
           <p className="pt-2">
-            <strong className="text-[#4A3F30]">참고 출처:</strong>{" "}
+            <strong className="text-[#3F3D56]">참고 출처:</strong>{" "}
             <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer" className="text-[#D45A45] underline underline-offset-2">청약홈(applyhome.co.kr) 공식 가점 계산기</a>
             {" · "}
             <a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer" className="text-[#D45A45] underline underline-offset-2">주택공급에 관한 규칙(법제처)</a>
             {" · "}
             <a href="https://www.molit.go.kr" target="_blank" rel="noopener noreferrer" className="text-[#D45A45] underline underline-offset-2">국토교통부 신혼부부 특별공급 운영지침</a>
           </p>
-          <p className="text-[12px] text-[#968670] pt-2">
+          <p className="text-[12px] text-[#8A87A0] pt-2">
             홈코노미뉴스 편집부 · 최종 갱신 2026.05.31
           </p>
         </div>
@@ -447,17 +447,17 @@ function ScoreRow({
   const pct = Math.min((value / max) * 100, 100);
   return (
     <div className="flex items-center gap-3 py-1">
-      <span className={`text-[13px] flex-shrink-0 ${faint ? "text-[#968670]" : "text-[#4A3F30]"} w-[45%]`}>
+      <span className={`text-[13px] flex-shrink-0 ${faint ? "text-[#8A87A0]" : "text-[#3F3D56]"} w-[45%]`}>
         {label}
       </span>
-      <div className="flex-1 h-[6px] bg-[#F4EDE3] rounded-full overflow-hidden">
+      <div className="flex-1 h-[6px] bg-[#EDEEF7] rounded-full overflow-hidden">
         <div
-          className={`h-full rounded-full transition-all ${faint ? "bg-[#C8BBA8]" : "bg-[#E8745F]"}`}
+          className={`h-full rounded-full transition-all ${faint ? "bg-[#B5B3C8]" : "bg-[#E8745F]"}`}
           style={{ width: `${pct}%` }}
         />
       </div>
       <span
-        className={`text-[13px] font-bold tabular-nums w-[60px] text-right ${faint ? "text-[#6B5D4A]" : "text-[#1F1A12]"}`}
+        className={`text-[13px] font-bold tabular-nums w-[60px] text-right ${faint ? "text-[#5B5870]" : "text-[#151320]"}`}
       >
         {value}/{max}점
       </span>

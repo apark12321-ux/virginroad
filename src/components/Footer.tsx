@@ -13,7 +13,7 @@ function LogoIcon({ className = "" }: { className?: string }) {
         </linearGradient>
       </defs>
       <circle cx="13" cy="18" r="9.5" stroke="url(#footerRingGrad)" strokeWidth="2.5" />
-      <circle cx="23" cy="18" r="9.5" stroke="#2C2419" strokeWidth="2.5" />
+      <circle cx="23" cy="18" r="9.5" stroke="#1E1B2E" strokeWidth="2.5" />
     </svg>
   );
 }
@@ -22,7 +22,7 @@ export function Footer({ onNavigate }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-[#FFF6EE] to-[#FFE9D9] border-t border-[#E8DDCB] mt-24" id="site-footer">
+    <footer className="bg-gradient-to-br from-[#F5F6FD] to-[#EEF0FB] border-t border-[#E2E4F0] mt-24" id="site-footer">
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-14 lg:py-16">
         <div className="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-6 mb-12">
           {/* Brand */}
@@ -34,19 +34,19 @@ export function Footer({ onNavigate }: FooterProps) {
               <LogoIcon className="w-9 h-9 shrink-0" />
               <div className="flex flex-col items-start leading-none">
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-[18px] font-bold tracking-[-0.02em] text-[#2C2419]">
+                  <span className="text-[18px] font-bold tracking-[-0.02em] text-[#1E1B2E]">
                     홈코노미뉴스
                   </span>
                   <span className="text-[11px] font-medium text-[#E8745F] tracking-[0.1em] uppercase">
                     Homeconomy News
                   </span>
                 </div>
-                <span className="text-[11px] font-medium text-[#968670] mt-1.5">
+                <span className="text-[11px] font-medium text-[#8A87A0] mt-1.5">
                   가정경제·생활정책 전문 미디어
                 </span>
               </div>
             </button>
-            <p className="text-[13px] leading-[1.7] text-[#4A3F30] max-w-md break-keep">
+            <p className="text-[13px] leading-[1.7] text-[#3F3D56] max-w-md break-keep">
               신혼·출산·주거·세금 정책부터 가정 재무까지, 가정의 의사결정에 필요한 정보를
               정부·공공기관 자료에 근거해 전합니다. 평균값이 아닌 본인 가구 기준의 답을 함께 찾습니다.
             </p>
@@ -65,7 +65,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("category-신혼금융")}
-                  className="text-[14px] font-medium text-[#2C2419] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
                 >
                   신혼금융
                 </button>
@@ -73,7 +73,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("category-신혼가전")}
-                  className="text-[14px] font-medium text-[#2C2419] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
                 >
                   신혼가전
                 </button>
@@ -81,7 +81,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("category-결혼준비")}
-                  className="text-[14px] font-medium text-[#2C2419] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
                 >
                   결혼준비
                 </button>
@@ -89,7 +89,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("policy")}
-                  className="text-[14px] font-medium text-[#2C2419] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
                 >
                   정책정보
                 </button>
@@ -106,7 +106,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("about")}
-                  className="text-[14px] font-medium text-[#2C2419] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
                 >
                   소개
                 </button>
@@ -114,7 +114,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("announcement")}
-                  className="text-[14px] font-medium text-[#2C2419] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
                 >
                   공지사항
                 </button>
@@ -122,7 +122,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("partnership")}
-                  className="text-[14px] font-medium text-[#2C2419] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
                 >
                   제휴 문의
                 </button>
@@ -130,7 +130,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   href="mailto:apark12321@gmail.com"
-                  className="text-[14px] font-medium text-[#2C2419] hover:text-[#E8745F] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#E8745F] transition-colors"
                 >
                   apark12321@gmail.com
                 </a>
@@ -140,20 +140,20 @@ export function Footer({ onNavigate }: FooterProps) {
         </div>
 
         {/* Business info — AdSense requirement */}
-        <div className="border-t border-[#E8DDCB] pt-8">
+        <div className="border-t border-[#E2E4F0] pt-8">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
             <div className="space-y-2">
-              <p className="text-[13px] text-[#4A3F30] leading-[1.7]">
-                <span className="font-bold text-[#2C2419]">상상아트</span>
-                <span className="mx-2 text-[#C8BBA8]">·</span>사업자등록번호 272-14-01256
-                <span className="mx-2 text-[#C8BBA8]">·</span>통신판매업 신고번호 제2023-화성동탄-1098호
+              <p className="text-[13px] text-[#3F3D56] leading-[1.7]">
+                <span className="font-bold text-[#1E1B2E]">상상아트</span>
+                <span className="mx-2 text-[#B5B3C8]">·</span>사업자등록번호 272-14-01256
+                <span className="mx-2 text-[#B5B3C8]">·</span>통신판매업 신고번호 제2023-화성동탄-1098호
               </p>
-              <p className="text-[13px] text-[#4A3F30] leading-[1.7]">
+              <p className="text-[13px] text-[#3F3D56] leading-[1.7]">
                 <a href="mailto:apark12321@gmail.com" className="hover:text-[#E8745F] transition-colors">
                   apark12321@gmail.com
                 </a>
               </p>
-              <p className="text-[11px] text-[#968670] pt-2">
+              <p className="text-[11px] text-[#8A87A0] pt-2">
                 © {currentYear} Homeconomy News · 상상아트. All rights reserved.
               </p>
             </div>
@@ -166,7 +166,7 @@ export function Footer({ onNavigate }: FooterProps) {
               </button>
               <button
                 onClick={() => onNavigate("terms")}
-                className="text-[12px] font-medium text-[#4A3F30] hover:text-[#E8745F] hover:underline underline-offset-2"
+                className="text-[12px] font-medium text-[#3F3D56] hover:text-[#E8745F] hover:underline underline-offset-2"
               >
                 이용약관
               </button>

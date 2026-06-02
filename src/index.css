@@ -4,8 +4,8 @@
   --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 
   /* Option B — 대한민국 신혼 대표 */
-  --color-coral-50: #FFF4F0;
-  --color-coral-100: #FFE9DF;
+  --color-coral-50: #F0F2FC;
+  --color-coral-100: #EEF0FB;
   --color-coral-200: #FFD2BD;
   --color-coral-400: #FF9876;
   --color-coral-500: #E8745F;
@@ -13,18 +13,18 @@
   --color-coral-700: #B0432F;
   --color-coral-900: #6B2418;
 
-  --color-ivory: #FFFBF7;
-  --color-cream: #FFF6EE;
-  --color-peach-soft: #FFE9D9;
-  --color-warm-50: #FAF7F2;
-  --color-warm-100: #F4EDE3;
-  --color-warm-200: #E8DDCB;
+  --color-ivory: #FAFBFF;
+  --color-cream: #F5F6FD;
+  --color-peach-soft: #EEF0FB;
+  --color-warm-50: #F5F6FD;
+  --color-warm-100: #EDEEF7;
+  --color-warm-200: #E2E4F0;
 
-  --color-ink: #2C2419;
-  --color-ink-soft: #4A3F30;
-  --color-warm-gray-700: #6B5D4A;
-  --color-warm-gray-500: #968670;
-  --color-warm-gray-300: #C8BBA8;
+  --color-ink: #1E1B2E;
+  --color-ink-soft: #3F3D56;
+  --color-warm-gray-700: #5B5870;
+  --color-warm-gray-500: #8A87A0;
+  --color-warm-gray-300: #B5B3C8;
   --color-white: #FFFFFF;
 
   --color-accent: #E8745F;
@@ -55,24 +55,24 @@
 }
 
 :root {
-  --background: #FFFBF7;
-  --foreground: #2C2419;
+  --background: #FAFBFF;
+  --foreground: #1E1B2E;
   --card: #FFFFFF;
-  --card-foreground: #2C2419;
+  --card-foreground: #1E1B2E;
   --popover: #FFFFFF;
-  --popover-foreground: #2C2419;
+  --popover-foreground: #1E1B2E;
   --primary: #E8745F;
   --primary-foreground: #FFFFFF;
-  --secondary: #FFF6EE;
-  --secondary-foreground: #2C2419;
-  --muted: #FAF7F2;
-  --muted-foreground: #6B5D4A;
-  --accent-shadcn: #FFE9D9;
-  --accent-foreground: #2C2419;
+  --secondary: #F5F6FD;
+  --secondary-foreground: #1E1B2E;
+  --muted: #F5F6FD;
+  --muted-foreground: #5B5870;
+  --accent-shadcn: #EEF0FB;
+  --accent-foreground: #1E1B2E;
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
-  --border: #E8DDCB;
-  --input: #E8DDCB;
+  --border: #E2E4F0;
+  --input: #E2E4F0;
   --ring: #E8745F;
   --radius: 0.625rem;
 }
@@ -86,8 +86,8 @@
     -webkit-tap-highlight-color: transparent;
   }
   body {
-    background-color: #FFFBF7;
-    color: #2C2419;
+    background-color: #FAFBFF;
+    color: #1E1B2E;
     font-family: var(--font-sans);
     font-feature-settings: "kern" 1, "liga" 1, "ss02" 1;
     -webkit-font-smoothing: antialiased;
@@ -112,27 +112,27 @@
 .text-coral { color: #E8745F; }
 .text-coral-dark { color: #D45A45; }
 .bg-coral { background-color: #E8745F; }
-.bg-coral-soft { background-color: #FFE9D9; }
-.bg-cream { background-color: #FFF6EE; }
-.bg-ivory { background-color: #FFFBF7; }
-.bg-warm-50 { background-color: #FAF7F2; }
-.bg-warm-100 { background-color: #F4EDE3; }
-.text-ink { color: #2C2419; }
-.text-ink-soft { color: #4A3F30; }
-.text-warm-gray-700 { color: #6B5D4A; }
-.text-warm-gray-500 { color: #968670; }
-.text-warm-gray-300 { color: #C8BBA8; }
-.border-warm-200 { border-color: #E8DDCB; }
+.bg-coral-soft { background-color: #EEF0FB; }
+.bg-cream { background-color: #F5F6FD; }
+.bg-ivory { background-color: #FAFBFF; }
+.bg-warm-50 { background-color: #F5F6FD; }
+.bg-warm-100 { background-color: #EDEEF7; }
+.text-ink { color: #1E1B2E; }
+.text-ink-soft { color: #3F3D56; }
+.text-warm-gray-700 { color: #5B5870; }
+.text-warm-gray-500 { color: #8A87A0; }
+.text-warm-gray-300 { color: #B5B3C8; }
+.border-warm-200 { border-color: #E2E4F0; }
 .border-coral { border-color: #E8745F; }
 
 .article-body {
   font-size: 18px;
   line-height: 1.8;
-  color: #1F1A12;
+  color: #151320;
 }
 .article-body .toc {
-  background-color: #FFF6EE;
-  border: 1px solid #E8DDCB;
+  background-color: #F5F6FD;
+  border: 1px solid #E2E4F0;
   border-radius: 14px;
   padding: 26px 30px;
   margin: 36px 0 52px;
@@ -154,11 +154,11 @@
 }
 .article-body .toc li {
   font-size: 15.5px;
-  color: #4A3F30;
+  color: #3F3D56;
   line-height: 1.55;
 }
 .article-body .toc li a {
-  color: #4A3F30;
+  color: #3F3D56;
   text-decoration: none;
   transition: color 0.15s;
 }
@@ -172,37 +172,37 @@
   font-weight: 800;
   letter-spacing: -0.028em;
   line-height: 1.3;
-  color: #1F1A12;
+  color: #151320;
   margin: 64px 0 20px;
   padding-bottom: 12px;
-  border-bottom: 2px solid #FFE9D9;
+  border-bottom: 2px solid #EEF0FB;
 }
 .article-body h3 {
   font-size: 23px;
   font-weight: 700;
   letter-spacing: -0.022em;
   line-height: 1.4;
-  color: #1F1A12;
+  color: #151320;
   margin: 40px 0 16px;
 }
 .article-body h4 {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.015em;
-  color: #1F1A12;
+  color: #151320;
   margin: 30px 0 12px;
 }
 .article-body p {
   font-size: 18px;
   line-height: 1.85;
-  color: #2C2419;
+  color: #1E1B2E;
   margin-bottom: 20px;
   letter-spacing: -0.015em;
 }
 .article-body p strong {
-  color: #1F1A12;
+  color: #151320;
   font-weight: 700;
-  background: linear-gradient(180deg, transparent 65%, #FFE9D9 65%);
+  background: linear-gradient(180deg, transparent 65%, #EEF0FB 65%);
   padding: 0 2px;
 }
 .article-body ul:not(.toc ul) {
@@ -215,7 +215,7 @@
 .article-body ul:not(.toc ul) li {
   font-size: 18px;
   line-height: 1.7;
-  color: #2C2419;
+  color: #1E1B2E;
   padding-left: 26px;
   position: relative;
   letter-spacing: -0.015em;
@@ -231,9 +231,9 @@
   background-color: #E8745F;
 }
 .article-body ul:not(.toc ul) li strong {
-  color: #2C2419;
+  color: #1E1B2E;
   font-weight: 700;
-  background: linear-gradient(180deg, transparent 65%, #FFE9D9 65%);
+  background: linear-gradient(180deg, transparent 65%, #EEF0FB 65%);
   padding: 0 2px;
 }
 .article-body a {
@@ -253,17 +253,17 @@
   margin: 36px 0;
   font-size: 19px;
   line-height: 1.75;
-  color: #1F1A12;
+  color: #151320;
   font-weight: 500;
-  background: linear-gradient(90deg, #FFF6EE 0%, transparent 100%);
+  background: linear-gradient(90deg, #F5F6FD 0%, transparent 100%);
   border-radius: 0 8px 8px 0;
   letter-spacing: -0.015em;
 }
 .article-body p[class*="text-sm"] {
   font-size: 14px;
-  color: #6B5D4A;
-  background-color: #FAF7F2;
-  border: 1px solid #E8DDCB;
+  color: #5B5870;
+  background-color: #F5F6FD;
+  border: 1px solid #E2E4F0;
   border-radius: 10px;
   padding: 16px 20px;
   margin-top: 44px;
@@ -271,7 +271,7 @@
 }
 .article-body p[class*="text-xs"] {
   font-size: 12.5px;
-  color: #968670;
+  color: #8A87A0;
 }
 .article-body table {
   border-collapse: collapse;
@@ -283,18 +283,18 @@
   line-height: 1.6;
 }
 .article-body th {
-  background-color: #FFE9D9;
+  background-color: #EEF0FB;
   text-align: left;
   padding: 14px 16px;
   font-weight: 700;
-  color: #1F1A12;
-  border: 1px solid #E8DDCB;
+  color: #151320;
+  border: 1px solid #E2E4F0;
   letter-spacing: -0.01em;
 }
 .article-body td {
   padding: 14px 16px;
-  border: 1px solid #E8DDCB;
-  color: #2C2419;
+  border: 1px solid #E2E4F0;
+  color: #1E1B2E;
   vertical-align: top;
   letter-spacing: -0.012em;
 }
@@ -343,27 +343,27 @@
 }
 
 .gradient-warm {
-  background: linear-gradient(135deg, #FFFBF7 0%, #FFE9D9 50%, #FFF6EE 100%);
+  background: linear-gradient(135deg, #312E81 0%, #3730A3 55%, #4338CA 100%);
 }
 .gradient-coral {
-  background: linear-gradient(135deg, #E8745F 0%, #D45A45 100%);
+  background: linear-gradient(135deg, #3730A3 0%, #4F46E5 100%);
 }
 .card-warm {
   background: #FFFFFF;
-  border: 1px solid #E8DDCB;
+  border: 1px solid #E2E4F0;
   border-radius: 14px;
   transition: all 0.2s;
 }
 .card-warm:hover {
-  border-color: #FFD2BD;
-  box-shadow: 0 4px 12px rgba(232, 116, 95, 0.08);
+  border-color: #C7C9F0;
+  box-shadow: 0 4px 14px rgba(55, 48, 163, 0.10);
 }
 .badge-coral {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: #FFE9D9;
-  color: #B0432F;
+  background: #EEF0FB;
+  color: #3730A3;
   font-size: 11px;
   font-weight: 700;
   padding: 4px 10px;
@@ -381,6 +381,17 @@
   border-radius: 999px;
   letter-spacing: 0.05em;
 }
+.badge-indigo {
+  display: inline-flex;
+  align-items: center;
+  background: #4F46E5;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -390,12 +401,12 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #E8DDCB;
+  background: #E2E4F0;
   border-radius: 5px;
-  border: 2px solid #FFFBF7;
+  border: 2px solid #FAFBFF;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C8BBA8;
+  background: #B5B3C8;
 }
 
 .hide-scrollbar::-webkit-scrollbar { display: none; }

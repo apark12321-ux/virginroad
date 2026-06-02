@@ -10,8 +10,8 @@ interface PostCardProps {
 }
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
-  "신혼금융": { bg: "#FFE9D9", text: "#B0432F" },
-  "신혼가전": { bg: "#FFF6EE", text: "#6B5D4A" },
+  "신혼금융": { bg: "#EEF0FB", text: "#B0432F" },
+  "신혼가전": { bg: "#F5F6FD", text: "#5B5870" },
   "결혼준비": { bg: "#FFD2BD", text: "#6B2418" },
 };
 
@@ -26,7 +26,7 @@ export function PostCard({ post, onClick }: PostCardProps) {
       id={`post-${post.id}`}
     >
       {/* Image */}
-      <div className="relative aspect-[5/4] overflow-hidden bg-[#FFF6EE]">
+      <div className="relative aspect-[5/4] overflow-hidden bg-[#F5F6FD]">
         <img
           src={post.image}
           alt={post.title}
@@ -52,19 +52,19 @@ export function PostCard({ post, onClick }: PostCardProps) {
       {/* Content */}
       <div className="p-5 flex flex-col flex-1">
         {/* Title */}
-        <h3 className="text-[16px] sm:text-[17px] font-bold leading-[1.4] text-[#1F1A12] mb-2.5 break-keep line-clamp-2 group-hover:text-[#E8745F] transition-colors tracking-[-0.018em]">
+        <h3 className="text-[16px] sm:text-[17px] font-bold leading-[1.4] text-[#151320] mb-2.5 break-keep line-clamp-2 group-hover:text-[#E8745F] transition-colors tracking-[-0.018em]">
           {post.title}
         </h3>
 
         {/* Excerpt */}
-        <p className="text-[14px] leading-[1.6] text-[#6B5D4A] line-clamp-2 break-keep mb-4 flex-1 tracking-[-0.012em]">
+        <p className="text-[14px] leading-[1.6] text-[#5B5870] line-clamp-2 break-keep mb-4 flex-1 tracking-[-0.012em]">
           {post.excerpt}
         </p>
 
         {/* Meta */}
-        <div className="flex items-center gap-2 text-[12px] text-[#968670] pt-3 border-t border-[#F4EDE3]">
+        <div className="flex items-center gap-2 text-[12px] text-[#8A87A0] pt-3 border-t border-[#EDEEF7]">
           <span className="font-medium">{post.date.replace(/-/g, ". ")}</span>
-          <span className="w-[3px] h-[3px] bg-[#C8BBA8] rounded-full" />
+          <span className="w-[3px] h-[3px] bg-[#B5B3C8] rounded-full" />
           <Clock className="w-3 h-3" />
           <span>{dynamicReadTime}</span>
         </div>
