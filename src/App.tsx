@@ -278,8 +278,14 @@ export default function App() {
   useEffect(() => {
     if (!currentPost) return;
     const id = currentPost.id;
-    recordView(id).then(() => {
-      fetchAllViews().then(setViews);
+    recordView(id).then((next) => {
+      if (typeof next === "number") {
+        // 쓰기 성공: 반환된 최신값으로 즉시 반영
+        setViews((prev) => ({ ...prev, [id]: next }));
+      } else {
+        // 이미 본 글이거나 쓰기 생략: 전체 조회수만 다시 읽어 동기화
+        fetchAllViews().then(setViews);
+      }
     });
   }, [currentPost]);
 
@@ -886,7 +892,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[1000px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 홈코노미뉴스 소개
@@ -937,7 +943,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[1000px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 개인정보 처리방침
@@ -1122,7 +1128,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[1000px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 이용약관
@@ -1188,7 +1194,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[1000px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 공지사항
@@ -1222,7 +1228,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="max-w-[780px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
+              className="max-w-[1000px] mx-auto px-5 lg:px-6 py-12 lg:py-20 article-body"
             >
               <h1 className="text-[32px] sm:text-[40px] font-bold tracking-[-0.025em] leading-[1.2] text-[#1E1B2E] mb-6 break-keep">
                 제휴 및 비즈니스 문의
