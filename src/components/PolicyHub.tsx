@@ -37,13 +37,13 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
               📊 최신 정책·금리 한눈에
             </h2>
             <p className="text-[13px] text-[#5B5870] mt-1">
-              2026년 신혼부부 핵심 정책을 항상 최신으로 정리합니다 · 정부 공식 자료 기준
+              가정에 바로 영향 주는 핵심 정책을 항상 최신으로 정리해요 · 정부 공식 자료 기준
             </p>
           </div>
           {onNavigate && (
             <button
               onClick={() => onNavigate("policy")}
-              className="text-[13px] font-bold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1.5 bg-[#EEF0FB] hover:bg-[#FFD2BD] px-4 py-2 rounded-full transition-all whitespace-nowrap"
+              className="text-[13px] font-bold text-[#4F46E5] hover:text-[#3730A3] inline-flex items-center gap-1.5 bg-[#EEF0FB] hover:bg-[#E2E4F0] px-4 py-2 rounded-full transition-all whitespace-nowrap"
             >
               전체 정책 보기
               <ExternalLink className="w-3.5 h-3.5" />
@@ -128,11 +128,11 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
           </span>
         </div>
         <h1 className="text-[28px] sm:text-[36px] font-bold tracking-[-0.03em] text-[#1E1B2E] mb-3 break-keep">
-          2026 신혼부부 정책·금리 정보
+          2026 가정경제·생활정책 한눈에
         </h1>
         <p className="text-[15px] leading-[1.7] text-[#3F3D56] max-w-2xl break-keep">
-          신혼부부가 꼭 알아야 할 대출 금리, 세금 혜택, 출산 지원금을 정부·공공기관 공식 자료
-          기준으로 정리했습니다. 정책이 변경되면 신속하게 업데이트합니다.
+          대출 금리, 세금 혜택, 출산 지원금처럼 가정에 바로 영향을 주는 정책을
+          정부·공공기관 공식 자료 기준으로 모았어요. 정책이 바뀌면 그때그때 업데이트합니다.
         </p>
       </div>
 
