@@ -116,7 +116,7 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
 
   // ───────────── 전체 페이지 버전 ─────────────
   return (
-    <div className="max-w-[1000px] mx-auto px-5 lg:px-8 py-10 lg:py-14">
+    <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-10 lg:py-14">
       {/* 헤더 */}
       <div className="mb-10">
         <div className="flex items-center gap-2 mb-3">

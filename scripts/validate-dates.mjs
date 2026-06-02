@@ -15,7 +15,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
 const SITE_START = "2026-03-01"; // 사이트 운영 시작 기준일(이보다 이전 글은 의심)
-const TODAY = new Date().toISOString().slice(0, 10);
+// '오늘'을 한국 시간(KST, UTC+9) 기준으로 계산.
+// 컨테이너가 UTC로 동작해도 한국 자정 이후 작성한 글이 '미래 날짜'로 오판되지 않도록 함.
+const TODAY = new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
 
 function loadPosts() {
   const file = resolve(ROOT, "src/constants.ts");
