@@ -229,28 +229,46 @@ function buildStaticPageBody(title, body) {
 
 function articleJsonLd(post) {
   const slug = slugify(post.title) || post.id;
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.excerpt,
-    image: [post.image],
-    datePublished: post.date,
-    dateModified: post.date,
-    author: { "@type": "Organization", name: post.author },
-    publisher: {
-      "@type": "Organization",
-      name: "상상아트",
-      alternateName: SITE_NAME,
-      url: SITE_URL,
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.svg` },
-      taxID: "272-14-01256",
-      foundingDate: "2025-03-01",
+  const url = `${SITE_URL}/post/${encodeURIComponent(slug)}`;
+  const dateIso = `${post.date}T09:00:00+09:00`;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post.title,
+      description: post.excerpt,
+      image: [post.image],
+      datePublished: dateIso,
+      dateModified: dateIso,
+      author: { "@type": "Organization", name: post.author, url: SITE_URL },
+      publisher: {
+        "@type": "Organization",
+        name: "상상아트",
+        alternateName: SITE_NAME,
+        url: SITE_URL,
+        logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.svg` },
+        taxID: "272-14-01256",
+        foundingDate: "2025-03-01",
+      },
+      mainEntityOfPage: { "@type": "WebPage", "@id": url },
+      articleSection: post.category,
+      inLanguage: "ko-KR",
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/post/${slug}` },
-    articleSection: post.category,
-    inLanguage: "ko-KR",
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "홈", item: SITE_URL },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: post.category,
+          item: `${SITE_URL}/category/${encodeURIComponent(post.category)}`,
+        },
+        { "@type": "ListItem", position: 3, name: post.title, item: url },
+      ],
+    },
+  ];
 }
 
 function writeFile(p, content) {
@@ -387,7 +405,7 @@ function main() {
       template,
       {
         title: `${cat} 카테고리 | ${SITE_NAME}`,
-        description: `${cat} 관련 신혼부부 정보를 모았습니다.`,
+        description: `${cat} 관련 가정경제·생활정책 정보를 정부·공공기관 자료 기준으로 모았습니다.`,
         canonical: `${SITE_URL}/category/${encodeURIComponent(cat)}`,
         ogType: "website",
       },
