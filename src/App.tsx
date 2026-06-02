@@ -1280,8 +1280,9 @@ export default function App() {
               initial={{ y: 12, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="max-w-[720px] mx-auto px-5 lg:px-6 py-10 lg:py-16"
+              className="max-w-[1400px] mx-auto px-5 lg:px-10 py-10 lg:py-16"
             >
+              <div className="lg:max-w-[860px]">
               {/* Breadcrumb */}
               <nav aria-label="breadcrumb" className="mb-6 text-[12px] text-[#8A87A0]">
                 <ol className="flex flex-wrap items-center gap-1.5">
@@ -1364,7 +1365,11 @@ export default function App() {
                   </button>
                 </div>
               </div>
+              </div>
 
+              {/* Body + Sidebar grid */}
+              <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+                <div className="lg:col-span-8 min-w-0">
               {/* Hero image */}
               <div className="aspect-[16/10] overflow-hidden mb-10 bg-[#F1F3F9] rounded-lg">
                 <img
@@ -1399,6 +1404,90 @@ export default function App() {
                   </div>
                 </div>
               )}
+                </div>
+
+                {/* Sidebar */}
+                <aside className="lg:col-span-4 space-y-6">
+                  <div className="lg:sticky lg:top-24 space-y-6">
+                    {/* 인기 글 */}
+                    <div className="bg-white border border-[#E2E4F0] rounded-xl overflow-hidden">
+                      <div className="bg-[#3730A3] px-4 py-3">
+                        <h3 className="text-[14px] font-bold text-white flex items-center gap-1.5">
+                          <TrendingUp className="w-4 h-4" /> 인기 글
+                        </h3>
+                      </div>
+                      <ul className="divide-y divide-[#EDEEF7]">
+                        {["fin-39", "fin-38", "fin-41", "fin-43", "fin-44"]
+                          .map(id => allPosts.find(p => p.id === id))
+                          .filter((p): p is typeof allPosts[number] => Boolean(p) && p!.id !== currentPost.id)
+                          .slice(0, 5)
+                          .map((post, i) => (
+                            <li key={post.id}>
+                              <button
+                                onClick={() => handleNavigate(`post-${post.id}`)}
+                                className="group flex gap-2.5 w-full text-left p-3 hover:bg-[#F5F6FD] transition-colors"
+                              >
+                                <span className="flex items-center justify-center w-5 h-5 bg-[#EEF0FB] text-[#3730A3] text-[11px] font-bold rounded shrink-0 mt-0.5 tabular-nums">
+                                  {i + 1}
+                                </span>
+                                <span className="text-[13px] font-medium text-[#1E1B2E] leading-[1.45] break-keep line-clamp-2 group-hover:text-[#4F46E5] transition-colors">
+                                  {post.title}
+                                </span>
+                              </button>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+
+                    {/* 같은 카테고리 최신 글 */}
+                    <div className="bg-white border border-[#E2E4F0] rounded-xl overflow-hidden">
+                      <div className="bg-[#4F46E5] px-4 py-3">
+                        <h3 className="text-[14px] font-bold text-white">📰 {currentPost.category} 최신</h3>
+                      </div>
+                      <ul className="divide-y divide-[#EDEEF7]">
+                        {allPosts
+                          .filter(p => p.category === currentPost.category && p.id !== currentPost.id)
+                          .sort((a, b) => b.date.localeCompare(a.date))
+                          .slice(0, 5)
+                          .map((post) => (
+                            <li key={post.id}>
+                              <button
+                                onClick={() => handleNavigate(`post-${post.id}`)}
+                                className="group flex flex-col gap-1 w-full text-left p-3 hover:bg-[#F5F6FD] transition-colors"
+                              >
+                                <span className="text-[13px] font-medium text-[#1E1B2E] leading-[1.45] break-keep line-clamp-2 group-hover:text-[#4F46E5] transition-colors">
+                                  {post.title}
+                                </span>
+                                <span className="text-[11px] text-[#8A87A0]">{post.date.replace(/-/g, ". ")}</span>
+                              </button>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+
+                    {/* 실용 도구 바로가기 */}
+                    <div className="bg-white border border-[#E2E4F0] rounded-xl overflow-hidden">
+                      <div className="bg-[#312E81] px-4 py-3">
+                        <h3 className="text-[14px] font-bold text-white">🧮 실용 계산기</h3>
+                      </div>
+                      <div className="p-3 space-y-2">
+                        <button
+                          onClick={() => handleNavigate("tools-didimdol")}
+                          className="w-full text-left text-[13px] font-medium text-[#3F3D56] bg-[#F5F6FD] hover:bg-[#EEF0FB] hover:text-[#4F46E5] border border-[#E2E4F0] rounded-lg px-3 py-2.5 transition-colors"
+                        >
+                          디딤돌 우대금리 계산기
+                        </button>
+                        <button
+                          onClick={() => handleNavigate("tools-cheongyak")}
+                          className="w-full text-left text-[13px] font-medium text-[#3F3D56] bg-[#F5F6FD] hover:bg-[#EEF0FB] hover:text-[#4F46E5] border border-[#E2E4F0] rounded-lg px-3 py-2.5 transition-colors"
+                        >
+                          신혼특공 가점 계산기
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
 
               {/* Related */}
               {(() => {
