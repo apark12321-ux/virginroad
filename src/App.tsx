@@ -8,7 +8,7 @@ import { DidimdolCalculator } from "./components/DidimdolCalculator";
 import { CheongyakCalculator } from "./components/CheongyakCalculator";
 import { MOCK_POSTS, CATEGORIES } from "./constants";
 import { Post } from "./types";
-import { Share2, Printer, ArrowRight } from "lucide-react";
+import { Share2, Printer, ArrowRight, TrendingUp, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { auth, db } from "./lib/firebase";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
@@ -452,8 +452,75 @@ export default function App() {
                 </div>
               </div>
 
+              {/* === 많이 찾는 주제 (빠른 진입 태그 바) === */}
+              <div className="border-y border-[#E8DDCB] bg-[#FFFBF7]">
+                <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-4">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="inline-flex items-center gap-1.5 text-[12px] font-bold text-[#B0432F] shrink-0">
+                      <TrendingUp className="w-4 h-4" />
+                      많이 찾는 주제
+                    </span>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      {[
+                        { label: "디딤돌 금리 계산", page: "tools-didimdol" },
+                        { label: "신혼특공 가점", page: "tools-cheongyak" },
+                        { label: "신생아 특례대출", page: "category-신혼금융" },
+                        { label: "부모급여·아동수당", page: "category-신혼금융" },
+                        { label: "공공임대 자격", page: "category-신혼금융" },
+                        { label: "결혼세액공제", page: "policy" },
+                      ].map((t, i) => (
+                        <button
+                          key={t.label}
+                          onClick={() => handleNavigate(t.page)}
+                          className="inline-flex items-center gap-1 text-[12.5px] font-medium text-[#4A3F30] hover:text-[#E8745F] transition-colors"
+                        >
+                          <span className="text-[#C8BBA8] font-bold tabular-nums">{i + 1}</span>
+                          {t.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* === POLICY HUB 요약 (정책·금리 대시보드) === */}
               <PolicyHub compact={true} onNavigate={handleNavigate} />
+
+              {/* === 공식 자료 바로가기 (실용 외부 링크) === */}
+              <div className="max-w-[1400px] mx-auto px-5 lg:px-10 pt-10 lg:pt-14">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-1 h-5 bg-[#E8745F] rounded-full" />
+                  <h2 className="text-[16px] font-bold text-[#2C2419]">정부·공공기관 공식 자료 바로가기</h2>
+                </div>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                  {[
+                    { icon: "🏦", title: "주택도시기금", desc: "디딤돌·버팀목 대출 신청", url: "https://nhuf.molit.go.kr" },
+                    { icon: "🏠", title: "청약홈", desc: "청약 일정·가점 계산기", url: "https://www.applyhome.co.kr" },
+                    { icon: "👶", title: "복지로", desc: "부모급여·아동수당 신청", url: "https://www.bokjiro.go.kr" },
+                    { icon: "📋", title: "홈택스", desc: "결혼세액공제·연말정산", url: "https://www.hometax.go.kr" },
+                  ].map((link) => (
+                    <a
+                      key={link.title}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-3 bg-white border border-[#E8DDCB] hover:border-[#FFD2BD] hover:bg-[#FFF6EE] rounded-xl p-4 transition-all"
+                    >
+                      <span className="text-[24px] shrink-0">{link.icon}</span>
+                      <div className="min-w-0">
+                        <p className="text-[14px] font-bold text-[#2C2419] group-hover:text-[#E8745F] transition-colors flex items-center gap-1">
+                          {link.title}
+                          <ArrowUpRight className="w-3.5 h-3.5 opacity-50" />
+                        </p>
+                        <p className="text-[12px] text-[#968670] leading-snug break-keep">{link.desc}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+                <p className="text-[11px] text-[#968670] mt-3">
+                  외부 공식 사이트로 연결됩니다. 신청 자격·금액은 각 기관 안내를 기준으로 확인하세요.
+                </p>
+              </div>
 
               {/* === CATEGORY SECTIONS — info-dense === */}
               <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
@@ -642,6 +709,45 @@ export default function App() {
                           </div>
                         </section>
                       )}
+
+                      {/* 주목할 글 — 계산기 연동·심층 글 큐레이션 */}
+                      {(() => {
+                        // 계산기 연동 글(fin-39, fin-38)과 심층 정책 글을 우선 노출
+                        const featuredIds = ["fin-39", "fin-38", "fin-41", "fin-43"];
+                        const featured = featuredIds
+                          .map(id => allPosts.find(p => p.id === id))
+                          .filter((p): p is typeof allPosts[number] => Boolean(p));
+                        if (featured.length < 3) return null;
+                        return (
+                          <section className="py-12 lg:py-16 border-t border-[#E8DDCB]">
+                            <div className="flex items-end justify-between mb-8">
+                              <div>
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-1 h-6 bg-[#E8745F] rounded-full" />
+                                  <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#E8745F]">
+                                    Editor's Pick
+                                  </p>
+                                </div>
+                                <h2 className="text-[24px] sm:text-[30px] font-bold text-[#2C2419] tracking-[-0.025em]">
+                                  ⭐ 주목할 글
+                                </h2>
+                                <p className="text-[13px] text-[#6B5D4A] mt-1">
+                                  계산기로 직접 확인할 수 있는 글, 실제 사례 기반 심층 분석
+                                </p>
+                              </div>
+                            </div>
+                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+                              {featured.map(post => (
+                                <PostCard
+                                  key={post.id}
+                                  post={post}
+                                  onClick={(id) => handleNavigate(`post-${id}`)}
+                                />
+                              ))}
+                            </div>
+                          </section>
+                        );
+                      })()}
 
                       {/* All posts CTA strip */}
                       <section className="py-12 lg:py-16">
