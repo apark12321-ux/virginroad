@@ -216,9 +216,14 @@
   color: #FFB4A2;
   font-weight: 800;
 }
-.article-body .summary-box strong {
-  color: #fff;
+.article-body .summary-box strong,
+.article-body .summary-box p strong,
+.article-body .summary-box ul li strong,
+.article-body ul.summary-list li strong {
+  color: #ffffff !important;
   font-weight: 700;
+  background: none !important;
+  padding: 0;
 }
 .article-body h2 {
   font-size: 30px;
