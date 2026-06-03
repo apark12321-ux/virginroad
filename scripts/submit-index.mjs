@@ -35,31 +35,41 @@ function loadUrlsFromSitemap() {
 }
 
 async function submitIndexNow(urls) {
-  const endpoint = "https://api.indexnow.org/indexnow";
+  // IndexNow는 한 곳에 제출하면 참여 검색엔진(Bing·Naver·Yandex 등)에 공유되지만,
+  // 네이버는 자체 전용 엔드포인트도 운영하므로 양쪽에 모두 제출해 네이버 색인 신뢰도를 높임.
+  const endpoints = [
+    { name: "IndexNow(공용: Bing·Yandex 등)", url: "https://api.indexnow.org/indexnow" },
+    { name: "Naver 서치어드바이저", url: "https://searchadvisor.naver.com/indexnow" },
+  ];
   const body = {
     host: SITE_HOST,
     key: INDEXNOW_KEY,
     keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
     urlList: urls,
   };
-  try {
-    const res = await fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json; charset=utf-8" },
-      body: JSON.stringify(body),
-    });
-    console.log(`IndexNow 제출: ${res.status} ${res.statusText} (${urls.length}개 URL)`);
-    if (res.status === 200 || res.status === 202) {
-      console.log("  ✅ 색인 요청 접수됨 (Bing, Naver, Yandex 등)");
-    } else if (res.status === 403) {
-      console.log("  ⚠️ 403 — 키 파일 확인 필요. 배포 후 " + `${SITE_URL}/${INDEXNOW_KEY}.txt` + " 접속 가능한지 확인.");
-    } else if (res.status === 422) {
-      console.log("  ⚠️ 422 — URL이 사이트 호스트와 불일치. SITE_HOST 확인.");
-    } else {
-      console.log("  ⚠️ 예상치 못한 응답. 잠시 후 재시도하세요.");
+
+  for (const ep of endpoints) {
+    try {
+      const res = await fetch(ep.url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        body: JSON.stringify(body),
+      });
+      console.log(`[${ep.name}] ${res.status} ${res.statusText} (${urls.length}개 URL)`);
+      if (res.status === 200 || res.status === 202) {
+        console.log("  ✅ 색인 요청 접수됨");
+      } else if (res.status === 403) {
+        console.log("  ⚠️ 403 — 키 파일 확인: " + `${SITE_URL}/${INDEXNOW_KEY}.txt` + " 접속 가능한지 확인.");
+      } else if (res.status === 422) {
+        console.log("  ⚠️ 422 — URL이 사이트 호스트와 불일치. SITE_HOST 확인.");
+      } else if (res.status === 429) {
+        console.log("  ⚠️ 429 — 요청 과다. 잠시 후 재시도.");
+      } else {
+        console.log("  ⚠️ 예상치 못한 응답. 잠시 후 재시도하세요.");
+      }
+    } catch (e) {
+      console.error(`  ✗ [${ep.name}] 제출 실패:`, e.message);
     }
-  } catch (e) {
-    console.error("  ✗ IndexNow 제출 실패:", e.message);
   }
 }
 

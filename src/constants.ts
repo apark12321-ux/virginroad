@@ -120,6 +120,7 @@ export const MOCK_POSTS = [
       <p>가정의 재무 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 가구 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널의 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 홈코노미뉴스 편집부는 가정경제·생활정책 변경 사항을 지속적으로 반영합니다.</p>
       <p>관련 공식 정보는 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 콘텐츠는 일반적인 안내를 목적으로 작성되었으며, 특정 개인의 자산·세무 상담을 대체하지 않습니다. 실제 거래 시 세무사·금융기관과 별도 상담을 권합니다.</p>
+      <p><strong>공식 출처·신청:</strong> 본 글에서 다룬 제도의 정확한 자격·일정·금액은 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈 신혼부부 특별공급 안내</a>에서 확인하시기 바랍니다. 정책은 변경될 수 있으므로 신청 전 공식 안내를 함께 확인하세요.</p>
       <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-03-16</p>
     `,
     category: "신혼금융",
@@ -493,6 +494,7 @@ export const MOCK_POSTS = [
       <p>가정의 재무 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 가구 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널의 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 홈코노미뉴스 편집부는 가정경제·생활정책 변경 사항을 지속적으로 반영합니다.</p>
       <p>관련 공식 정보는 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본문에 나오는 금리·한도·세율은 2026년 5월 기준이고, 정책 변경에 따라 달라질 수 있으니 신청 시점에 다시 확인해 주시기 바랍니다.</p>
+      <p><strong>공식 출처·신청:</strong> 본 글에서 다룬 제도의 정확한 자격·일정·금액은 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈 주택청약 안내</a>에서 확인하시기 바랍니다. 정책은 변경될 수 있으므로 신청 전 공식 안내를 함께 확인하세요.</p>
       <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-06</p>
     `,
     category: "신혼금융",
@@ -1691,6 +1693,7 @@ export const MOCK_POSTS = [
       <p>가정의 재무 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 가구 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널의 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 홈코노미뉴스 편집부는 가정경제·생활정책 변경 사항을 지속적으로 반영합니다.</p>
       <p>관련 공식 정보는 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글에 인용된 수치는 발행일 기준이며, 이후 정책 변경에 따라 달라질 수 있습니다. 본문 하단 갱신 일자도 함께 확인해 주시기 바랍니다.</p>
+      <p><strong>공식 출처·신청:</strong> 본 글에서 다룬 제도의 정확한 자격·일정·금액은 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈 주택청약 안내</a>에서 확인하시기 바랍니다. 정책은 변경될 수 있으므로 신청 전 공식 안내를 함께 확인하세요.</p>
       <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-16</p>
     `,
     category: "신혼금융",
@@ -2383,6 +2386,7 @@ export const MOCK_POSTS = [
       <p>가정의 재무 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 가구 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널의 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 홈코노미뉴스 편집부는 가정경제·생활정책 변경 사항을 지속적으로 반영합니다.</p>
       <p>관련 공식 정보는 <a href="https://www.gov.kr" target="_blank" rel="noopener noreferrer">정부24</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 모든 수치와 조건은 본문 작성 시점의 공식 자료에 근거하나, 정책 개정 가능성을 고려해 신청 직전 1차 자료를 재확인하시기 바랍니다.</p>
+      <p><strong>공식 출처·신청:</strong> 본 글에서 다룬 제도의 정확한 자격·일정·금액은 <a href="https://www.gov.kr" target="_blank" rel="noopener noreferrer">정부24 모바일 신분증 안내</a>에서 확인하시기 바랍니다. 정책은 변경될 수 있으므로 신청 전 공식 안내를 함께 확인하세요.</p>
       <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-17</p>
     `,
     category: "신혼금융",
@@ -2499,6 +2503,7 @@ export const MOCK_POSTS = [
       <p>가정의 재무 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 가구 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널의 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 홈코노미뉴스 편집부는 가정경제·생활정책 변경 사항을 지속적으로 반영합니다.</p>
       <p>관련 공식 정보는 <a href="https://irds.kr" target="_blank" rel="noopener noreferrer">국토교통부 부동산거래관리시스템</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본문에 나오는 금리·한도·세율은 2026년 5월 기준이고, 정책 변경에 따라 달라질 수 있으니 신청 시점에 다시 확인해 주시기 바랍니다.</p>
+      <p><strong>공식 출처·신청:</strong> 본 글에서 다룬 제도의 정확한 자격·일정·금액은 <a href="https://irts.molit.go.kr" target="_blank" rel="noopener noreferrer">국토교통부 부동산거래 전자계약시스템</a>에서 확인하시기 바랍니다. 정책은 변경될 수 있으므로 신청 전 공식 안내를 함께 확인하세요.</p>
       <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-20</p>
     `,
     category: "신혼금융",
@@ -2557,6 +2562,7 @@ export const MOCK_POSTS = [
       <p>가정의 재무 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 가구 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널의 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 홈코노미뉴스 편집부는 가정경제·생활정책 변경 사항을 지속적으로 반영합니다.</p>
       <p>관련 공식 정보는 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 글은 정책·금융 일반 정보를 제공하며, 실제 신청·승인 결과는 개별 심사에 따라 달라질 수 있습니다. 중요 결정 전 해당 기관 공식 안내를 반드시 확인하시기 바랍니다.</p>
+      <p><strong>공식 출처·신청:</strong> 본 글에서 다룬 제도의 정확한 자격·일정·금액은 <a href="https://nhuf.molit.go.kr" target="_blank" rel="noopener noreferrer">주택도시기금 청년 주택드림 청약통장</a>에서 확인하시기 바랍니다. 정책은 변경될 수 있으므로 신청 전 공식 안내를 함께 확인하세요.</p>
       <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-04-24</p>
     `,
     category: "신혼금융",
@@ -3145,6 +3151,7 @@ export const MOCK_POSTS = [
       <p>가정의 재무 결정은 한 번에 큰 차이로 이어집니다. 본 글이 본인 가구 상황을 판단하는 출발점이 되기를 바라며, 구체적인 신청은 공식 채널의 최신 정보를 확인하신 뒤 진행하시기 바랍니다. 홈코노미뉴스 편집부는 가정경제·생활정책 변경 사항을 지속적으로 반영합니다.</p>
       <p>관련 공식 정보는 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈</a>에서 확인하실 수 있습니다.</p>
       <p class="text-sm text-gray-500 mt-8">※ 본 콘텐츠는 일반적인 안내를 목적으로 작성되었으며, 특정 개인의 자산·세무 상담을 대체하지 않습니다. 실제 거래 시 세무사·금융기관과 별도 상담을 권합니다.</p>
+      <p><strong>공식 출처·신청:</strong> 본 글에서 다룬 제도의 정확한 자격·일정·금액은 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer">청약홈 청약 일정·제도 안내</a>에서 확인하시기 바랍니다. 정책은 변경될 수 있으므로 신청 전 공식 안내를 함께 확인하세요.</p>
       <p class="text-xs text-gray-400 mt-2">최종 업데이트: 2026-05-24</p>
     `,
     category: "신혼금융",
@@ -3494,7 +3501,7 @@ export const MOCK_POSTS = [
 
       <h2 id="sec5">5. 신청 전 확인할 점</h2>
       <p>첫째, 본인이 연령·소득·무주택 요건에 모두 해당하는지 확인합니다. 셋 중 하나라도 어긋나면 신청이 반려될 수 있습니다. 둘째, 거주 중인 주택의 보증금·월세가 지원 상한 안에 들어오는지 봅니다. 셋째, 다른 주거 지원(공공임대 거주 등)과 중복으로 받을 수 없는 경우가 있으니, 이미 받고 있는 지원이 있다면 중복 가능 여부를 확인해야 합니다.</p>
-      <p>신청은 복지로(bokjiro.go.kr)나 거주지 지자체, 또는 마이홈포털(myhome.go.kr) 등을 통해 진행하는 것이 일반적입니다. 제출 서류(임대차계약서, 소득 증빙 등)를 미리 준비해 두면 신청이 한결 수월합니다.</p>
+      <p>신청은 <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener noreferrer">복지로(bokjiro.go.kr)</a>나 거주지 지자체, 또는 <a href="https://www.myhome.go.kr" target="_blank" rel="noopener noreferrer">마이홈포털(myhome.go.kr)</a> 등을 통해 진행하는 것이 일반적입니다. 제출 서류(임대차계약서, 소득 증빙 등)를 미리 준비해 두면 신청이 한결 수월합니다.</p>
 
       <h2 id="sec6">6. 자주 묻는 질문</h2>
       <p><strong>Q. 상시 신청이면 아무 때나 신청해도 똑같이 받나요?</strong><br>신청 시기 제한이 사라진 것이지, 지원 금액이나 기간이 늘어난 것은 아닙니다. 다만 신청 시점부터 지원이 시작되는 구조라면 늦게 신청할수록 받는 총액이 줄 수 있으니, 자격이 된다면 미루지 않는 편이 좋습니다.</p>
@@ -3503,7 +3510,7 @@ export const MOCK_POSTS = [
 
       <h2 id="sec7">7. 정리하며</h2>
       <p>2026년 청년 월세 특별지원의 상시 신청 전환은, 제도 자체보다 '신청 기회를 놓치는 일'을 줄이는 변화입니다. 자격이 되는데도 시기를 놓쳐 못 받던 경우가 많았던 만큼, 본인이 대상인지 한 번 점검해 볼 가치가 있습니다.</p>
-      <p>주거비 지원은 개인 가구의 소득·자산·거주 형태에 따라 적용 여부가 달라지므로, 신청 전 반드시 공식 사이트에서 최신 기준을 확인하시기 바랍니다. 정확한 요건과 금액은 복지로(bokjiro.go.kr)와 마이홈포털(myhome.go.kr)에서 확인하실 수 있습니다.</p>
+      <p>주거비 지원은 개인 가구의 소득·자산·거주 형태에 따라 적용 여부가 달라지므로, 신청 전 반드시 공식 사이트에서 최신 기준을 확인하시기 바랍니다. 정확한 요건과 금액은 <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener noreferrer">복지로(bokjiro.go.kr)</a>와 <a href="https://www.myhome.go.kr" target="_blank" rel="noopener noreferrer">마이홈포털(myhome.go.kr)</a>에서 확인하실 수 있습니다.</p>
     `,
     category: "신혼금융",
     author: "홈코노미뉴스 편집부",
@@ -3583,7 +3590,7 @@ export const MOCK_POSTS = [
 
       <h3 id="sec7">7. 정리하며</h3>
       <p>결혼세액공제는 조건이 단순하고 효과가 직접적인 제도지만, 2026년 12월 31일 혼인신고분까지만 적용되는 한시 혜택입니다. 결혼 계획이 있다면 신고 시점을, 이미 결혼했다면 소급 신청 가능 여부를 점검해 볼 가치가 있습니다.</p>
-      <p>세액공제 적용 여부와 실제 환급액은 개인의 소득·세액 상황에 따라 달라지므로, 신청 전 국세청 홈택스(hometax.go.kr)나 관할 세무서의 공식 안내를 확인하시기 바랍니다. 제도 연장 여부도 향후 세법 개정에 따라 달라질 수 있으니 최신 정보를 함께 확인하세요.</p>
+      <p>세액공제 적용 여부와 실제 환급액은 개인의 소득·세액 상황에 따라 달라지므로, 신청 전 <a href="https://www.hometax.go.kr" target="_blank" rel="noopener noreferrer">국세청 홈택스(hometax.go.kr)</a>나 관할 세무서의 공식 안내를 확인하시기 바랍니다. 제도 연장 여부도 향후 세법 개정에 따라 달라질 수 있으니 최신 정보를 함께 확인하세요.</p>
     `,
     category: "신혼금융",
     author: "홈코노미뉴스 편집부",
@@ -3662,7 +3669,7 @@ export const MOCK_POSTS = [
 
       <h3 id="sec7">7. 정리하며</h3>
       <p>혼인 증여공제는 결혼·출산이라는 생애 시점에 부모님의 지원을 세금 부담 없이 받을 수 있는 강력한 제도입니다. 기본 5천만원에 혼인공제 1억원을 더해 1인당 1억 5천만원, 부부 합산 최대 3억원까지 비과세가 가능합니다.</p>
-      <p>다만 시점 조건(혼인신고 전후 2년)과 과거 증여 이력에 따라 실제 한도가 달라지고, 세금은 개인 상황에 따라 차이가 큽니다. 큰 금액을 증여받기 전 국세청 홈택스(hometax.go.kr)나 세무 전문가의 확인을 받으시기 바랍니다. 신고가 필요한지 여부도 함께 점검하세요.</p>
+      <p>다만 시점 조건(혼인신고 전후 2년)과 과거 증여 이력에 따라 실제 한도가 달라지고, 세금은 개인 상황에 따라 차이가 큽니다. 큰 금액을 증여받기 전 <a href="https://www.hometax.go.kr" target="_blank" rel="noopener noreferrer">국세청 홈택스(hometax.go.kr)</a>나 세무 전문가의 확인을 받으시기 바랍니다. 신고가 필요한지 여부도 함께 점검하세요.</p>
     `,
     category: "신혼금융",
     author: "홈코노미뉴스 편집부",
