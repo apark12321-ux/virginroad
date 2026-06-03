@@ -167,6 +167,59 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+/* 강력한 훅 도입부 (글 첫 단락 강조) */
+.article-body .hook {
+  font-size: 18.5px;
+  line-height: 1.75;
+  color: #1E1B2E;
+  background: linear-gradient(180deg, #FFF6EE 0%, #F5F6FD 100%);
+  border-left: 4px solid #E8745F;
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+  margin: 0 0 36px;
+  font-weight: 500;
+}
+/* 핵심 정리 박스 */
+.article-body .summary-box {
+  background: #312E81;
+  border-radius: 16px;
+  padding: 28px 30px;
+  margin: 48px 0 24px;
+  color: #fff;
+}
+.article-body .summary-box > p:first-child {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+.article-body .summary-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.article-body .summary-box li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #E0E1F5;
+  padding-left: 26px;
+  position: relative;
+}
+.article-body .summary-box li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFB4A2;
+  font-weight: 800;
+}
+.article-body .summary-box strong {
+  color: #fff;
+  font-weight: 700;
+}
 .article-body h2 {
   font-size: 30px;
   font-weight: 800;
