@@ -11,7 +11,7 @@ import { Post } from "./types";
 import { Share2, Printer, ArrowRight, TrendingUp, ArrowUpRight, Eye } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { auth, db } from "./lib/firebase";
-import { recordView, fetchAllViews, formatViews } from "./lib/views";
+import { recordView, fetchAllViews, fetchView, formatViews } from "./lib/views";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { calculateReadTime, slugify, stripHtml } from "./lib/utils";
@@ -231,10 +231,11 @@ export default function App() {
     return combined.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }, [realPosts]);
 
-  // 전체 조회수 로드 (마운트 시 1회)
+  // 전체 조회수 로드 (글 목록이 준비되면)
   useEffect(() => {
-    fetchAllViews().then(setViews);
-  }, []);
+    if (allPosts.length === 0) return;
+    fetchAllViews(allPosts.map((p) => p.id)).then(setViews);
+  }, [allPosts]);
 
   const filteredPosts = useMemo(() => {
     let posts = allPosts;
@@ -283,8 +284,10 @@ export default function App() {
         // 쓰기 성공: 반환된 최신값으로 즉시 반영
         setViews((prev) => ({ ...prev, [id]: next }));
       } else {
-        // 이미 본 글이거나 쓰기 생략: 전체 조회수만 다시 읽어 동기화
-        fetchAllViews().then(setViews);
+        // 이미 본 글(세션 중복)이면 해당 글 조회수만 다시 읽어 동기화
+        fetchView(id).then((v) => {
+          if (typeof v === "number") setViews((prev) => ({ ...prev, [id]: v }));
+        });
       }
     });
   }, [currentPost]);
