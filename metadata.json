@@ -1,6 +1,6 @@
 {
-  "name": "하우징허브 (HousingHub)",
-  "description": "청약부터 전세사기 예방, 대출 전략까지 - 복잡한 부동산 정보를 한눈에 보기 쉽게 정리하여 제공하는 대한민국 대표 주거 정보 가이드입니다.",
+  "name": "버진로드",
+  "description": "결혼 준비부터 신혼부부 디딤돌대출, 버팀목대출, 신생아 특례대출 금리 계산기, 청약 가점 시뮬레이션까지 함께하는 신혼 금융 생활 백서",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

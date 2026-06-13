@@ -1,4 +1,3 @@
-
 import {
   POLICY_LAST_UPDATED,
   DEADLINE_POLICIES,
@@ -43,7 +42,7 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
           {onNavigate && (
             <button
               onClick={() => onNavigate("policy")}
-              className="text-[13px] font-bold text-[#4F46E5] hover:text-[#3730A3] inline-flex items-center gap-1.5 bg-[#EEF0FB] hover:bg-[#E2E4F0] px-4 py-2 rounded-full transition-all whitespace-nowrap"
+              className="text-[13px] font-bold text-[#4F46E5] hover:text-[#3730A3] inline-flex items-center gap-1.5 bg-[#EEF0FB] hover:bg-[#E2E4F0] px-4 py-2 rounded-full transition-all whitespace-nowrap cursor-pointer"
             >
               전체 정책 보기
               <ExternalLink className="w-3.5 h-3.5" />
@@ -58,10 +57,10 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
             {DEADLINE_POLICIES.map((p) => {
               const d = daysUntil(p.deadline);
               return (
-                <div key={p.title} className="card-warm p-5">
+                <div key={p.title} className="card-warm p-5 bg-white">
                   <div className="flex items-center justify-between mb-2">
                     <span className="badge-coral">
-                      <Calendar className="w-3 h-3" /> 마감 임박
+                      <Calendar className="w-3 h-3 text-[#3730A3]" /> 마감 임박
                     </span>
                     <span className="text-[20px] font-bold text-[#E8745F] tabular-nums">
                       D-{d > 0 ? d : 0}
@@ -80,7 +79,7 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
           </div>
 
           {/* 대출 금리 미니 테이블 */}
-          <div className="lg:col-span-7 card-warm p-5 overflow-hidden">
+          <div className="lg:col-span-7 card-warm p-5 overflow-hidden bg-white">
             <div className="flex items-center gap-2 mb-4">
               <TrendingDown className="w-4 h-4 text-[#E8745F]" />
               <h3 className="text-[15px] font-bold text-[#1E1B2E]">2026 신혼부부 대출 금리</h3>
@@ -116,12 +115,12 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
 
   // ───────────── 전체 페이지 버전 ─────────────
   return (
-    <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-10 lg:py-14">
+    <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-10 lg:py-14 bg-white">
       {/* 헤더 */}
       <div className="mb-10">
         <div className="flex items-center gap-2 mb-3">
           <span className="badge-coral">
-            <FileText className="w-3 h-3" /> Policy Hub
+            <FileText className="w-3 h-3 text-[#3730A3]" /> Policy Hub
           </span>
           <span className="text-[12px] text-[#8A87A0]">
             최종 업데이트 {POLICY_LAST_UPDATED.replace(/-/g, ". ")}
@@ -146,7 +145,7 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
           {DEADLINE_POLICIES.map((p) => {
             const d = daysUntil(p.deadline);
             return (
-              <div key={p.title} className="card-warm p-6 relative overflow-hidden">
+              <div key={p.title} className="card-warm p-6 relative overflow-hidden bg-white">
                 <div className="absolute top-0 right-0 gradient-coral text-white px-4 py-2 rounded-bl-xl">
                   <span className="text-[18px] font-bold tabular-nums">D-{d > 0 ? d : 0}</span>
                 </div>
@@ -160,7 +159,6 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
                   </span>
                   <a
                     href={p.source}
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-[12px] font-semibold text-[#E8745F] hover:text-[#B0432F] inline-flex items-center gap-1"
                   >
@@ -179,7 +177,7 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
           <TrendingDown className="w-5 h-5 text-[#E8745F]" />
           <h2 className="text-[20px] font-bold text-[#1E1B2E]">신혼부부 대출 금리 비교</h2>
         </div>
-        <div className="card-warm overflow-hidden">
+        <div className="card-warm overflow-hidden bg-white">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
@@ -225,7 +223,7 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {CASH_SUPPORTS.map((c) => (
-            <div key={c.name} className="card-warm p-5">
+            <div key={c.name} className="card-warm p-5 bg-white">
               <h3 className="text-[14px] font-bold text-[#1E1B2E] mb-1 break-keep">{c.name}</h3>
               <p className="text-[22px] font-bold text-[#E8745F] mb-1">{c.amount}</p>
               <p className="text-[12px] text-[#8A87A0] mb-2">{c.period}</p>
@@ -244,7 +242,7 @@ export function PolicyHub({ compact = false, onNavigate }: PolicyHubProps) {
           <Calendar className="w-5 h-5 text-[#E8745F]" />
           <h2 className="text-[20px] font-bold text-[#1E1B2E]">최근 정책 변경 타임라인</h2>
         </div>
-        <div className="card-warm p-6">
+        <div className="card-warm p-6 bg-white">
           <ul className="space-y-5">
             {POLICY_CHANGES.map((c, idx) => (
               <li key={idx} className="flex gap-4">

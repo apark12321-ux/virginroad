@@ -1,17 +1,5 @@
 import { useState, useMemo } from "react";
 
-/**
- * 신혼부부 특별공급 가점 계산기
- *
- * 「주택공급에 관한 규칙」 별표1 가점 산정 기준 + 신혼부부 특별공급 운영지침 기반.
- * 공공분양 신혼특공의 표준 배점을 모델링했으며, 단지별·지역별 세부 기준은 청약홈(applyhome.co.kr)
- * 공고문에서 반드시 확인해야 합니다.
- *
- * 면책: 본 계산기는 자가 점검 참고용입니다. 단지별 가점표, 가점 적용 우선순위(1순위 자녀,
- * 2순위 무주택 기간, 3순위 청약통장 등)의 운용은 공급 공고에 따라 다를 수 있습니다.
- * 정확한 자격·가점은 청약홈 공식 가점 계산기와 단지 공고문을 함께 확인하세요.
- */
-
 interface CalcInput {
   // 신혼특공 가점
   children: 0 | 1 | 2 | 3; // 미성년 자녀 수 (태아 제외)
@@ -135,7 +123,7 @@ export function CheongyakCalculator() {
   }, [result.specialTotal]);
 
   return (
-    <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-8 sm:py-10">
+    <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-8 sm:py-10 bg-white">
       <header className="mb-8">
         <span className="badge-coral mb-3">실용 도구</span>
         <h1 className="text-[26px] sm:text-[32px] font-bold tracking-[-0.025em] text-[#151320] leading-[1.25] mt-3">
@@ -164,7 +152,7 @@ export function CheongyakCalculator() {
                     key={c}
                     type="button"
                     onClick={() => setInput({ ...input, children: c as 0 | 1 | 2 | 3, isMultiChild: c >= 3 })}
-                    className={`py-2 text-[13px] font-medium rounded-[8px] border transition-colors ${
+                    className={`py-2 text-[13px] font-medium rounded-[8px] border transition-colors cursor-pointer ${
                       input.children === c
                         ? "bg-[#E8745F] border-[#E8745F] text-white"
                         : "bg-white border-[#E2E4F0] text-[#3F3D56] hover:border-[#FFD2BD]"
@@ -418,14 +406,14 @@ export function CheongyakCalculator() {
           </p>
           <p className="pt-2">
             <strong className="text-[#3F3D56]">참고 출처:</strong>{" "}
-            <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer" className="text-[#D45A45] underline underline-offset-2">청약홈(applyhome.co.kr) 공식 가점 계산기</a>
+            <a href="https://www.applyhome.co.kr" rel="noopener noreferrer" className="text-[#D45A45] underline underline-offset-2">청약홈(applyhome.co.kr) 공식 가점 계산기</a>
             {" · "}
-            <a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer" className="text-[#D45A45] underline underline-offset-2">주택공급에 관한 규칙(법제처)</a>
+            <a href="https://www.law.go.kr" rel="noopener noreferrer" className="text-[#D45A45] underline underline-offset-2">주택공급에 관한 규칙(법제처)</a>
             {" · "}
-            <a href="https://www.molit.go.kr" target="_blank" rel="noopener noreferrer" className="text-[#D45A45] underline underline-offset-2">국토교통부 신혼부부 특별공급 운영지침</a>
+            <a href="https://www.molit.go.kr" rel="noopener noreferrer" className="text-[#D45A45] underline underline-offset-2">국토교통부 신혼부부 특별공급 운영지침</a>
           </p>
           <p className="text-[12px] text-[#8A87A0] pt-2">
-            홈코노미뉴스 편집부 · 최종 갱신 2026.05.31
+            버진로드 편집부 · 최종 갱신 2026.05.31
           </p>
         </div>
       </section>

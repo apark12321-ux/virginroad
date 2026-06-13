@@ -2,26 +2,40 @@
   "entities": {
     "Post": {
       "title": "Post",
-      "description": "A blog post or guide entry.",
+      "description": "A blog post or news article.",
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
         "title": { "type": "string" },
         "excerpt": { "type": "string" },
         "content": { "type": "string" },
-        "category": { "type": "string", "enum": ["청약-분양", "전월세", "이사-인테리어", "대출-금융"] },
+        "category": { "type": "string" },
         "author": { "type": "string" },
         "date": { "type": "string" },
+        "updated": { "type": "string" },
         "image": { "type": "string" },
-        "readTime": { "type": "string" }
+        "readTime": { "type": "string" },
+        "hashtags": { "type": "array" }
       },
-      "required": ["title", "content", "category", "author", "date"]
+      "required": ["title", "excerpt", "content", "category", "author", "date", "image", "readTime"]
+    },
+    "View": {
+      "title": "View",
+      "description": "Views count tracker for post.",
+      "type": "object",
+      "properties": {
+        "count": { "type": "integer" }
+      },
+      "required": ["count"]
     }
   },
   "firestore": {
-    "posts": {
+    "/posts/{postId}": {
       "schema": "Post",
-      "description": "Collection of blog posts."
+      "description": "Collection of blog/news posts."
+    },
+    "/views/{postId}": {
+      "schema": "View",
+      "description": "Collection of post views."
     }
   }
 }

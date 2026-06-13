@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Search, X, Menu } from "lucide-react";
 
@@ -42,12 +41,12 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
   };
 
   const navItems = [
-    { label: "신혼금융", page: "category-신혼금융", icon: "💰" },
-    { label: "신혼가전", page: "category-신혼가전", icon: "🏠" },
-    { label: "결혼준비", page: "category-결혼준비", icon: "💍" },
-    { label: "정책정보", page: "policy", icon: "📊" },
-    { label: "금리 계산기", page: "tools-didimdol", icon: "🧮" },
-    { label: "가점 계산기", page: "tools-cheongyak", icon: "🎯" },
+    { label: "신혼금융", page: "category-신혼금융" },
+    { label: "신혼가전", page: "category-신혼가전" },
+    { label: "결혼준비", page: "category-결혼준비" },
+    { label: "정책정보", page: "policy" },
+    { label: "금리 계산기", page: "tools-didimdol" },
+    { label: "가점 계산기", page: "tools-cheongyak" },
   ];
 
   return (
@@ -64,20 +63,20 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
               onClick={goHome}
               className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
               id="site-logo"
-              aria-label="홈코노미뉴스 홈"
+              aria-label="버진로드 홈"
             >
               <LogoIcon className="w-8 h-8 shrink-0" />
               <div className="flex flex-col items-start leading-none">
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-[17px] font-bold tracking-[-0.02em] text-[#1E1B2E]">
-                    홈코노미뉴스
+                    버진로드
                   </span>
                   <span className="text-[10px] font-medium text-[#E8745F] tracking-[0.1em] uppercase">
-                    Homeconomy News
+                    Virginroad
                   </span>
                 </div>
                 <span className="text-[10px] font-medium text-[#8A87A0] mt-1">
-                  가정경제·생활정책 전문 미디어
+                  결혼 준비 & 신혼 금융 생활 백서
                 </span>
               </div>
             </button>
@@ -88,7 +87,7 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
                 <button
                   key={item.page}
                   onClick={() => onNavigate(item.page)}
-                  className="px-4 py-2 text-[14px] font-semibold text-[#3F3D56] hover:text-[#4F46E5] hover:bg-[#EEF0FB] rounded-lg transition-all"
+                  className="px-4 py-2 text-[14px] font-semibold text-[#3F3D56] hover:text-[#4F46E5] hover:bg-[#EEF0FB] rounded-lg transition-all cursor-pointer"
                 >
                   {item.label}
                 </button>
@@ -115,7 +114,7 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
                         onSearch("");
                         setIsSearchOpen(false);
                       }}
-                      className="p-1.5 rounded text-[#8A87A0] hover:text-[#4F46E5] hover:bg-white transition-colors"
+                      className="p-1.5 rounded text-[#8A87A0] hover:text-[#4F46E5] hover:bg-white transition-colors cursor-pointer"
                       aria-label="검색 닫기"
                     >
                       <X className="w-3.5 h-3.5" />
@@ -124,7 +123,7 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
                 ) : (
                   <button
                     onClick={() => setIsSearchOpen(true)}
-                    className="p-2.5 rounded-lg text-[#3F3D56] hover:text-[#4F46E5] hover:bg-[#EEF0FB] transition-colors"
+                    className="p-2.5 rounded-lg text-[#3F3D56] hover:text-[#4F46E5] hover:bg-[#EEF0FB] transition-colors cursor-pointer"
                     aria-label="검색"
                   >
                     <Search className="w-4 h-4" />
@@ -135,7 +134,7 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
               {/* Mobile: hamburger */}
               <button
                 onClick={() => setIsMobileMenuOpen((v) => !v)}
-                className="md:hidden p-2.5 rounded-lg text-[#3F3D56] hover:bg-[#EEF0FB] transition-colors"
+                className="md:hidden p-2.5 rounded-lg text-[#3F3D56] hover:bg-[#EEF0FB] transition-colors cursor-pointer"
                 aria-label="메뉴"
               >
                 {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -160,7 +159,7 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
                 {searchQuery && (
                   <button
                     onClick={() => onSearch("")}
-                    className="p-1.5 rounded text-[#8A87A0] hover:text-[#4F46E5]"
+                    className="p-1.5 rounded text-[#8A87A0] hover:text-[#4F46E5] cursor-pointer"
                     aria-label="검색어 지우기"
                   >
                     <X className="w-3.5 h-3.5" />
@@ -175,7 +174,7 @@ export function Navbar({ onSearch, onNavigate, searchQuery = "" }: NavbarProps) 
                     onNavigate(item.page);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="block w-full text-left px-3 py-3 text-[16px] font-semibold text-[#1E1B2E] hover:bg-[#EEF0FB] hover:text-[#4F46E5] rounded-lg transition-colors"
+                  className="block w-full text-left px-3 py-3 text-[16px] font-semibold text-[#1E1B2E] hover:bg-[#EEF0FB] hover:text-[#4F46E5] rounded-lg transition-colors cursor-pointer"
                 >
                   {item.label}
                 </button>

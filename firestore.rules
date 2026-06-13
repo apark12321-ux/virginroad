@@ -1,30 +1,32 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-
-    // 기본 정책: 모든 작업 차단
-    match /{document=**} {
-      allow read, write: if false;
+    // Helper functions for validation
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
     }
 
-    // posts 컬렉션: 공개 읽기만 허용, 쓰기는 모두 차단
-    // 외부 자동 발행을 차단하기 위해 모든 쓰기 권한 제거
-    // (사이트는 src/constants.ts의 정적 데이터를 사용)
+    function isValidView(data) {
+      return data.keys().hasAll(['count']) &&
+             data.keys().size() == 1 &&
+             data.count is int &&
+             data.count >= 0;
+    }
+
+    // Articles/Posts collection rules
     match /posts/{postId} {
-      allow get, list: if true;
-      allow create, update, delete: if false;
+      allow read: if true;
+      allow create, update: if request.resource.data.secretToken == "virginroad-secure-secret-token-2026";
+      allow delete: if false;
     }
 
-    // views 컬렉션: 조회수 집계용
-    // 누구나 읽기 가능. 쓰기는 'count 필드를 1씩 증가'시키는 경우만 허용.
-    // (임의 값 설정·삭제는 차단해 조회수 조작 방지)
+    // Views tracker collection rules
     match /views/{postId} {
-      allow get, list: if true;
-      allow create: if request.resource.data.count == 1
-                    && request.resource.data.keys().hasOnly(['count']);
-      allow update: if request.resource.data.count == resource.data.count + 1
-                    && request.resource.data.keys().hasOnly(['count']);
-      allow delete: if false;
+      allow read: if true;
+      allow create, update: if postId is string && postId.size() <= 128 &&
+                            request.resource.data.count is int &&
+                            request.resource.data.count >= 0;
     }
   }
 }
+

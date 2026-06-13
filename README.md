@@ -1,23 +1,20 @@
-# 버진로드 (Virgin Road)
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-신혼부부의 새로운 출발을 돕는 실용 정보 미디어 — `virginroad.kr`
+# Run and deploy your AI Studio app
 
-## 카테고리
+This contains everything you need to run your app locally.
 
-- **신혼금융** — 디딤돌·보금자리·신생아특례대출, 신혼특공 청약, 혼인 증여공제, IRP·연금저축
-- **신혼가전** — 삼성·LG 패키지 비교, 평수별 가전 사이즈, 빌트인 선택 기준, 가구 매트릭스
-- **결혼준비** — 스드메 견적, 웨딩홀 종류별 장단점, 6개월 타임라인, 예단·예물 협상법
+View your app in AI Studio: https://ai.studio/apps/a1df4c27-291e-45c4-816c-730f1328afb6
 
-## 운영
+## Run Locally
 
-- 운영: 알고파트너스 (대표 박예준)
-- 사업자등록번호: 450-07-03104
-- 문의: apark12321@gmail.com
+**Prerequisites:**  Node.js
 
-## 실행
 
-```bash
-npm install
-npm run dev      # 개발 서버
-npm run build    # 프로덕션 빌드 (vite + sitemap + prerender)
-```
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

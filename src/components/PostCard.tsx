@@ -1,10 +1,10 @@
-
 import { Post } from "../types";
 import { calculateReadTime } from "../lib/utils";
 import { Clock, Eye } from "lucide-react";
 import { formatViews } from "../lib/views";
 
 interface PostCardProps {
+  key?: string | number;
   post: Post;
   onClick: (id: string) => void;
   index?: number;
@@ -23,14 +23,14 @@ export function PostCard({ post, onClick, views }: PostCardProps) {
 
   return (
     <article
-      className="group cursor-pointer card-warm overflow-hidden flex flex-col h-full"
+      className="group cursor-pointer card-warm overflow-hidden flex flex-col h-full bg-white"
       onClick={() => onClick(post.id)}
       id={`post-${post.id}`}
     >
       {/* Image */}
       <div className="relative aspect-[5/4] overflow-hidden bg-[#F5F6FD]">
         <img
-          src={post.image}
+          src={post.image || "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=800"}
           alt={post.title}
           referrerPolicy="no-referrer"
           loading="lazy"
@@ -67,12 +67,12 @@ export function PostCard({ post, onClick, views }: PostCardProps) {
         <div className="flex items-center gap-2 text-[12px] text-[#8A87A0] pt-3 border-t border-[#EDEEF7]">
           <span className="font-medium">{post.date.replace(/-/g, ". ")}</span>
           <span className="w-[3px] h-[3px] bg-[#B5B3C8] rounded-full" />
-          <Clock className="w-3 h-3" />
+          <Clock className="w-3 h-3 text-[#B5B3C8]" />
           <span>{dynamicReadTime}</span>
           {typeof views === "number" && views > 0 && (
             <>
               <span className="w-[3px] h-[3px] bg-[#B5B3C8] rounded-full" />
-              <Eye className="w-3 h-3" />
+              <Eye className="w-3.5 h-3.5 text-[#B5B3C8]" />
               <span>{formatViews(views)}</span>
             </>
           )}

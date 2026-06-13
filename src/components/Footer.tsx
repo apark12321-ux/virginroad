@@ -1,4 +1,3 @@
-
 interface FooterProps {
   onNavigate: (page: string) => void;
 }
@@ -29,26 +28,25 @@ export function Footer({ onNavigate }: FooterProps) {
           <div className="col-span-2 md:col-span-5">
             <button
               onClick={() => onNavigate("home")}
-              className="flex items-center gap-2.5 hover:opacity-80 transition-opacity mb-5"
+              className="flex items-center gap-2.5 hover:opacity-80 transition-opacity mb-5 cursor-pointer"
             >
               <LogoIcon className="w-9 h-9 shrink-0" />
               <div className="flex flex-col items-start leading-none">
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-[18px] font-bold tracking-[-0.02em] text-[#1E1B2E]">
-                    홈코노미뉴스
+                    버진로드
                   </span>
                   <span className="text-[11px] font-medium text-[#E8745F] tracking-[0.1em] uppercase">
-                    Homeconomy News
+                    Virginroad
                   </span>
                 </div>
                 <span className="text-[11px] font-medium text-[#8A87A0] mt-1.5">
-                  가정경제·생활정책 전문 미디어
+                  결혼 준비 & 신혼 금융 생활 백서
                 </span>
               </div>
             </button>
             <p className="text-[13px] leading-[1.7] text-[#3F3D56] max-w-md break-keep">
-              신혼·출산·주거·세금 정책부터 가정 재무까지, 가정의 의사결정에 필요한 정보를
-              정부·공공기관 자료에 근거해 전합니다. 평균값이 아닌 본인 가구 기준의 답을 함께 찾습니다.
+              결혼 준비부터 신혼부부 디딤돌대출, 버팀목대출, 신생아 특례대출 금리 계산기, 청약 가점 시뮬레이션까지 함께하는 신혼 금융 생활 백서, 버진로드입니다.
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-2">
               <span className="badge-coral">정부·공공기관 자료 기반</span>
@@ -65,7 +63,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("category-신혼금융")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors cursor-pointer"
                 >
                   신혼금융
                 </button>
@@ -73,7 +71,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("category-신혼가전")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors cursor-pointer"
                 >
                   신혼가전
                 </button>
@@ -81,7 +79,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("category-결혼준비")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors cursor-pointer"
                 >
                   결혼준비
                 </button>
@@ -89,7 +87,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("policy")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors cursor-pointer"
                 >
                   정책정보
                 </button>
@@ -106,7 +104,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("about")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors cursor-pointer"
                 >
                   소개
                 </button>
@@ -114,7 +112,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("announcement")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors cursor-pointer"
                 >
                   공지사항
                 </button>
@@ -122,7 +120,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate("partnership")}
-                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors"
+                  className="text-[14px] font-medium text-[#1E1B2E] hover:text-[#4F46E5] transition-colors cursor-pointer"
                 >
                   제휴 문의
                 </button>
@@ -154,19 +152,19 @@ export function Footer({ onNavigate }: FooterProps) {
                 </a>
               </p>
               <p className="text-[11px] text-[#8A87A0] pt-2">
-                © {currentYear} Homeconomy News · 상상아트. All rights reserved.
+                © {currentYear} Virginroad · 상상아트. All rights reserved.
               </p>
             </div>
             <div className="flex items-center gap-5">
               <button
                 onClick={() => onNavigate("privacy")}
-                className="text-[12px] font-bold text-[#E8745F] hover:text-[#B0432F] hover:underline underline-offset-2"
+                className="text-[12px] font-bold text-[#E8745F] hover:text-[#B0432F] hover:underline underline-offset-2 cursor-pointer"
               >
                 개인정보처리방침
               </button>
               <button
                 onClick={() => onNavigate("terms")}
-                className="text-[12px] font-medium text-[#3F3D56] hover:text-[#4F46E5] hover:underline underline-offset-2"
+                className="text-[12px] font-medium text-[#3F3D56] hover:text-[#4F46E5] hover:underline underline-offset-2 cursor-pointer"
               >
                 이용약관
               </button>

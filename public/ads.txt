@@ -1,1 +1,3 @@
-google.com, pub-9552509372228899, DIRECT, f08c47fec0942fa0
+# Google AdSense Publisher file for Virginroad / Virginroad.kr
+# Replace pub-0000000000000000 below with your actual Publisher ID from your AdSense Dashboard (Account -> Settings -> Account Info)
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

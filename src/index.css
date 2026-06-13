@@ -104,9 +104,6 @@
     word-break: keep-all;
     overflow-wrap: break-word;
   }
-  button {
-    -webkit-tap-highlight-color: transparent;
-  }
 }
 
 .text-coral { color: #E8745F; }
@@ -450,22 +447,3 @@
   border-radius: 999px;
   letter-spacing: 0.05em;
 }
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #E2E4F0;
-  border-radius: 5px;
-  border: 2px solid #FAFBFF;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #B5B3C8;
-}
-
-.hide-scrollbar::-webkit-scrollbar { display: none; }
-.hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
